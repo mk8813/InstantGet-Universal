@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DownloadMenuText.Content" xml:space="preserve">
+    <value>دریافت</value>
+  </data>
+  <data name="AboutMenuText.Content" xml:space="preserve">
+    <value>درباره</value>
+  </data>
+  <data name="HistoryMenuText.Content" xml:space="preserve">
+    <value>تاریخچه</value>
+  </data>
+  <data name="SettingMenuText.Content" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="pgMain.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="btnFeedback.Content" xml:space="preserve">
+    <value>ارسال بازخورد</value>
+  </data>
+  <data name="btnRate.Content" xml:space="preserve">
+    <value>امتیازدهی و ثبت دیدگاه</value>
+  </data>
+  <data name="mnuCopyShareUrl.Text" xml:space="preserve">
+    <value>کپی آدرس اینستاگرام</value>
+  </data>
+  <data name="mnuDelete.Text" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="btnClearSelection.Label" xml:space="preserve">
+    <value>برداشتن</value>
+  </data>
+  <data name="btnDeleteGrid.Label" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="btnSelectGrid.Label" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="txtUrlCaption.Text" xml:space="preserve">
+    <value>آدرس پست یا پروفایل کاربر اینستاگرام :</value>
+  </data>
+  <data name="DownloadCompleted" xml:space="preserve">
+    <value>دریافت انجام شد.</value>
+  </data>
+  <data name="DownloadError" xml:space="preserve">
+    <value>متاسفانه خطای غیرمنتظره ای در هنگام دریافت فایل رخ داد.</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>در حال دریافت {0} کیلوبایت از {1} کیلوبایت</value>
+  </data>
+  <data name="DownloadPaused" xml:space="preserve">
+    <value>دریافت متوقف شد.</value>
+  </data>
+  <data name="PausedCostedNetwork" xml:space="preserve">
+    <value>دریافت متوقف شد، اتصال شبکه هزینه بر است.</value>
+  </data>
+  <data name="PausedNoNetwork" xml:space="preserve">
+    <value>دریافت متوقف شد، ارتباط با شبکه وجود ندارد.</value>
+  </data>
+  <data name="btnCommandShareFile.Label" xml:space="preserve">
+    <value>اشتراک</value>
+  </data>
+  <data name="btnCommandShareFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>اشتراک</value>
+  </data>
+  <data name="btnCommandViewFile.Label" xml:space="preserve">
+    <value>مشاهده</value>
+  </data>
+  <data name="btnCommandViewFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>مشاهده</value>
+  </data>
+  <data name="btnDownload.Label" xml:space="preserve">
+    <value>دریافت</value>
+  </data>
+  <data name="btnDownload.ToolTipService.ToolTip" xml:space="preserve">
+    <value>دریافت</value>
+  </data>
+  <data name="btnPaste.Label" xml:space="preserve">
+    <value>چسباندن</value>
+  </data>
+  <data name="btnPaste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>چسباندن</value>
+  </data>
+  <data name="DownloadCompleteToast" xml:space="preserve">
+    <value>دریافت انجام شد</value>
+  </data>
+  <data name="DownloadFailedToast" xml:space="preserve">
+    <value>دریافت ناموفق بود</value>
+  </data>
+  <data name="DownloadInitialize" xml:space="preserve">
+    <value>در حال آماده سازی...</value>
+  </data>
+  <data name="ErrorDownloadPicture" xml:space="preserve">
+    <value>خطای غیرمنتظره ای در هنگام دانلود تصویر رخ داد.</value>
+  </data>
+  <data name="ErrorDownloadVideo" xml:space="preserve">
+    <value>خطای غیرمنتظره ای در هنگام دانلود ویدیو رخ داد.</value>
+  </data>
+  <data name="ErrorWhenInitialize" xml:space="preserve">
+    <value>خطای غیرمنتظره ای در هنگام آماده سازی فرآیند دریافت رخ داد.</value>
+  </data>
+  <data name="FailedToRetrieveUrl" xml:space="preserve">
+    <value>دریافت اطلاعات آدرس ناموفق بود.</value>
+  </data>
+  <data name="InvalidInstagramUrl" xml:space="preserve">
+    <value>آدرس اینستاگرام نامعتبر است.</value>
+  </data>
+  <data name="PictureSuccessfullySaved" xml:space="preserve">
+    <value>تصویر با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="RatepopupContent" xml:space="preserve">
+    <value>اگر از اپلیکیشن رضایت دارید، لطفا چندلحظه از وقت خود را صرف رای دادن به آن در فروشگاه ویندوز کنید.</value>
+  </data>
+  <data name="RatepopupPrimaryButtonText" xml:space="preserve">
+    <value>حتما، همین الان میرم!</value>
+  </data>
+  <data name="RatepopupSecondaryButtonText" xml:space="preserve">
+    <value>شاید بعدا</value>
+  </data>
+  <data name="RatepopupTitle" xml:space="preserve">
+    <value>امتیازدهی به اینستاگِت</value>
+  </data>
+  <data name="ShareUITitle" xml:space="preserve">
+    <value>اشتراک سریع</value>
+  </data>
+  <data name="TargetFileNotFound" xml:space="preserve">
+    <value>فایل مقصد یافت نشد.</value>
+  </data>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>متاسفانه خطای غیرمنتظره ای رخ داد.</value>
+  </data>
+  <data name="VideoSuccessfullySaved" xml:space="preserve">
+    <value>ویدیو با موفقیت ذخیره شد.</value>
+  </data>
+  <data name="btnSelectPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="txtPicturesFolder.Text" xml:space="preserve">
+    <value>پوشه تصاویر :</value>
+  </data>
+  <data name="txtVideosFolder.Text" xml:space="preserve">
+    <value>پوشه ویدیوها : </value>
+  </data>
+  <data name="btnSelectVideoPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="toggleActionCenter.Header" xml:space="preserve">
+    <value>مرکز اعلانات</value>
+  </data>
+  <data name="toggleTheme.Header" xml:space="preserve">
+    <value>پوسته تیره</value>
+  </data>
+  <data name="txtbgTask.Text" xml:space="preserve">
+    <value>اجرا در پس زمینه</value>
+  </data>
+  <data name="txtChangesTip.Text" xml:space="preserve">
+    <value>* تغییرات انجام شده با اجرای مجدد برنامه قابل مشاهده خواهد بود.</value>
+  </data>
+  <data name="txtAppearance.Text" xml:space="preserve">
+    <value>ظاهر برنامه</value>
+  </data>
+  <data name="txtStorage.Text" xml:space="preserve">
+    <value>محل ذخیره سازی</value>
+  </data>
+  <data name="btnClearSelection.ToolTipService.ToolTip" xml:space="preserve">
+    <value>برداشتن</value>
+  </data>
+  <data name="btnDeleteGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="btnSelectGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>دسترسی امکان پذیر نیست.</value>
+  </data>
+  <data name="ActionCenterIsntRunning" xml:space="preserve">
+    <value>مرکز اعلان در حال اجرا نیست، مجددا آن را از تنظیمات فعال کنید.</value>
+  </data>
+  <data name="appActionCenterCancelMsg" xml:space="preserve">
+    <value>برای در حال اجرا ماندن برنامه در پس زمینه ، مجددا مرکز اعلان را از تنظیمات فعال کنید.</value>
+  </data>
+  <data name="bgPermissionFailed" xml:space="preserve">
+    <value>قادر به تکمیل درخواست نیست، دسترسی لازم داده نشد!</value>
+  </data>
+  <data name="CancelBtn" xml:space="preserve">
+    <value>لغو</value>
+  </data>
+  <data name="DeleteBtn" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DeleteThese" xml:space="preserve">
+    <value>حذف شوند؟</value>
+  </data>
+  <data name="DeleteThis" xml:space="preserve">
+    <value>حذف شود؟</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>دریافت</value>
+  </data>
+  <data name="DownloadInProgress" xml:space="preserve">
+    <value>در حال دریافت، لطفا صبر کنید...</value>
+  </data>
+  <data name="FailedToEnableActionCenter" xml:space="preserve">
+    <value>فعالسازی/غیرفعالسازی قابلیت مرکزاعلان ناموفق بود.</value>
+  </data>
+  <data name="FailedToLoadData" xml:space="preserve">
+    <value>داده های کاربر بارگیری نشد.</value>
+  </data>
+  <data name="PasteShareUrl" xml:space="preserve">
+    <value>آدرس پست یا پروفایل اینستاگرام را اینجا بچسبانید!</value>
+  </data>
+  <data name="dropLangAutomatic.Content" xml:space="preserve">
+    <value>پیش فرض سیستم</value>
+  </data>
+  <data name="txtLanguage.Text" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="lblGeneralSetting.Text" xml:space="preserve">
+    <value>کلیپ بورد</value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>زبان موردنظر خود را انتخاب کنید:</value>
+  </data>
+  <data name="toggleClipboard.Header" xml:space="preserve">
+    <value>پیوندها را بطور خودکار بچسبان!</value>
+  </data>
+  <data name="AboutMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>درباره</value>
+  </data>
+  <data name="BrowserMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>مرورگر وب</value>
+  </data>
+  <data name="DownloadMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>دریافت</value>
+  </data>
+  <data name="HistoryMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تاریخچه</value>
+  </data>
+  <data name="SettingMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>چیزی یافت نشد!</value>
+  </data>
+  <data name="btnPictureDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>دریافت تصویر</value>
+  </data>
+  <data name="btnProfileDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>دریافت تصویر پروفایل</value>
+  </data>
+  <data name="btnVideoDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>دریافت ویدیو</value>
+  </data>
+  <data name="btnGo.Content" xml:space="preserve">
+    <value>برو</value>
+  </data>
+  <data name="btnGo.ToolTipService.ToolTip" xml:space="preserve">
+    <value>برو</value>
+  </data>
+  <data name="btnPasteBrowser.Label" xml:space="preserve">
+    <value>چسباندن</value>
+  </data>
+  <data name="btnPasteBrowser.ToolTipService.ToolTip" xml:space="preserve">
+    <value>چسباندن پیوند</value>
+  </data>
+  <data name="BrowserMenuText.Content" xml:space="preserve">
+    <value>مرورگر وب</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>نسخه</value>
+  </data>
+  <data name="btnBack.ToolTipService.ToolTip" xml:space="preserve">
+    <value>بازگشت</value>
+  </data>
+  <data name="btnForward.ToolTipService.ToolTip" xml:space="preserve">
+    <value>جلو</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>درباره</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>مرورگر وب</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>دریافت</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>تاریخچه</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="TabPictures.Header" xml:space="preserve">
+    <value>تصاویر</value>
+  </data>
+  <data name="TabVideos.Header" xml:space="preserve">
+    <value>ویدئوها</value>
+  </data>
+  <data name="btnReloadList.Label" xml:space="preserve">
+    <value>‏‏بازخوانی</value>
+  </data>
+  <data name="btnReloadList.ToolTipService.ToolTip" xml:space="preserve">
+    <value>‏‏بازخوانی</value>
+  </data>
+  <data name="mnuOpenFolder.Text" xml:space="preserve">
+    <value>باز کردن مکان پرونده</value>
+  </data>
+  <data name="btnPictureDownloadBrw.Text" xml:space="preserve">
+    <value>عکس</value>
+  </data>
+  <data name="btnProfileDownloadBrw.Text" xml:space="preserve">
+    <value>تصویر پروفایل</value>
+  </data>
+  <data name="btnVideoDownloadBrw.Text" xml:space="preserve">
+    <value>ویدئو</value>
+  </data>
+  <data name="PostponeButton" xml:space="preserve">
+    <value>تعویق</value>
+  </data>
+  <data name="UrlPostponed" xml:space="preserve">
+    <value>به تعویق افتاد!</value>
+  </data>
+  <data name="btnPickUrlLabelUID.ToolTipService.ToolTip" xml:space="preserve">
+    <value>انتخاب از لیست تعویق</value>
+  </data>
+  <data name="btnPickUrlLabelUID.Label" xml:space="preserve">
+    <value>لیست تعویق</value>
+  </data>
+  <data name="btnDonateImg.ToolTipService.ToolTip" xml:space="preserve">
+    <value>برای حمایت از توسعه دهنده مبلغی را اهدا کنید</value>
+  </data>
+  <data name="btnPopUpBrowseUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>مشاهده در مرورگر...</value>
+  </data>
+  <data name="btnPopUpCopyUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>رونوشت</value>
+  </data>
+  <data name="txtBlockPopUpTitle.Text" xml:space="preserve">
+    <value>لیست تعویق</value>
+  </data>
+  <data name="btnClosePopUp.Content" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="btnPickUrlFromListUID.Label" xml:space="preserve">
+    <value>لیست تعویق</value>
+  </data>
+  <data name="DonatepopupContent" xml:space="preserve">
+    <value>برای محافظت از حریم خصوصی شما، از تبلیغات برای درآمد استفاده نمی کنیم. بنابراین اگر نرم افزار من را می پسندید، لطفا با تقدیم کمک مالی به این برنامه، از توسعه  برنامه های بیشتر و پشتیبانی آن حمایت کنید!</value>
+  </data>
+  <data name="DonatepopupPrimaryButtonText" xml:space="preserve">
+    <value>پرداخت 🙂</value>
+  </data>
+  <data name="DonatepopupSecondaryButtonText" xml:space="preserve">
+    <value>الان نه 🙁</value>
+  </data>
+  <data name="DonatepopupTitle" xml:space="preserve">
+    <value>پشتیبانی از توسعه دهنده</value>
+  </data>
+  <data name="txtLblNothingPopUp.Text" xml:space="preserve">
+    <value>چیزی اینجا نیست!</value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>پوسته :</value>
+  </data>
+  <data name="chkFullSizeimage.Content" xml:space="preserve">
+    <value>دریافت تصویر با کیفیت بالاتر</value>
+  </data>
+</root>

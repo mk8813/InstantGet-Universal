@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="InstagramDownloader.pgHelp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InstagramDownloader"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"  
+    xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors"
+   >
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <EdgeUIThemeTransition Edge="Right" />
+        </TransitionCollection>
+    </Page.Transitions>
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Background="Transparent" >
+        <!--"{ThemeResource ApplicationPageBackgroundThemeBrush}"-->
+        <Grid x:Name="grdPgHelp" Canvas.ZIndex="0" >
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition  Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="245"/>
+
+
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+
+
+            <Image Grid.Column="0" MaxHeight="128" MaxWidth="128" ToolTipService.ToolTip="Follow us on Instagram!" Tapped="Image_Tapped" Grid.Row="1" Source="ms-appx:///Assets/new-icon-color.png"></Image>
+            <TextBlock  TextAlignment="Center" Grid.Column="0" Grid.Row="2" FontSize="20">InstantGet Universal</TextBlock>
+            <TextBlock x:Name="lblVersion" x:Uid="lblVersion" TextAlignment="Center" Grid.Column="0" Grid.Row="3" FontSize="12" />
+                
+            <TextBlock x:Name="lblCopyright"  TextAlignment="Center"  Grid.Column="0" Grid.Row="5" FontSize="14" />
+            <TextBlock  TextWrapping="Wrap"  Padding="15 0" TextAlignment="Center" Text=" Instagram and the Camera logos are trademarks of Instagram, LLC in the United States and elsewhere."  Grid.Column="0" Grid.Row="6" FontStyle="Italic" FontSize="11" />
+
+            <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="113,10">
+                <Button x:Name="btnRate"  Background="#e95950"  Width="165px" x:Uid="btnRate" Content="Rate and review" Click="btnRate_Click" />
+                <TextBlock Height="5"></TextBlock>
+                <Button x:Name="btnFeedback" Background="#e95950"  Width="165px" x:Uid="btnFeedback" Content="Send Feedback" Click="btnFeedback_Click"/>
+                <TextBlock Height="5"></TextBlock>
+
+               
+                <Button x:Name="imgDonateBtn"  Background="#e95950" Width="165px" Content="Donate"  x:Uid="btnDonateImg" Margin="0 0 0 1" PointerEntered="Image_PointerEntered" PointerExited="Image_PointerExited" ToolTipService.ToolTip="Help the developer, by making one donation"   VerticalAlignment="Center" HorizontalAlignment="Center"  Tapped="imgDonateBtn_Tapped"></Button>
+                <Button x:Name="btnDonate" Background="#e95950"  Width="165px" Visibility="Collapsed" Click="btnDonate_Click">تقدیم هدیه</Button>
+
+                <TextBlock  Margin="0 15 0 0" x:Name="txtMoreApps" ToolTipService.ToolTip="More Apps" Tapped="txtMoreApps_Tapped" PointerEntered="txtMoreApps_PointerEntered" PointerExited="txtMoreApps_PointerExited" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13">
+                    <TextBlock.Triggers>
+                        <EventTrigger RoutedEvent="TextBlock.Loaded">
+                            <BeginStoryboard x:Name="txtstatusFadeAnimation">
+                                <Storyboard>
+                                    <DoubleAnimation
+            Storyboard.TargetName="txtMoreApps" 
+            Storyboard.TargetProperty="(TextBlock.Opacity)"
+            From="1.0" To="0.2" Duration="0:0:1" 
+            AutoReverse="True" RepeatBehavior="Forever" />
+                                </Storyboard>
+                            </BeginStoryboard>
+
+                        </EventTrigger>
+                    </TextBlock.Triggers>
+                    
+                    <Underline>
+                        <Run>
+                            More Apps
+                        </Run>
+                    </Underline>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Stretch" Padding="10 3 0 10" Grid.Column="0" Grid.Row="8" >
+
+                <TextBlock   Margin="0 15 0 0" PointerEntered="txtMoreApps_PointerEntered" PointerExited="txtMoreApps_PointerExited"  VerticalAlignment="Bottom" ToolTipService.ToolTip="Help translate InstantGet today!" FontWeight="Bold" Tapped="TextBlock_Tapped" FontStyle="Italic"  HorizontalAlignment="Center" Grid.Column="0" Grid.Row="6">
+                    
+                    
+             <Underline>
+                 <Run Text="Help translate InstantGet today!"></Run>
+           </Underline>
+                    
+                    
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" FontWeight="SemiBold" >Special Thanks to :</TextBlock>
+
+                <TextBlock HorizontalAlignment="Left" Padding="15 2.5 1 2.5" FontStyle="Italic" Text="Fernando Ayala (Spanish - Mexico)"></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Padding="15 2.5 1 2.5" FontStyle="Italic" Text="Rustam Safarov (Russian)"  ></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Padding="15 2.5 1 2.5" FontStyle="Italic" Text="Thanh Tú (Vietnamese)" ></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Padding="15 2.5 1 2.5" FontStyle="Italic" Text="Víthor Brandão (Portuguese (Brazil))" ></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Padding="15 2.5 1 2.5" FontStyle="Italic" Text="Ahmed Farag Salem (Arabic (Egypt))" ></TextBlock>
+
+
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+</Page>

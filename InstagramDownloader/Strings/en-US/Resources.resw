@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMenuText.Content" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="btnClearSelection.Label" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="btnCommandShareFile.Label" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="btnCommandShareFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="btnCommandViewFile.Label" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="btnCommandViewFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="btnDeleteGrid.Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnDownload.Label" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="btnDownload.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="btnFeedback.Content" xml:space="preserve">
+    <value>Send Feedback</value>
+  </data>
+  <data name="btnPaste.Label" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="btnPaste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="btnRate.Content" xml:space="preserve">
+    <value>Rate and review</value>
+  </data>
+  <data name="btnSelectGrid.Label" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="btnSelectPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="btnSelectVideoPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="DownloadCompleted" xml:space="preserve">
+    <value>Download completed.</value>
+  </data>
+  <data name="DownloadCompleteToast" xml:space="preserve">
+    <value>Download completed</value>
+  </data>
+  <data name="DownloadError" xml:space="preserve">
+    <value>An error occured while downloading the file.</value>
+  </data>
+  <data name="DownloadFailedToast" xml:space="preserve">
+    <value>Download failed</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Downloading {0}kB of {1}kB</value>
+  </data>
+  <data name="DownloadInitialize" xml:space="preserve">
+    <value>Initializing...</value>
+  </data>
+  <data name="DownloadMenuText.Content" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DownloadPaused" xml:space="preserve">
+    <value>Download paused.</value>
+  </data>
+  <data name="ErrorDownloadPicture" xml:space="preserve">
+    <value>An error occurred while downloading the picture.</value>
+  </data>
+  <data name="ErrorDownloadVideo" xml:space="preserve">
+    <value>An error occurred while downloading the video.</value>
+  </data>
+  <data name="ErrorWhenInitialize" xml:space="preserve">
+    <value>An error occurred while initializing the download operation.</value>
+  </data>
+  <data name="FailedToRetrieveUrl" xml:space="preserve">
+    <value>Failed to retrieve the Url.</value>
+  </data>
+  <data name="HistoryMenuText.Content" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="InvalidInstagramUrl" xml:space="preserve">
+    <value>Invalid Instagram URL.</value>
+  </data>
+  <data name="mnuCopyShareUrl.Text" xml:space="preserve">
+    <value>Copy Share URL</value>
+  </data>
+  <data name="mnuDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="PausedCostedNetwork" xml:space="preserve">
+    <value>Download paused, Metered connection.</value>
+  </data>
+  <data name="PausedNoNetwork" xml:space="preserve">
+    <value>Download paused, No network connection.</value>
+  </data>
+  <data name="pgMain.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="PictureSuccessfullySaved" xml:space="preserve">
+    <value>Picture successfully saved.</value>
+  </data>
+  <data name="RatepopupContent" xml:space="preserve">
+    <value>If you like this app, please take a moment to rate it in the Windows store.</value>
+  </data>
+  <data name="RatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Sure, take me there</value>
+  </data>
+  <data name="RatepopupSecondaryButtonText" xml:space="preserve">
+    <value>Maybe later</value>
+  </data>
+  <data name="RatepopupTitle" xml:space="preserve">
+    <value>Rate InstantGet Universal</value>
+  </data>
+  <data name="SettingMenuText.Content" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ShareUITitle" xml:space="preserve">
+    <value>Quick share</value>
+  </data>
+  <data name="TabPictures.Header" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
+  <data name="TabVideos.Header" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="TargetFileNotFound" xml:space="preserve">
+    <value>Target file not found.</value>
+  </data>
+  <data name="toggleActionCenter.Header" xml:space="preserve">
+    <value>Action center</value>
+  </data>
+  <data name="toggleTheme.Header" xml:space="preserve">
+    <value>Dark theme</value>
+  </data>
+  <data name="txtAppearance.Text" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="txtbgTask.Text" xml:space="preserve">
+    <value>Background task</value>
+  </data>
+  <data name="txtChangesTip.Text" xml:space="preserve">
+    <value>* You will see your changes the next time you start the app.</value>
+  </data>
+  <data name="txtPicturesFolder.Text" xml:space="preserve">
+    <value>Pictures Folder :</value>
+  </data>
+  <data name="txtUrlCaption.Text" xml:space="preserve">
+    <value>Instagram Share URL :</value>
+  </data>
+  <data name="txtVideosFolder.Text" xml:space="preserve">
+    <value>Videos Folder :</value>
+  </data>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>An unhandled exception has occurred.</value>
+  </data>
+  <data name="VideoSuccessfullySaved" xml:space="preserve">
+    <value>Video successfully saved.</value>
+  </data>
+  <data name="txtStorage.Text" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="btnClearSelection.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="btnDeleteGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnSelectGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Access denied.</value>
+  </data>
+  <data name="ActionCenterIsntRunning" xml:space="preserve">
+    <value>Action center isn't running, reactivate it from app Settings.</value>
+  </data>
+  <data name="appActionCenterCancelMsg" xml:space="preserve">
+    <value>To keep the app running in the background reactivate the Action center from the Settings.</value>
+  </data>
+  <data name="bgPermissionFailed" xml:space="preserve">
+    <value>Request couldn't be completed. Permission failed!</value>
+  </data>
+  <data name="CancelBtn" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DeleteBtn" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteThese" xml:space="preserve">
+    <value>Delete these?</value>
+  </data>
+  <data name="DeleteThis" xml:space="preserve">
+    <value>Delete this?</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DownloadInProgress" xml:space="preserve">
+    <value>Download in progress, please wait...</value>
+  </data>
+  <data name="FailedToEnableActionCenter" xml:space="preserve">
+    <value>Failed to enable/disable Action center integration.</value>
+  </data>
+  <data name="FailedToLoadData" xml:space="preserve">
+    <value>Failed to load user data.</value>
+  </data>
+  <data name="PasteShareUrl" xml:space="preserve">
+    <value>Paste URL here!</value>
+  </data>
+  <data name="dropLangAutomatic.Content" xml:space="preserve">
+    <value>System Language</value>
+  </data>
+  <data name="txtLanguage.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lblGeneralSetting.Text" xml:space="preserve">
+    <value>Clipboard</value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>Select your preferred language :</value>
+  </data>
+  <data name="toggleClipboard.Header" xml:space="preserve">
+    <value>Automatically paste URLs</value>
+  </data>
+  <data name="AboutMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="BrowserMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Web Browser</value>
+  </data>
+  <data name="DownloadMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="HistoryMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="SettingMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="BrowserMenuText.Content" xml:space="preserve">
+    <value>Web Browser</value>
+  </data>
+  <data name="btnGo.Content" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="btnGo.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="btnPasteBrowser.Label" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="btnPasteBrowser.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Paste Url</value>
+  </data>
+  <data name="btnPictureDownloadBrw.Text" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="btnPictureDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Get picture</value>
+  </data>
+  <data name="btnProfileDownloadBrw.Text" xml:space="preserve">
+    <value>Profile picture</value>
+  </data>
+  <data name="btnProfileDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Get profile picture</value>
+  </data>
+  <data name="btnVideoDownloadBrw.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="btnVideoDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Get video</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Nothing found!</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="btnBack.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnForward.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Web Browser</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="btnReloadList.Label" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="btnReloadList.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="mnuOpenFolder.Text" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="PostponeButton" xml:space="preserve">
+    <value>Enqueue</value>
+  </data>
+  <data name="UrlPostponed" xml:space="preserve">
+    <value>Queued for download later</value>
+  </data>
+  <data name="btnPickUrlLabelUID.Label" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="btnPickUrlLabelUID.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="btnClosePopUp.Content" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnDonateImg.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Help the developer, by making one donation</value>
+  </data>
+  <data name="btnPickUrlFromListUID.Label" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="btnPopUpBrowseUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="btnPopUpCopyUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="txtBlockPopUpTitle.Text" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="DonatepopupContent" xml:space="preserve">
+    <value>To protect your privacy, we do not use ads for revenue. So if you have enjoyed my App please consider making a donation towards the cost of keep this App alive!</value>
+  </data>
+  <data name="DonatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Donate 🙂</value>
+  </data>
+  <data name="DonatepopupSecondaryButtonText" xml:space="preserve">
+    <value>Not now 🙁</value>
+  </data>
+  <data name="DonatepopupTitle" xml:space="preserve">
+    <value>Support Developer</value>
+  </data>
+  <data name="txtLblNothingPopUp.Text" xml:space="preserve">
+    <value>Nothing here!</value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>Theme :</value>
+  </data>
+  <data name="chkFullSizeimage.Content" xml:space="preserve">
+    <value>Download the original photo</value>
+  </data>
+  <data name="ErrorProfilePicture" xml:space="preserve">
+    <value>Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
+More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</value>
+  </data>
+  <data name="PinnedBrowserTileMsg" xml:space="preserve">
+    <value>Pinned!</value>
+  </data>
+  <data name="UnPinBrowserTileMsg" xml:space="preserve">
+    <value>UnPinned!</value>
+  </data>
+</root>

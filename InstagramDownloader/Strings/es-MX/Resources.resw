@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMenuText.Content" xml:space="preserve">
+    <value>Acerca</value>
+  </data>
+  <data name="btnClearSelection.Label" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="btnCommandShareFile.Label" xml:space="preserve">
+    <value>Compartir</value>
+  </data>
+  <data name="btnCommandShareFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Compartir</value>
+  </data>
+  <data name="btnCommandViewFile.Label" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="btnCommandViewFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="btnDeleteGrid.Label" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="btnDownload.Label" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="btnDownload.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="btnFeedback.Content" xml:space="preserve">
+    <value>Envia tus comentarios</value>
+  </data>
+  <data name="btnPaste.Label" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="btnPaste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="btnRate.Content" xml:space="preserve">
+    <value>Califica y opina</value>
+  </data>
+  <data name="btnSelectGrid.Label" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="btnSelectPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="btnSelectVideoPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="DownloadCompleted" xml:space="preserve">
+    <value>Descarga completada.</value>
+  </data>
+  <data name="DownloadCompleteToast" xml:space="preserve">
+    <value>Descarga completada</value>
+  </data>
+  <data name="DownloadError" xml:space="preserve">
+    <value>Ha ocurrido un error al descargar el archivo.</value>
+  </data>
+  <data name="DownloadFailedToast" xml:space="preserve">
+    <value>La descarga ha fallado</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Descargando {0}kB de {1}kB</value>
+  </data>
+  <data name="DownloadInitialize" xml:space="preserve">
+    <value>Iniciando…</value>
+  </data>
+  <data name="DownloadMenuText.Content" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="DownloadPaused" xml:space="preserve">
+    <value>Descarga pausada.</value>
+  </data>
+  <data name="ErrorDownloadPicture" xml:space="preserve">
+    <value>Se ha producido un error al intentar descargar la foto.</value>
+  </data>
+  <data name="ErrorDownloadVideo" xml:space="preserve">
+    <value>Se ha producido un error al intentar descargar el video.</value>
+  </data>
+  <data name="ErrorWhenInitialize" xml:space="preserve">
+    <value>Se ha producido un error al intentar iniciar la operacion de descarga.</value>
+  </data>
+  <data name="FailedToRetrieveUrl" xml:space="preserve">
+    <value>Error al recuperar la Url</value>
+  </data>
+  <data name="HistoryMenuText.Content" xml:space="preserve">
+    <value>Historial</value>
+  </data>
+  <data name="InvalidInstagramUrl" xml:space="preserve">
+    <value>URL de Instagram invalido.</value>
+  </data>
+  <data name="mnuCopyShareUrl.Text" xml:space="preserve">
+    <value>Copiar enlace URL</value>
+  </data>
+  <data name="mnuDelete.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="PausedCostedNetwork" xml:space="preserve">
+    <value>Descarga pausada, conexion medida.</value>
+  </data>
+  <data name="PausedNoNetwork" xml:space="preserve">
+    <value>Descarga pausada, no hay conexion a la red.</value>
+  </data>
+  <data name="PictureSuccessfullySaved" xml:space="preserve">
+    <value>Imagen guardada exitosamente.</value>
+  </data>
+  <data name="RatepopupContent" xml:space="preserve">
+    <value>Si te gusta esta aplicacion, por favor toma un momento para calificarla en la tienda de Windows.</value>
+  </data>
+  <data name="RatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Claro, llevame alli</value>
+  </data>
+  <data name="RatepopupSecondaryButtonText" xml:space="preserve">
+    <value>Quizas luego</value>
+  </data>
+  <data name="RatepopupTitle" xml:space="preserve">
+    <value>Califica ProGet Universal</value>
+  </data>
+  <data name="SettingMenuText.Content" xml:space="preserve">
+    <value>Configuracion</value>
+  </data>
+  <data name="ShareUITitle" xml:space="preserve">
+    <value>Compartir ahora</value>
+  </data>
+  <data name="TabPictures.Header" xml:space="preserve">
+    <value>Imagenes</value>
+  </data>
+  <data name="TabVideos.Header" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="TargetFileNotFound" xml:space="preserve">
+    <value>Archivo de destino no encontrado.</value>
+  </data>
+  <data name="toggleActionCenter.Header" xml:space="preserve">
+    <value>Centro de acciones</value>
+  </data>
+  <data name="toggleTheme.Header" xml:space="preserve">
+    <value>Tema oscuro</value>
+  </data>
+  <data name="txtAppearance.Text" xml:space="preserve">
+    <value>Apariencia</value>
+  </data>
+  <data name="txtbgTask.Text" xml:space="preserve">
+    <value>Tarea en Segundo plano</value>
+  </data>
+  <data name="txtChangesTip.Text" xml:space="preserve">
+    <value>* Podras ver los cambios la proxima vez que inicies la aplicacion.</value>
+  </data>
+  <data name="txtPicturesFolder.Text" xml:space="preserve">
+    <value>Carpeta de Imagenes :</value>
+  </data>
+  <data name="txtUrlCaption.Text" xml:space="preserve">
+    <value>Perfil de Instagram o enlace URL :</value>
+  </data>
+  <data name="txtVideosFolder.Text" xml:space="preserve">
+    <value>Carpeta de Videos :</value>
+  </data>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>Se ha producido una excepción no controlada.</value>
+  </data>
+  <data name="VideoSuccessfullySaved" xml:space="preserve">
+    <value>Video guardado exitosamente.</value>
+  </data>
+  <data name="txtStorage.Text" xml:space="preserve">
+    <value>Almacenamiento</value>
+  </data>
+  <data name="btnClearSelection.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="btnDeleteGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="btnSelectGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Acceso denegado</value>
+  </data>
+  <data name="ActionCenterIsntRunning" xml:space="preserve">
+    <value>El centro de acciones no se esta ejecutando, vuelva a activarlo desde la configuración de la aplicación.</value>
+  </data>
+  <data name="appActionCenterCancelMsg" xml:space="preserve">
+    <value>Para mantener la aplicación en ejecución en segundo plano, vuelva a activar el centro de Accion desde la Configuracion.</value>
+  </data>
+  <data name="bgPermissionFailed" xml:space="preserve">
+    <value>No se pudo completar la solicitud. ¡El permiso ha fallado!
+</value>
+  </data>
+  <data name="CancelBtn" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="DeleteBtn" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="DeleteThese" xml:space="preserve">
+    <value>Quieres eliminarlos?</value>
+  </data>
+  <data name="DeleteThis" xml:space="preserve">
+    <value>Quieres eliminar esto?
+</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="DownloadInProgress" xml:space="preserve">
+    <value>Descarga en progreso, espere por favor…</value>
+  </data>
+  <data name="FailedToEnableActionCenter" xml:space="preserve">
+    <value>Error al activar/desactivar la integracion con el centro de acciones.</value>
+  </data>
+  <data name="FailedToLoadData" xml:space="preserve">
+    <value>Error al cargar los datos de usuario.</value>
+  </data>
+  <data name="PasteShareUrl" xml:space="preserve">
+    <value>¡Copiar URL aqui!</value>
+  </data>
+  <data name="dropLangAutomatic.Content" xml:space="preserve">
+    <value>Idioma del sistema</value>
+  </data>
+  <data name="txtLanguage.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="lblGeneralSetting.Text" xml:space="preserve">
+    <value>Portapapeles</value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>Selecciona tu idioma preferido :</value>
+  </data>
+  <data name="toggleClipboard.Header" xml:space="preserve">
+    <value>Pegar URL automaticamente</value>
+  </data>
+  <data name="AboutMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Acerca</value>
+  </data>
+  <data name="BrowserMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Navegador Web</value>
+  </data>
+  <data name="DownloadMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="HistoryMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Historial</value>
+  </data>
+  <data name="SettingMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Configuracion</value>
+  </data>
+  <data name="BrowserMenuText.Content" xml:space="preserve">
+    <value>Navegador Web</value>
+  </data>
+  <data name="btnGo.Content" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="btnGo.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ir</value>
+  </data>
+  <data name="btnPasteBrowser.Label" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="btnPasteBrowser.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Pegar Url</value>
+  </data>
+  <data name="btnPictureDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Obtener imagen</value>
+  </data>
+  <data name="btnProfileDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Obtener foto de perfil</value>
+  </data>
+  <data name="btnVideoDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Obtener video</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>¡No se ha encontrado nada!</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="btnBack.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Atras</value>
+  </data>
+  <data name="btnForward.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Remitir</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Acerca</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Navegador Web</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Historial</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Configuracion</value>
+  </data>
+  <data name="btnReloadList.Label" xml:space="preserve">
+    <value>Recargar</value>
+  </data>
+  <data name="btnReloadList.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Recargar</value>
+  </data>
+  <data name="mnuOpenFolder.Text" xml:space="preserve">
+    <value>Abrir ubicacion del archivo</value>
+  </data>
+  <data name="btnPictureDownloadBrw.Text" xml:space="preserve">
+    <value>Fotografía</value>
+  </data>
+  <data name="btnProfileDownloadBrw.Text" xml:space="preserve">
+    <value>foto de perfil</value>
+  </data>
+  <data name="btnVideoDownloadBrw.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="PostponeButton" xml:space="preserve">
+    <value>Posponer</value>
+  </data>
+  <data name="UrlPostponed" xml:space="preserve">
+    <value>Aplazado!</value>
+  </data>
+  <data name="btnPickUrlLabelUID.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Escoja de la lista aplazado</value>
+  </data>
+  <data name="btnPickUrlLabelUID.Label" xml:space="preserve">
+    <value>Aplazado</value>
+  </data>
+  <data name="btnDonateImg.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ayudan al desarrollador, haciendo una donación</value>
+  </data>
+  <data name="btnPopUpBrowseUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Examinar...</value>
+  </data>
+  <data name="btnPopUpCopyUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="txtBlockPopUpTitle.Text" xml:space="preserve">
+    <value>Aplazado</value>
+  </data>
+  <data name="btnClosePopUp.Content" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="btnPickUrlFromListUID.Label" xml:space="preserve">
+    <value>Aplazado</value>
+  </data>
+  <data name="DonatepopupContent" xml:space="preserve">
+    <value>Para proteger su privacidad, no utilizamos anuncios para ingresos. ¡ así que si usted ha disfrutado de mi aplicación por favor considere hacer una donación hacia el costo de mantener esta aplicación viva!</value>
+  </data>
+  <data name="DonatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Donar 🙂</value>
+  </data>
+  <data name="DonatepopupSecondaryButtonText" xml:space="preserve">
+    <value>ahora no 🙁</value>
+  </data>
+  <data name="DonatepopupTitle" xml:space="preserve">
+    <value>Desarrollador de soporte</value>
+  </data>
+  <data name="txtLblNothingPopUp.Text" xml:space="preserve">
+    <value>¡ Aquí no hay nada!</value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>Tema:</value>
+  </data>
+  <data name="chkFullSizeimage.Content" xml:space="preserve">
+    <value>Descargar resolución de imagen original</value>
+  </data>
+</root>

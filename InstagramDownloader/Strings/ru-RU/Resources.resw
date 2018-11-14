@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMenuText.Content" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="btnClearSelection.Label" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="btnCommandShareFile.Label" xml:space="preserve">
+    <value>Поделиться</value>
+  </data>
+  <data name="btnCommandShareFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Поделиться</value>
+  </data>
+  <data name="btnCommandViewFile.Label" xml:space="preserve">
+    <value>Посмотреть</value>
+  </data>
+  <data name="btnCommandViewFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Посмотреть</value>
+  </data>
+  <data name="btnDeleteGrid.Label" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="btnDownload.Label" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="btnDownload.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="btnFeedback.Content" xml:space="preserve">
+    <value>Отправить отзыв</value>
+  </data>
+  <data name="btnPaste.Label" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="btnPaste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="btnRate.Content" xml:space="preserve">
+    <value>Оценка и отзыв</value>
+  </data>
+  <data name="btnSelectGrid.Label" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="btnSelectPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="btnSelectVideoPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="DownloadCompleted" xml:space="preserve">
+    <value>Загрузка завершена.</value>
+  </data>
+  <data name="DownloadCompleteToast" xml:space="preserve">
+    <value>Загрузка завершена.</value>
+  </data>
+  <data name="DownloadError" xml:space="preserve">
+    <value>Произошла ошибка при загрузке файла.</value>
+  </data>
+  <data name="DownloadFailedToast" xml:space="preserve">
+    <value>Ошибка загрузки</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Загрузка {0} kB  из {1} kB</value>
+  </data>
+  <data name="DownloadInitialize" xml:space="preserve">
+    <value>Инициализация ...</value>
+  </data>
+  <data name="DownloadMenuText.Content" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="DownloadPaused" xml:space="preserve">
+    <value>Загрузка приостановлена.</value>
+  </data>
+  <data name="ErrorDownloadPicture" xml:space="preserve">
+    <value>При загрузке изображения произошла ошибка.</value>
+  </data>
+  <data name="ErrorDownloadVideo" xml:space="preserve">
+    <value>При загрузке видео произошла ошибка.</value>
+  </data>
+  <data name="ErrorWhenInitialize" xml:space="preserve">
+    <value>Произошла ошибка при инициализации операции загрузки.</value>
+  </data>
+  <data name="FailedToRetrieveUrl" xml:space="preserve">
+    <value>Не удалось получить URL.</value>
+  </data>
+  <data name="HistoryMenuText.Content" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="InvalidInstagramUrl" xml:space="preserve">
+    <value>Недопустимый URL-адрес Instagram.</value>
+  </data>
+  <data name="mnuCopyShareUrl.Text" xml:space="preserve">
+    <value>Скопируйте адрес ссылки</value>
+  </data>
+  <data name="mnuDelete.Text" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="PausedCostedNetwork" xml:space="preserve">
+    <value>Загрузка приостановлена.</value>
+  </data>
+  <data name="PausedNoNetwork" xml:space="preserve">
+    <value>Загрузка приостановлена, нет сетевого подключения.</value>
+  </data>
+  <data name="PictureSuccessfullySaved" xml:space="preserve">
+    <value>Изображение успешно сохранено.</value>
+  </data>
+  <data name="RatepopupContent" xml:space="preserve">
+    <value>Если вам нравится это приложение, пожалуйста, оцените его в магазине Windows.</value>
+  </data>
+  <data name="RatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Конечно, отведи меня туда</value>
+  </data>
+  <data name="RatepopupSecondaryButtonText" xml:space="preserve">
+    <value>Может быть позже</value>
+  </data>
+  <data name="RatepopupTitle" xml:space="preserve">
+    <value>Оценить ProGet Universal</value>
+  </data>
+  <data name="SettingMenuText.Content" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="ShareUITitle" xml:space="preserve">
+    <value>Быстрый доступ</value>
+  </data>
+  <data name="TabPictures.Header" xml:space="preserve">
+    <value>Картинки</value>
+  </data>
+  <data name="TabVideos.Header" xml:space="preserve">
+    <value>Видео</value>
+  </data>
+  <data name="TargetFileNotFound" xml:space="preserve">
+    <value>Целевой файл не найден.</value>
+  </data>
+  <data name="toggleActionCenter.Header" xml:space="preserve">
+    <value>Центр событий</value>
+  </data>
+  <data name="toggleTheme.Header" xml:space="preserve">
+    <value>Темная тема</value>
+  </data>
+  <data name="txtAppearance.Text" xml:space="preserve">
+    <value>Внешность</value>
+  </data>
+  <data name="txtbgTask.Text" xml:space="preserve">
+    <value>Фоновая задача</value>
+  </data>
+  <data name="txtChangesTip.Text" xml:space="preserve">
+    <value>* Вы увидите свои изменения при следующем запуске приложения.</value>
+  </data>
+  <data name="txtPicturesFolder.Text" xml:space="preserve">
+    <value>Сохранение изображений в:</value>
+  </data>
+  <data name="txtUrlCaption.Text" xml:space="preserve">
+    <value>Вставить или введите URL изображения или видео:</value>
+  </data>
+  <data name="txtVideosFolder.Text" xml:space="preserve">
+    <value>Сохранить видео в:</value>
+  </data>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>Произошло необработанное исключение.</value>
+  </data>
+  <data name="VideoSuccessfullySaved" xml:space="preserve">
+    <value>Видео успешно сохранено.</value>
+  </data>
+  <data name="txtStorage.Text" xml:space="preserve">
+    <value>Место хранения</value>
+  </data>
+  <data name="btnClearSelection.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="btnDeleteGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="btnSelectGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Доступ закрыт.</value>
+  </data>
+  <data name="ActionCenterIsntRunning" xml:space="preserve">
+    <value>Центр действий не запущен, активируйте его из настроек приложения.</value>
+  </data>
+  <data name="appActionCenterCancelMsg" xml:space="preserve">
+    <value>Чтобы приложение работало в фоновом режиме, активируйте центр действий из настроек.</value>
+  </data>
+  <data name="bgPermissionFailed" xml:space="preserve">
+    <value>Запрос не может быть завершен. Разрешение не удалось!</value>
+  </data>
+  <data name="CancelBtn" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="DeleteBtn" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DeleteThese" xml:space="preserve">
+    <value>Удалить выбранное? </value>
+  </data>
+  <data name="DeleteThis" xml:space="preserve">
+    <value>Удалить?</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="DownloadInProgress" xml:space="preserve">
+    <value>Загрузите, пожалуйста, подождите ...</value>
+  </data>
+  <data name="FailedToEnableActionCenter" xml:space="preserve">
+    <value>Не удалось включить / отключить интеграцию центра действий.</value>
+  </data>
+  <data name="FailedToLoadData" xml:space="preserve">
+    <value>Не удалось загрузить пользовательские данные.</value>
+  </data>
+  <data name="PasteShareUrl" xml:space="preserve">
+    <value>Вставьте URL-адрес здесь!</value>
+  </data>
+  <data name="dropLangAutomatic.Content" xml:space="preserve">
+    <value>Язык системы</value>
+  </data>
+  <data name="txtLanguage.Text" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="lblGeneralSetting.Text" xml:space="preserve">
+    <value>Буфер обмена</value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>Выберите нужный язык:</value>
+  </data>
+  <data name="toggleClipboard.Header" xml:space="preserve">
+    <value>Автоматически вставлять URL-адреса</value>
+  </data>
+  <data name="AboutMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="BrowserMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Веб-браузер</value>
+  </data>
+  <data name="DownloadMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="HistoryMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="SettingMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="BrowserMenuText.Content" xml:space="preserve">
+    <value>Веб-браузер</value>
+  </data>
+  <data name="btnGo.Content" xml:space="preserve">
+    <value>Переход</value>
+  </data>
+  <data name="btnGo.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Переход</value>
+  </data>
+  <data name="btnPasteBrowser.Label" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="btnPasteBrowser.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Вставить ссылку</value>
+  </data>
+  <data name="btnPictureDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Получить изображение</value>
+  </data>
+  <data name="btnProfileDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Получить изображение профиля</value>
+  </data>
+  <data name="btnVideoDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Получить видео</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Ничего не найдено!</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="btnBack.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="btnForward.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Вперед</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Веб-браузер</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="btnReloadList.Label" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="btnReloadList.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="mnuOpenFolder.Text" xml:space="preserve">
+    <value>Расположение файл</value>
+  </data>
+  <data name="btnPictureDownloadBrw.Text" xml:space="preserve">
+    <value>изображение</value>
+  </data>
+  <data name="btnProfileDownloadBrw.Text" xml:space="preserve">
+    <value>изображение профиля</value>
+  </data>
+  <data name="btnVideoDownloadBrw.Text" xml:space="preserve">
+    <value>видео</value>
+  </data>
+  <data name="PostponeButton" xml:space="preserve">
+    <value>Отложить</value>
+  </data>
+  <data name="UrlPostponed" xml:space="preserve">
+    <value>Отложено!</value>
+  </data>
+  <data name="btnPickUrlLabelUID.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Выберите из отложенного списка</value>
+  </data>
+  <data name="btnPickUrlLabelUID.Label" xml:space="preserve">
+    <value>Отложено</value>
+  </data>
+  <data name="btnDonateImg.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Помогите разработчику, сделав одно пожертвование</value>
+  </data>
+  <data name="btnPopUpBrowseUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Обзор...</value>
+  </data>
+  <data name="btnPopUpCopyUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="txtBlockPopUpTitle.Text" xml:space="preserve">
+    <value>Отложено</value>
+  </data>
+  <data name="btnClosePopUp.Content" xml:space="preserve">
+    <value>закрыть</value>
+  </data>
+  <data name="btnPickUrlFromListUID.Label" xml:space="preserve">
+    <value>Отложено</value>
+  </data>
+  <data name="DonatepopupContent" xml:space="preserve">
+    <value>Чтобы защитить вашу конфиденциальность, мы не используем рекламу для получения дохода. Поэтому, если вы наслаждались моим приложением, подумайте о том, чтобы пожертвовать на расходы, чтобы сохранить это приложение в живых!</value>
+  </data>
+  <data name="DonatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Пожертвовать 🙂</value>
+  </data>
+  <data name="DonatepopupSecondaryButtonText" xml:space="preserve">
+    <value>Не сейчас 🙁</value>
+  </data>
+  <data name="DonatepopupTitle" xml:space="preserve">
+    <value>Поддержка разработчиков</value>
+  </data>
+  <data name="txtLblNothingPopUp.Text" xml:space="preserve">
+    <value>Здесь ничего!</value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>Внешний вид Стиль:</value>
+  </data>
+  <data name="chkFullSizeimage.Content" xml:space="preserve">
+    <value>Скачать оригинальное разрешение изображения</value>
+  </data>
+</root>

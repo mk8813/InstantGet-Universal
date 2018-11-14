@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="pt-BR" original="INSTAGRAMDOWNLOADER/STRINGS/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="INSTAGRAMDOWNLOADER/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="AboutMenuText.Content" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">Sobre</target>
+        </trans-unit>
+        <trans-unit id="btnClearSelection.Label" translate="yes" xml:space="preserve">
+          <source>Clear</source>
+          <target state="translated">Limpar</target>
+        </trans-unit>
+        <trans-unit id="btnCommandShareFile.Label" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="translated">Compartilhar</target>
+        </trans-unit>
+        <trans-unit id="btnCommandShareFile.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="translated">Compartilhar</target>
+        </trans-unit>
+        <trans-unit id="btnCommandViewFile.Label" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="translated">Visualizar (or Ver)</target>
+        </trans-unit>
+        <trans-unit id="btnCommandViewFile.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="translated">Visualizar (or Ver)</target>
+        </trans-unit>
+        <trans-unit id="btnDeleteGrid.Label" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Apagar</target>
+        </trans-unit>
+        <trans-unit id="btnDownload.Label" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">Baixar</target>
+        </trans-unit>
+        <trans-unit id="btnDownload.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">Baixar</target>
+        </trans-unit>
+        <trans-unit id="btnFeedback.Content" translate="yes" xml:space="preserve">
+          <source>Send Feedback</source>
+          <target state="translated">Enviar Comentário</target>
+        </trans-unit>
+        <trans-unit id="btnPaste.Label" translate="yes" xml:space="preserve">
+          <source>Paste</source>
+          <target state="translated">Colar</target>
+        </trans-unit>
+        <trans-unit id="btnPaste.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Paste</source>
+          <target state="translated">Colar</target>
+        </trans-unit>
+        <trans-unit id="btnRate.Content" translate="yes" xml:space="preserve">
+          <source>Rate and review</source>
+          <target state="translated">Classificar e comentar</target>
+        </trans-unit>
+        <trans-unit id="btnSelectGrid.Label" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">Selecionar</target>
+        </trans-unit>
+        <trans-unit id="btnSelectPath.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">Selecionar</target>
+        </trans-unit>
+        <trans-unit id="btnSelectVideoPath.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">Selecionar</target>
+        </trans-unit>
+        <trans-unit id="DownloadCompleted" translate="yes" xml:space="preserve">
+          <source>Download completed.</source>
+          <target state="translated">Arquivo baixado.</target>
+        </trans-unit>
+        <trans-unit id="DownloadCompleteToast" translate="yes" xml:space="preserve">
+          <source>Download completed</source>
+          <target state="translated">Arquivo baixado.</target>
+        </trans-unit>
+        <trans-unit id="DownloadError" translate="yes" xml:space="preserve">
+          <source>An error occured while downloading the file.</source>
+          <target state="translated">Ocorreu um erro enquanto o arquivo estava sendo baixado.</target>
+        </trans-unit>
+        <trans-unit id="DownloadFailedToast" translate="yes" xml:space="preserve">
+          <source>Download failed</source>
+          <target state="translated">Erro ao baixar</target>
+        </trans-unit>
+        <trans-unit id="Downloading" translate="yes" xml:space="preserve">
+          <source>Downloading {0}kB of {1}kB</source>
+          <target state="translated">Baixando {0} KB de {1} KB</target>
+        </trans-unit>
+        <trans-unit id="DownloadInitialize" translate="yes" xml:space="preserve">
+          <source>Initializing...</source>
+          <target state="translated">Iniciando…</target>
+        </trans-unit>
+        <trans-unit id="DownloadMenuText.Content" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">Baixar</target>
+        </trans-unit>
+        <trans-unit id="DownloadPaused" translate="yes" xml:space="preserve">
+          <source>Download paused.</source>
+          <target state="translated">Download pausado.</target>
+        </trans-unit>
+        <trans-unit id="ErrorDownloadPicture" translate="yes" xml:space="preserve">
+          <source>An error occurred while downloading the picture.</source>
+          <target state="translated">Ocorreu um erro enquanto a imagem estava sendo baixada.</target>
+        </trans-unit>
+        <trans-unit id="ErrorDownloadVideo" translate="yes" xml:space="preserve">
+          <source>An error occurred while downloading the video.</source>
+          <target state="translated">Ocorreu um erro enquanto o vídeo estava sendo baixado.</target>
+        </trans-unit>
+        <trans-unit id="ErrorWhenInitialize" translate="yes" xml:space="preserve">
+          <source>An error occurred while initializing the download operation.</source>
+          <target state="translated">Ocorreu um erro enquanto inicializava a solicitação para baixar.</target>
+        </trans-unit>
+        <trans-unit id="FailedToRetrieveUrl" translate="yes" xml:space="preserve">
+          <source>Failed to retrieve the Url.</source>
+          <target state="translated">Falha ao recuperar o Link.</target>
+        </trans-unit>
+        <trans-unit id="HistoryMenuText.Content" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">Histórico</target>
+        </trans-unit>
+        <trans-unit id="InvalidInstagramUrl" translate="yes" xml:space="preserve">
+          <source>Invalid Instagram URL.</source>
+          <target state="translated">Link Inválido do Instagram.</target>
+        </trans-unit>
+        <trans-unit id="mnuCopyShareUrl.Text" translate="yes" xml:space="preserve">
+          <source>Copy Share URL</source>
+          <target state="translated">Copiar/Compartilhar Link</target>
+        </trans-unit>
+        <trans-unit id="mnuDelete.Text" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Apagar</target>
+        </trans-unit>
+        <trans-unit id="PausedCostedNetwork" translate="yes" xml:space="preserve">
+          <source>Download paused, Metered connection.</source>
+          <target state="translated">Download pausado, conexão limitada.</target>
+        </trans-unit>
+        <trans-unit id="PausedNoNetwork" translate="yes" xml:space="preserve">
+          <source>Download paused, No network connection.</source>
+          <target state="translated">Download pausado, sem conexão à Internet.</target>
+        </trans-unit>
+        <trans-unit id="pgMain.FlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="new">LeftToRight</target>
+        </trans-unit>
+        <trans-unit id="PictureSuccessfullySaved" translate="yes" xml:space="preserve">
+          <source>Picture successfully saved.</source>
+          <target state="translated">Imagem salva com sucesso.</target>
+        </trans-unit>
+        <trans-unit id="RatepopupContent" translate="yes" xml:space="preserve">
+          <source>If you like this app, please take a moment to rate it in the Windows store.</source>
+          <target state="translated">Se você gostou do aplicativo, por favor, reserve um momento para classificá-lo na Loja do Windows (da Microsoft)</target>
+        </trans-unit>
+        <trans-unit id="RatepopupPrimaryButtonText" translate="yes" xml:space="preserve">
+          <source>Sure, take me there</source>
+          <target state="translated">Sim, leve-me até lá.</target>
+        </trans-unit>
+        <trans-unit id="RatepopupSecondaryButtonText" translate="yes" xml:space="preserve">
+          <source>Maybe later</source>
+          <target state="translated">Talvez depois</target>
+        </trans-unit>
+        <trans-unit id="RatepopupTitle" translate="yes" xml:space="preserve">
+          <source>Rate InstantGet Universal</source>
+          <target state="needs-review-translation">Classificar o ProGet Universal</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="SettingMenuText.Content" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Configurações</target>
+        </trans-unit>
+        <trans-unit id="ShareUITitle" translate="yes" xml:space="preserve">
+          <source>Quick share</source>
+          <target state="translated">Compartilhar rapidamente</target>
+        </trans-unit>
+        <trans-unit id="TabPictures.Header" translate="yes" xml:space="preserve">
+          <source>Pictures</source>
+          <target state="translated">Imagens</target>
+        </trans-unit>
+        <trans-unit id="TabVideos.Header" translate="yes" xml:space="preserve">
+          <source>Videos</source>
+          <target state="translated">Vídeos</target>
+        </trans-unit>
+        <trans-unit id="TargetFileNotFound" translate="yes" xml:space="preserve">
+          <source>Target file not found.</source>
+          <target state="translated">Arquivo não encontrado.</target>
+        </trans-unit>
+        <trans-unit id="toggleActionCenter.Header" translate="yes" xml:space="preserve">
+          <source>Action center</source>
+          <target state="translated">Central de ações</target>
+        </trans-unit>
+        <trans-unit id="toggleTheme.Header" translate="yes" xml:space="preserve">
+          <source>Dark theme</source>
+          <target state="translated">Tema Escuro</target>
+        </trans-unit>
+        <trans-unit id="txtAppearance.Text" translate="yes" xml:space="preserve">
+          <source>Appearance</source>
+          <target state="translated">Aparência</target>
+        </trans-unit>
+        <trans-unit id="txtbgTask.Text" translate="yes" xml:space="preserve">
+          <source>Background task</source>
+          <target state="translated">Trabalho em Segundo Plano</target>
+        </trans-unit>
+        <trans-unit id="txtChangesTip.Text" translate="yes" xml:space="preserve">
+          <source>* You will see your changes the next time you start the app.</source>
+          <target state="translated">* Você verá as mudanças da próxima vez que iniciar o aplicativo.</target>
+        </trans-unit>
+        <trans-unit id="txtPicturesFolder.Text" translate="yes" xml:space="preserve">
+          <source>Pictures Folder :</source>
+          <target state="translated">Pasta das Imagens :</target>
+        </trans-unit>
+        <trans-unit id="txtUrlCaption.Text" translate="yes" xml:space="preserve">
+          <source>Instagram Share URL :</source>
+          <target state="needs-review-translation">Perfil do Instagram ou Colar Link :</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="txtVideosFolder.Text" translate="yes" xml:space="preserve">
+          <source>Videos Folder :</source>
+          <target state="translated">Pasta dos Vídeos :</target>
+        </trans-unit>
+        <trans-unit id="UnhandledException" translate="yes" xml:space="preserve">
+          <source>An unhandled exception has occurred.</source>
+          <target state="translated">Ocorreu um erro insustentável.</target>
+        </trans-unit>
+        <trans-unit id="VideoSuccessfullySaved" translate="yes" xml:space="preserve">
+          <source>Video successfully saved.</source>
+          <target state="translated">Vídeo salvo com sucesso.</target>
+        </trans-unit>
+        <trans-unit id="txtStorage.Text" translate="yes" xml:space="preserve">
+          <source>Storage</source>
+          <target state="translated">Armazenamento</target>
+        </trans-unit>
+        <trans-unit id="btnClearSelection.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Clear</source>
+          <target state="translated">Limpar</target>
+        </trans-unit>
+        <trans-unit id="btnDeleteGrid.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Apagar</target>
+        </trans-unit>
+        <trans-unit id="btnSelectGrid.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">Selecionar</target>
+        </trans-unit>
+        <trans-unit id="AccessDenied" translate="yes" xml:space="preserve">
+          <source>Access denied.</source>
+          <target state="translated">Acesso Negado.</target>
+        </trans-unit>
+        <trans-unit id="ActionCenterIsntRunning" translate="yes" xml:space="preserve">
+          <source>Action center isn't running, reactivate it from app Settings.</source>
+          <target state="translated">Central de Ações não está funcionando, reative no aplicativo de Configurações</target>
+        </trans-unit>
+        <trans-unit id="appActionCenterCancelMsg" translate="yes" xml:space="preserve">
+          <source>To keep the app running in the background reactivate the Action center from the Settings.</source>
+          <target state="translated">Para manter o aplicativo rodando em Segundo plano, reative a central de ações em Configurações.</target>
+        </trans-unit>
+        <trans-unit id="bgPermissionFailed" translate="yes" xml:space="preserve">
+          <source>Request couldn't be completed. Permission failed!</source>
+          <target state="translated">Solicitação não completada. Não permitido!</target>
+        </trans-unit>
+        <trans-unit id="CancelBtn" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Cancelar</target>
+        </trans-unit>
+        <trans-unit id="DeleteBtn" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Apagar</target>
+        </trans-unit>
+        <trans-unit id="DeleteThese" translate="yes" xml:space="preserve">
+          <source>Delete these?</source>
+          <target state="translated">Deletar esses?</target>
+        </trans-unit>
+        <trans-unit id="DeleteThis" translate="yes" xml:space="preserve">
+          <source>Delete this?</source>
+          <target state="translated">Deletar isso?</target>
+        </trans-unit>
+        <trans-unit id="DownloadButton" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">Baixar</target>
+        </trans-unit>
+        <trans-unit id="DownloadInProgress" translate="yes" xml:space="preserve">
+          <source>Download in progress, please wait...</source>
+          <target state="translated">Download em progresso, por favor, aguarde...</target>
+        </trans-unit>
+        <trans-unit id="FailedToEnableActionCenter" translate="yes" xml:space="preserve">
+          <source>Failed to enable/disable Action center integration.</source>
+          <target state="translated">Falha ao ativar/desativar a integração com a central de ações.</target>
+        </trans-unit>
+        <trans-unit id="FailedToLoadData" translate="yes" xml:space="preserve">
+          <source>Failed to load user data.</source>
+          <target state="translated">Falha ao carregar os dados do usuário.</target>
+        </trans-unit>
+        <trans-unit id="PasteShareUrl" translate="yes" xml:space="preserve">
+          <source>Paste URL here!</source>
+          <target state="translated">Cole o Link aqui!</target>
+        </trans-unit>
+        <trans-unit id="dropLangAutomatic.Content" translate="yes" xml:space="preserve">
+          <source>System Language</source>
+          <target state="translated">Idioma do Sistema</target>
+        </trans-unit>
+        <trans-unit id="txtLanguage.Text" translate="yes" xml:space="preserve">
+          <source>Language</source>
+          <target state="translated">Idioma</target>
+        </trans-unit>
+        <trans-unit id="lblGeneralSetting.Text" translate="yes" xml:space="preserve">
+          <source>Clipboard</source>
+          <target state="translated">Prancheta</target>
+        </trans-unit>
+        <trans-unit id="lblLanguage.Text" translate="yes" xml:space="preserve">
+          <source>Select your preferred language :</source>
+          <target state="translated">Selecione o idioma desejado:</target>
+        </trans-unit>
+        <trans-unit id="toggleClipboard.Header" translate="yes" xml:space="preserve">
+          <source>Automatically paste URLs</source>
+          <target state="translated">Colar Links automaticamente</target>
+        </trans-unit>
+        <trans-unit id="AboutMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">Sobre</target>
+        </trans-unit>
+        <trans-unit id="BrowserMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Web Browser</source>
+          <target state="translated">Navegador Web</target>
+        </trans-unit>
+        <trans-unit id="DownloadMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">Baixar</target>
+        </trans-unit>
+        <trans-unit id="HistoryMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">Histórico</target>
+        </trans-unit>
+        <trans-unit id="SettingMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Configurações</target>
+        </trans-unit>
+        <trans-unit id="BrowserMenuText.Content" translate="yes" xml:space="preserve">
+          <source>Web Browser</source>
+          <target state="translated">Navegador Web</target>
+        </trans-unit>
+        <trans-unit id="btnGo.Content" translate="yes" xml:space="preserve">
+          <source>Go</source>
+          <target state="translated">Ir </target>
+        </trans-unit>
+        <trans-unit id="btnGo.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Go</source>
+          <target state="translated">Ir </target>
+        </trans-unit>
+        <trans-unit id="btnPasteBrowser.Label" translate="yes" xml:space="preserve">
+          <source>Paste</source>
+          <target state="translated">Colar</target>
+        </trans-unit>
+        <trans-unit id="btnPasteBrowser.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Paste Url</source>
+          <target state="translated">Colar Link</target>
+        </trans-unit>
+        <trans-unit id="btnPictureDownloadBrw.Text" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Imagem</target>
+        </trans-unit>
+        <trans-unit id="btnPictureDownloadBrw.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Get picture</source>
+          <target state="translated">Obtenha a Imagem</target>
+        </trans-unit>
+        <trans-unit id="btnProfileDownloadBrw.Text" translate="yes" xml:space="preserve">
+          <source>Profile picture</source>
+          <target state="translated">Foto do perfil</target>
+        </trans-unit>
+        <trans-unit id="btnProfileDownloadBrw.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Get profile picture</source>
+          <target state="translated">Obtenha a foto de perfil</target>
+        </trans-unit>
+        <trans-unit id="btnVideoDownloadBrw.Text" translate="yes" xml:space="preserve">
+          <source>Video</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Vídeo</target>
+        </trans-unit>
+        <trans-unit id="btnVideoDownloadBrw.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Get video</source>
+          <target state="translated">Obtenha o vídeo</target>
+        </trans-unit>
+        <trans-unit id="NothingFound" translate="yes" xml:space="preserve">
+          <source>Nothing found!</source>
+          <target state="translated">Não encontrado!</target>
+        </trans-unit>
+        <trans-unit id="Version" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="translated">Versão</target>
+        </trans-unit>
+        <trans-unit id="btnBack.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">Voltar</target>
+        </trans-unit>
+        <trans-unit id="btnForward.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Forward</source>
+          <target state="translated">Avançar</target>
+        </trans-unit>
+        <trans-unit id="About" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">Sobre</target>
+        </trans-unit>
+        <trans-unit id="Browser" translate="yes" xml:space="preserve">
+          <source>Web Browser</source>
+          <target state="translated">Navegador Web</target>
+        </trans-unit>
+        <trans-unit id="Download" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">Baixar</target>
+        </trans-unit>
+        <trans-unit id="History" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">Histórico</target>
+        </trans-unit>
+        <trans-unit id="Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Configurações</target>
+        </trans-unit>
+        <trans-unit id="btnReloadList.Label" translate="yes" xml:space="preserve">
+          <source>Refresh</source>
+          <target state="translated">Atualizar</target>
+        </trans-unit>
+        <trans-unit id="btnReloadList.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Refresh</source>
+          <target state="translated">Atualizar</target>
+        </trans-unit>
+        <trans-unit id="mnuOpenFolder.Text" translate="yes" xml:space="preserve">
+          <source>Open file location</source>
+          <target state="translated">Abrir localização do arquivo</target>
+        </trans-unit>
+        <trans-unit id="PostponeButton" translate="yes" xml:space="preserve">
+          <source>Enqueue</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiar</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="UrlPostponed" translate="yes" xml:space="preserve">
+          <source>Queued for download later</source>
+          <target state="needs-review-translation">Adiado!</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnPickUrlLabelUID.Label" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiado</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnPickUrlLabelUID.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation">Escolha da lista adiada</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnClosePopUp.Content" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Fechar</target>
+        </trans-unit>
+        <trans-unit id="btnDonateImg.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Help the developer, by making one donation</source>
+          <target state="translated">Ajude o desenvolvedor, fazendo uma doação</target>
+        </trans-unit>
+        <trans-unit id="btnPopUpBrowseUrl.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Browse...</source>
+          <target state="translated">Procurar...</target>
+        </trans-unit>
+        <trans-unit id="btnPopUpCopyUrl.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Copy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Copia</target>
+        </trans-unit>
+        <trans-unit id="txtBlockPopUpTitle.Text" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiado</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnPickUrlFromListUID.Label" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiado</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="DonatepopupContent" translate="yes" xml:space="preserve">
+          <source>To protect your privacy, we do not use ads for revenue. So if you have enjoyed my App please consider making a donation towards the cost of keep this App alive!</source>
+          <target state="translated">Para proteger sua privacidade, não usamos anúncios de receita. Então, se você gostou do meu aplicativo, considere fazer uma doação para o custo de manter este aplicativo vivo!</target>
+        </trans-unit>
+        <trans-unit id="DonatepopupPrimaryButtonText" translate="yes" xml:space="preserve">
+          <source>Donate 🙂</source>
+          <target state="translated">Doe 🙂</target>
+        </trans-unit>
+        <trans-unit id="DonatepopupSecondaryButtonText" translate="yes" xml:space="preserve">
+          <source>Not now 🙁</source>
+          <target state="translated">Não agora 🙁</target>
+        </trans-unit>
+        <trans-unit id="DonatepopupTitle" translate="yes" xml:space="preserve">
+          <source>Support Developer</source>
+          <target state="translated">Desenvolvedor de suporte</target>
+        </trans-unit>
+        <trans-unit id="txtLblNothingPopUp.Text" translate="yes" xml:space="preserve">
+          <source>Nothing here!</source>
+          <target state="translated">Nada aqui!</target>
+        </trans-unit>
+        <trans-unit id="lblTheme.Text" translate="yes" xml:space="preserve">
+          <source>Theme :</source>
+          <target state="translated">Tema:</target>
+        </trans-unit>
+        <trans-unit id="chkFullSizeimage.Content" translate="yes" xml:space="preserve">
+          <source>Download the original photo</source>
+          <target state="needs-review-translation">Baixe a resolução da imagem original</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ErrorProfilePicture" translate="yes" xml:space="preserve">
+          <source>Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
+More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</source>
+          <target state="new">Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
+More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</target>
+        </trans-unit>
+        <trans-unit id="PinnedBrowserTileMsg" translate="yes" xml:space="preserve">
+          <source>Pinned!</source>
+          <target state="new">Pinned!</target>
+        </trans-unit>
+        <trans-unit id="UnPinBrowserTileMsg" translate="yes" xml:space="preserve">
+          <source>UnPinned!</source>
+          <target state="new">UnPinned!</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

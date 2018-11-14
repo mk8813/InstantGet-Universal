@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMenuText.Content" xml:space="preserve">
+    <value>حول</value>
+  </data>
+  <data name="btnClearSelection.Label" xml:space="preserve">
+    <value>محو</value>
+  </data>
+  <data name="btnCommandShareFile.Label" xml:space="preserve">
+    <value>شارك</value>
+  </data>
+  <data name="btnCommandShareFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>شارك</value>
+  </data>
+  <data name="btnCommandViewFile.Label" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="btnCommandViewFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="btnDeleteGrid.Label" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="btnDownload.Label" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="btnDownload.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="btnFeedback.Content" xml:space="preserve">
+    <value>ارسل ملاحظات </value>
+  </data>
+  <data name="btnPaste.Label" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="btnPaste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="btnRate.Content" xml:space="preserve">
+    <value>التقييم والمراجعة</value>
+  </data>
+  <data name="btnSelectGrid.Label" xml:space="preserve">
+    <value>اختر</value>
+  </data>
+  <data name="btnSelectPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>اختر</value>
+  </data>
+  <data name="btnSelectVideoPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>اختر</value>
+  </data>
+  <data name="DownloadCompleted" xml:space="preserve">
+    <value>اكتمل التنزيل.</value>
+  </data>
+  <data name="DownloadCompleteToast" xml:space="preserve">
+    <value>اكتمل التنزيل.</value>
+  </data>
+  <data name="DownloadError" xml:space="preserve">
+    <value>حدث خطأ أثناء تنزيل الملف.</value>
+  </data>
+  <data name="DownloadFailedToast" xml:space="preserve">
+    <value>فشل التنزيل</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>يتم تنزيل {0} كيلوبايت من {1} كيلوبايت</value>
+  </data>
+  <data name="DownloadInitialize" xml:space="preserve">
+    <value>جار التهيئة..</value>
+  </data>
+  <data name="DownloadMenuText.Content" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="DownloadPaused" xml:space="preserve">
+    <value>تم إيقاف التزيل مؤقتاً.</value>
+  </data>
+  <data name="ErrorDownloadPicture" xml:space="preserve">
+    <value>حدث خطأ أثناء تنزيل الصورة. </value>
+  </data>
+  <data name="ErrorDownloadVideo" xml:space="preserve">
+    <value>حدث خطأ أثناء تنزيل الفيديو. </value>
+  </data>
+  <data name="ErrorWhenInitialize" xml:space="preserve">
+    <value>حدث خطأ أثناء تهيئة عملية التنزيل. </value>
+  </data>
+  <data name="FailedToRetrieveUrl" xml:space="preserve">
+    <value>فشل استرداد الرابط</value>
+  </data>
+  <data name="HistoryMenuText.Content" xml:space="preserve">
+    <value>السجل</value>
+  </data>
+  <data name="InvalidInstagramUrl" xml:space="preserve">
+    <value>رابط غير صحيح.</value>
+  </data>
+  <data name="mnuCopyShareUrl.Text" xml:space="preserve">
+    <value>نسخ الرابط من الحافظة </value>
+  </data>
+  <data name="mnuDelete.Text" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="PausedCostedNetwork" xml:space="preserve">
+    <value>تم إيقاف التزيل مؤقتاً، الإتصال محدود.</value>
+  </data>
+  <data name="PausedNoNetwork" xml:space="preserve">
+    <value>تم إيقاف التزيل مؤقتاً، لا يوجد إتصال.</value>
+  </data>
+  <data name="pgMain.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="PictureSuccessfullySaved" xml:space="preserve">
+    <value>تم حفظ الصورة بنجاح.</value>
+  </data>
+  <data name="RatepopupContent" xml:space="preserve">
+    <value>لو أعجبك التطبيق، رجائاً خذ من وقتك لحظة لتقييم التطبيق على متجر مايكروسوفت. </value>
+  </data>
+  <data name="RatepopupPrimaryButtonText" xml:space="preserve">
+    <value>بالتأكيد، خذني إلى هناك</value>
+  </data>
+  <data name="RatepopupSecondaryButtonText" xml:space="preserve">
+    <value>ربما لاحقا</value>
+  </data>
+  <data name="RatepopupTitle" xml:space="preserve">
+    <value>قيّم تطبيق بروجت يونيفرسال </value>
+  </data>
+  <data name="SettingMenuText.Content" xml:space="preserve">
+    <value>الإعدادات </value>
+  </data>
+  <data name="ShareUITitle" xml:space="preserve">
+    <value>مشاركة سريعة</value>
+  </data>
+  <data name="TabPictures.Header" xml:space="preserve">
+    <value>الصور </value>
+  </data>
+  <data name="TabVideos.Header" xml:space="preserve">
+    <value>الفيديوهات </value>
+  </data>
+  <data name="TargetFileNotFound" xml:space="preserve">
+    <value>لم يتم العثور علي الملف الهدف.</value>
+  </data>
+  <data name="toggleActionCenter.Header" xml:space="preserve">
+    <value>مركز الإشعارات</value>
+  </data>
+  <data name="toggleTheme.Header" xml:space="preserve">
+    <value>الوضع الليلي</value>
+  </data>
+  <data name="txtAppearance.Text" xml:space="preserve">
+    <value>المظهر</value>
+  </data>
+  <data name="txtbgTask.Text" xml:space="preserve">
+    <value>العمل في الخلفية </value>
+  </data>
+  <data name="txtChangesTip.Text" xml:space="preserve">
+    <value>* سوف يتم تطبيق التغييرات عند إعادة تشغيل التطبيق.</value>
+  </data>
+  <data name="txtPicturesFolder.Text" xml:space="preserve">
+    <value>مجلد الصور:</value>
+  </data>
+  <data name="txtUrlCaption.Text" xml:space="preserve">
+    <value>الصق رابط حساب أو منشور:</value>
+  </data>
+  <data name="txtVideosFolder.Text" xml:space="preserve">
+    <value>مجلد الفيديوهات:</value>
+  </data>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>حدث اعتراض غير معالج.</value>
+  </data>
+  <data name="VideoSuccessfullySaved" xml:space="preserve">
+    <value>تم حفظ الفيديو بنجاح.</value>
+  </data>
+  <data name="txtStorage.Text" xml:space="preserve">
+    <value>الذاكرة</value>
+  </data>
+  <data name="btnClearSelection.ToolTipService.ToolTip" xml:space="preserve">
+    <value>محو</value>
+  </data>
+  <data name="btnDeleteGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="btnSelectGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>اختر</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>تم رفض الوصول.</value>
+  </data>
+  <data name="ActionCenterIsntRunning" xml:space="preserve">
+    <value>مركز الإشعارات لا يعمل، أعد تشغيله من إعدادات التطبيق. </value>
+  </data>
+  <data name="appActionCenterCancelMsg" xml:space="preserve">
+    <value>للحفاظ علي تشغيل التطبيق في الخلفية أعد تنشيط مركز الإشعارات من الإعدادات.</value>
+  </data>
+  <data name="bgPermissionFailed" xml:space="preserve">
+    <value>تعذر إكمال الطلب. فشل في الصلاحية!</value>
+  </data>
+  <data name="CancelBtn" xml:space="preserve">
+    <value>إلغاء </value>
+  </data>
+  <data name="DeleteBtn" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DeleteThese" xml:space="preserve">
+    <value>هل تريد حذفها؟</value>
+  </data>
+  <data name="DeleteThis" xml:space="preserve">
+    <value>حذف هذا؟</value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="DownloadInProgress" xml:space="preserve">
+    <value>يتم الآن التنزيل، الرجاء الانتظار..</value>
+  </data>
+  <data name="FailedToEnableActionCenter" xml:space="preserve">
+    <value>فشل تمكين/تعطيل دمج مركز الإشعارات.</value>
+  </data>
+  <data name="FailedToLoadData" xml:space="preserve">
+    <value>فشل تحميل بيانات المستخدم.</value>
+  </data>
+  <data name="PasteShareUrl" xml:space="preserve">
+    <value>الصق الرابط هنا!</value>
+  </data>
+  <data name="dropLangAutomatic.Content" xml:space="preserve">
+    <value>لغة النظام</value>
+  </data>
+  <data name="txtLanguage.Text" xml:space="preserve">
+    <value>اللغة </value>
+  </data>
+  <data name="lblGeneralSetting.Text" xml:space="preserve">
+    <value>الحافظة</value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>اختر لغتك المفضلة:</value>
+  </data>
+  <data name="toggleClipboard.Header" xml:space="preserve">
+    <value>لصق الروابط تلقائياً</value>
+  </data>
+  <data name="AboutMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>حول</value>
+  </data>
+  <data name="BrowserMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>متصفح الويب </value>
+  </data>
+  <data name="DownloadMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="HistoryMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>السجل</value>
+  </data>
+  <data name="SettingMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>الإعدادات </value>
+  </data>
+  <data name="BrowserMenuText.Content" xml:space="preserve">
+    <value>متصفح الويب </value>
+  </data>
+  <data name="btnGo.Content" xml:space="preserve">
+    <value>اذهب</value>
+  </data>
+  <data name="btnGo.ToolTipService.ToolTip" xml:space="preserve">
+    <value>اذهب</value>
+  </data>
+  <data name="btnPasteBrowser.Label" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="btnPasteBrowser.ToolTipService.ToolTip" xml:space="preserve">
+    <value>لصق الرابط</value>
+  </data>
+  <data name="btnPictureDownloadBrw.Text" xml:space="preserve">
+    <value>صورة</value>
+  </data>
+  <data name="btnPictureDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تنزيل الصورة</value>
+  </data>
+  <data name="btnProfileDownloadBrw.Text" xml:space="preserve">
+    <value>الصورة الشخصية </value>
+  </data>
+  <data name="btnProfileDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تنزيل الصورة الشخصية </value>
+  </data>
+  <data name="btnVideoDownloadBrw.Text" xml:space="preserve">
+    <value>فيديو </value>
+  </data>
+  <data name="btnVideoDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تنزيل الفيديو </value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>لم يتم العثور على شيء!</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
+  <data name="btnBack.ToolTipService.ToolTip" xml:space="preserve">
+    <value>رجوع</value>
+  </data>
+  <data name="btnForward.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تحويل</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>حول</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>متصفح الويب </value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>السجل</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>الإعدادات </value>
+  </data>
+  <data name="btnReloadList.Label" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="btnReloadList.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="mnuOpenFolder.Text" xml:space="preserve">
+    <value>فتح موقع الملف </value>
+  </data>
+  <data name="PostponeButton" xml:space="preserve">
+    <value>تأجيل</value>
+  </data>
+  <data name="UrlPostponed" xml:space="preserve">
+    <value>أُجِّل!</value>
+  </data>
+  <data name="btnPickUrlLabelUID.Label" xml:space="preserve">
+    <value>مؤجل</value>
+  </data>
+  <data name="btnPickUrlLabelUID.ToolTipService.ToolTip" xml:space="preserve">
+    <value>اختر من القائمة المؤجلة</value>
+  </data>
+  <data name="btnClosePopUp.Content" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="btnDonateImg.ToolTipService.ToolTip" xml:space="preserve">
+    <value>ادعم المطور بتبرع</value>
+  </data>
+  <data name="btnPickUrlFromListUID.Label" xml:space="preserve">
+    <value>مؤجل</value>
+  </data>
+  <data name="btnPopUpBrowseUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>تصفح...</value>
+  </data>
+  <data name="btnPopUpCopyUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>نسخ</value>
+  </data>
+  <data name="txtBlockPopUpTitle.Text" xml:space="preserve">
+    <value>مؤجل</value>
+  </data>
+  <data name="DonatepopupContent" xml:space="preserve">
+    <value>لحماية خصوصيتك، نحن لا نستخدم الإعلانات للربح. لذلك إن أعجبك تطبيقنا نرجو منكم الدعم بالتبرع للحفاظ على تطوير التطبيق!</value>
+  </data>
+  <data name="DonatepopupPrimaryButtonText" xml:space="preserve">
+    <value>تبرع 🙂</value>
+  </data>
+  <data name="DonatepopupSecondaryButtonText" xml:space="preserve">
+    <value>ليس الآن 🙁</value>
+  </data>
+  <data name="DonatepopupTitle" xml:space="preserve">
+    <value>دعم المطور</value>
+  </data>
+  <data name="txtLblNothingPopUp.Text" xml:space="preserve">
+    <value>لا يوجد شيء هنا! </value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>الموضوع:</value>
+  </data>
+  <data name="chkFullSizeimage.Content" xml:space="preserve">
+    <value>تحميل دقة الصورة الأصلية</value>
+  </data>
+</root>

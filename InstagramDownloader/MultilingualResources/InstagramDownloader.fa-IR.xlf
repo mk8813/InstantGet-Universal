@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fa-IR" original="INSTAGRAMDOWNLOADER/STRINGS/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1795.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="INSTAGRAMDOWNLOADER/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="DownloadMenuText.Content" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">دریافت</target>
+        </trans-unit>
+        <trans-unit id="AboutMenuText.Content" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">درباره</target>
+        </trans-unit>
+        <trans-unit id="HistoryMenuText.Content" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">تاریخچه</target>
+        </trans-unit>
+        <trans-unit id="SettingMenuText.Content" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">تنظیمات</target>
+        </trans-unit>
+        <trans-unit id="pgMain.FlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">RightToLeft</target>
+        </trans-unit>
+        <trans-unit id="btnFeedback.Content" translate="yes" xml:space="preserve">
+          <source>Send Feedback</source>
+          <target state="translated">ارسال بازخورد</target>
+        </trans-unit>
+        <trans-unit id="btnRate.Content" translate="yes" xml:space="preserve">
+          <source>Rate and review</source>
+          <target state="translated">امتیازدهی و ثبت دیدگاه</target>
+        </trans-unit>
+        <trans-unit id="mnuCopyShareUrl.Text" translate="yes" xml:space="preserve">
+          <source>Copy Share URL</source>
+          <target state="translated">کپی آدرس اینستاگرام</target>
+        </trans-unit>
+        <trans-unit id="mnuDelete.Text" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">حذف</target>
+        </trans-unit>
+        <trans-unit id="btnClearSelection.Label" translate="yes" xml:space="preserve">
+          <source>Clear</source>
+          <target state="translated">برداشتن</target>
+        </trans-unit>
+        <trans-unit id="btnDeleteGrid.Label" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">حذف</target>
+        </trans-unit>
+        <trans-unit id="btnSelectGrid.Label" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">انتخاب</target>
+        </trans-unit>
+        <trans-unit id="txtUrlCaption.Text" translate="yes" xml:space="preserve">
+          <source>Instagram Share URL :</source>
+          <target state="needs-review-translation">آدرس پست یا پروفایل کاربر اینستاگرام :</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="DownloadCompleted" translate="yes" xml:space="preserve">
+          <source>Download completed.</source>
+          <target state="translated">دریافت انجام شد.</target>
+        </trans-unit>
+        <trans-unit id="DownloadError" translate="yes" xml:space="preserve">
+          <source>An error occured while downloading the file.</source>
+          <target state="translated">متاسفانه خطای غیرمنتظره ای در هنگام دریافت فایل رخ داد.</target>
+        </trans-unit>
+        <trans-unit id="Downloading" translate="yes" xml:space="preserve">
+          <source>Downloading {0}kB of {1}kB</source>
+          <target state="translated">در حال دریافت {0} کیلوبایت از {1} کیلوبایت</target>
+        </trans-unit>
+        <trans-unit id="DownloadPaused" translate="yes" xml:space="preserve">
+          <source>Download paused.</source>
+          <target state="translated">دریافت متوقف شد.</target>
+        </trans-unit>
+        <trans-unit id="PausedCostedNetwork" translate="yes" xml:space="preserve">
+          <source>Download paused, Metered connection.</source>
+          <target state="translated">دریافت متوقف شد، اتصال شبکه هزینه بر است.</target>
+        </trans-unit>
+        <trans-unit id="PausedNoNetwork" translate="yes" xml:space="preserve">
+          <source>Download paused, No network connection.</source>
+          <target state="translated">دریافت متوقف شد، ارتباط با شبکه وجود ندارد.</target>
+        </trans-unit>
+        <trans-unit id="btnCommandShareFile.Label" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="translated">اشتراک</target>
+        </trans-unit>
+        <trans-unit id="btnCommandShareFile.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="translated">اشتراک</target>
+        </trans-unit>
+        <trans-unit id="btnCommandViewFile.Label" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="translated">مشاهده</target>
+        </trans-unit>
+        <trans-unit id="btnCommandViewFile.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>View</source>
+          <target state="translated">مشاهده</target>
+        </trans-unit>
+        <trans-unit id="btnDownload.Label" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">دریافت</target>
+        </trans-unit>
+        <trans-unit id="btnDownload.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">دریافت</target>
+        </trans-unit>
+        <trans-unit id="btnPaste.Label" translate="yes" xml:space="preserve">
+          <source>Paste</source>
+          <target state="translated">چسباندن</target>
+        </trans-unit>
+        <trans-unit id="btnPaste.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Paste</source>
+          <target state="translated">چسباندن</target>
+        </trans-unit>
+        <trans-unit id="DownloadCompleteToast" translate="yes" xml:space="preserve">
+          <source>Download completed</source>
+          <target state="translated">دریافت انجام شد</target>
+        </trans-unit>
+        <trans-unit id="DownloadFailedToast" translate="yes" xml:space="preserve">
+          <source>Download failed</source>
+          <target state="translated">دریافت ناموفق بود</target>
+        </trans-unit>
+        <trans-unit id="DownloadInitialize" translate="yes" xml:space="preserve">
+          <source>Initializing...</source>
+          <target state="translated">در حال آماده سازی...</target>
+        </trans-unit>
+        <trans-unit id="ErrorDownloadPicture" translate="yes" xml:space="preserve">
+          <source>An error occurred while downloading the picture.</source>
+          <target state="translated">خطای غیرمنتظره ای در هنگام دانلود تصویر رخ داد.</target>
+        </trans-unit>
+        <trans-unit id="ErrorDownloadVideo" translate="yes" xml:space="preserve">
+          <source>An error occurred while downloading the video.</source>
+          <target state="translated">خطای غیرمنتظره ای در هنگام دانلود ویدیو رخ داد.</target>
+        </trans-unit>
+        <trans-unit id="ErrorWhenInitialize" translate="yes" xml:space="preserve">
+          <source>An error occurred while initializing the download operation.</source>
+          <target state="translated">خطای غیرمنتظره ای در هنگام آماده سازی فرآیند دریافت رخ داد.</target>
+        </trans-unit>
+        <trans-unit id="FailedToRetrieveUrl" translate="yes" xml:space="preserve">
+          <source>Failed to retrieve the Url.</source>
+          <target state="translated">دریافت اطلاعات آدرس ناموفق بود.</target>
+        </trans-unit>
+        <trans-unit id="InvalidInstagramUrl" translate="yes" xml:space="preserve">
+          <source>Invalid Instagram URL.</source>
+          <target state="translated">آدرس اینستاگرام نامعتبر است.</target>
+        </trans-unit>
+        <trans-unit id="PictureSuccessfullySaved" translate="yes" xml:space="preserve">
+          <source>Picture successfully saved.</source>
+          <target state="translated">تصویر با موفقیت ذخیره شد.</target>
+        </trans-unit>
+        <trans-unit id="RatepopupContent" translate="yes" xml:space="preserve">
+          <source>If you like this app, please take a moment to rate it in the Windows store.</source>
+          <target state="translated">اگر از اپلیکیشن رضایت دارید، لطفا چندلحظه از وقت خود را صرف رای دادن به آن در فروشگاه ویندوز کنید.</target>
+        </trans-unit>
+        <trans-unit id="RatepopupPrimaryButtonText" translate="yes" xml:space="preserve">
+          <source>Sure, take me there</source>
+          <target state="translated">حتما، همین الان میرم!</target>
+        </trans-unit>
+        <trans-unit id="RatepopupSecondaryButtonText" translate="yes" xml:space="preserve">
+          <source>Maybe later</source>
+          <target state="translated">شاید بعدا</target>
+        </trans-unit>
+        <trans-unit id="RatepopupTitle" translate="yes" xml:space="preserve">
+          <source>Rate InstantGet Universal</source>
+          <target state="needs-review-translation">امتیازدهی به اینستاگِت</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ShareUITitle" translate="yes" xml:space="preserve">
+          <source>Quick share</source>
+          <target state="translated">اشتراک سریع</target>
+        </trans-unit>
+        <trans-unit id="TargetFileNotFound" translate="yes" xml:space="preserve">
+          <source>Target file not found.</source>
+          <target state="translated">فایل مقصد یافت نشد.</target>
+        </trans-unit>
+        <trans-unit id="UnhandledException" translate="yes" xml:space="preserve">
+          <source>An unhandled exception has occurred.</source>
+          <target state="translated">متاسفانه خطای غیرمنتظره ای رخ داد.</target>
+        </trans-unit>
+        <trans-unit id="VideoSuccessfullySaved" translate="yes" xml:space="preserve">
+          <source>Video successfully saved.</source>
+          <target state="translated">ویدیو با موفقیت ذخیره شد.</target>
+        </trans-unit>
+        <trans-unit id="btnSelectPath.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">انتخاب</target>
+        </trans-unit>
+        <trans-unit id="txtPicturesFolder.Text" translate="yes" xml:space="preserve">
+          <source>Pictures Folder :</source>
+          <target state="translated">پوشه تصاویر :</target>
+        </trans-unit>
+        <trans-unit id="txtVideosFolder.Text" translate="yes" xml:space="preserve">
+          <source>Videos Folder :</source>
+          <target state="translated">پوشه ویدیوها : </target>
+        </trans-unit>
+        <trans-unit id="btnSelectVideoPath.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">انتخاب</target>
+        </trans-unit>
+        <trans-unit id="toggleActionCenter.Header" translate="yes" xml:space="preserve">
+          <source>Action center</source>
+          <target state="translated">مرکز اعلانات</target>
+        </trans-unit>
+        <trans-unit id="toggleTheme.Header" translate="yes" xml:space="preserve">
+          <source>Dark theme</source>
+          <target state="translated">پوسته تیره</target>
+        </trans-unit>
+        <trans-unit id="txtbgTask.Text" translate="yes" xml:space="preserve">
+          <source>Background task</source>
+          <target state="translated">اجرا در پس زمینه</target>
+        </trans-unit>
+        <trans-unit id="txtChangesTip.Text" translate="yes" xml:space="preserve">
+          <source>* You will see your changes the next time you start the app.</source>
+          <target state="translated">* تغییرات انجام شده با اجرای مجدد برنامه قابل مشاهده خواهد بود.</target>
+        </trans-unit>
+        <trans-unit id="txtAppearance.Text" translate="yes" xml:space="preserve">
+          <source>Appearance</source>
+          <target state="translated">ظاهر برنامه</target>
+        </trans-unit>
+        <trans-unit id="txtStorage.Text" translate="yes" xml:space="preserve">
+          <source>Storage</source>
+          <target state="translated">محل ذخیره سازی</target>
+        </trans-unit>
+        <trans-unit id="btnClearSelection.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Clear</source>
+          <target state="translated">برداشتن</target>
+        </trans-unit>
+        <trans-unit id="btnDeleteGrid.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">حذف</target>
+        </trans-unit>
+        <trans-unit id="btnSelectGrid.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Select</source>
+          <target state="translated">انتخاب</target>
+        </trans-unit>
+        <trans-unit id="AccessDenied" translate="yes" xml:space="preserve">
+          <source>Access denied.</source>
+          <target state="translated">دسترسی امکان پذیر نیست.</target>
+        </trans-unit>
+        <trans-unit id="ActionCenterIsntRunning" translate="yes" xml:space="preserve">
+          <source>Action center isn't running, reactivate it from app Settings.</source>
+          <target state="translated">مرکز اعلان در حال اجرا نیست، مجددا آن را از تنظیمات فعال کنید.</target>
+        </trans-unit>
+        <trans-unit id="appActionCenterCancelMsg" translate="yes" xml:space="preserve">
+          <source>To keep the app running in the background reactivate the Action center from the Settings.</source>
+          <target state="translated">برای در حال اجرا ماندن برنامه در پس زمینه ، مجددا مرکز اعلان را از تنظیمات فعال کنید.</target>
+        </trans-unit>
+        <trans-unit id="bgPermissionFailed" translate="yes" xml:space="preserve">
+          <source>Request couldn't be completed. Permission failed!</source>
+          <target state="translated">قادر به تکمیل درخواست نیست، دسترسی لازم داده نشد!</target>
+        </trans-unit>
+        <trans-unit id="CancelBtn" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">لغو</target>
+        </trans-unit>
+        <trans-unit id="DeleteBtn" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">حذف</target>
+        </trans-unit>
+        <trans-unit id="DeleteThese" translate="yes" xml:space="preserve">
+          <source>Delete these?</source>
+          <target state="translated">حذف شوند؟</target>
+        </trans-unit>
+        <trans-unit id="DeleteThis" translate="yes" xml:space="preserve">
+          <source>Delete this?</source>
+          <target state="translated">حذف شود؟</target>
+        </trans-unit>
+        <trans-unit id="DownloadButton" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">دریافت</target>
+        </trans-unit>
+        <trans-unit id="DownloadInProgress" translate="yes" xml:space="preserve">
+          <source>Download in progress, please wait...</source>
+          <target state="translated">در حال دریافت، لطفا صبر کنید...</target>
+        </trans-unit>
+        <trans-unit id="FailedToEnableActionCenter" translate="yes" xml:space="preserve">
+          <source>Failed to enable/disable Action center integration.</source>
+          <target state="translated">فعالسازی/غیرفعالسازی قابلیت مرکزاعلان ناموفق بود.</target>
+        </trans-unit>
+        <trans-unit id="FailedToLoadData" translate="yes" xml:space="preserve">
+          <source>Failed to load user data.</source>
+          <target state="translated">داده های کاربر بارگیری نشد.</target>
+        </trans-unit>
+        <trans-unit id="PasteShareUrl" translate="yes" xml:space="preserve">
+          <source>Paste URL here!</source>
+          <target state="translated">آدرس پست یا پروفایل اینستاگرام را اینجا بچسبانید!</target>
+        </trans-unit>
+        <trans-unit id="dropLangAutomatic.Content" translate="yes" xml:space="preserve">
+          <source>System Language</source>
+          <target state="translated">پیش فرض سیستم</target>
+        </trans-unit>
+        <trans-unit id="txtLanguage.Text" translate="yes" xml:space="preserve">
+          <source>Language</source>
+          <target state="translated">زبان</target>
+        </trans-unit>
+        <trans-unit id="lblGeneralSetting.Text" translate="yes" xml:space="preserve">
+          <source>Clipboard</source>
+          <target state="translated">کلیپ بورد</target>
+        </trans-unit>
+        <trans-unit id="lblLanguage.Text" translate="yes" xml:space="preserve">
+          <source>Select your preferred language :</source>
+          <target state="translated">زبان موردنظر خود را انتخاب کنید:</target>
+        </trans-unit>
+        <trans-unit id="toggleClipboard.Header" translate="yes" xml:space="preserve">
+          <source>Automatically paste URLs</source>
+          <target state="translated">پیوندها را بطور خودکار بچسبان!</target>
+        </trans-unit>
+        <trans-unit id="AboutMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">درباره</target>
+        </trans-unit>
+        <trans-unit id="BrowserMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Web Browser</source>
+          <target state="translated">مرورگر وب</target>
+        </trans-unit>
+        <trans-unit id="DownloadMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">دریافت</target>
+        </trans-unit>
+        <trans-unit id="HistoryMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">تاریخچه</target>
+        </trans-unit>
+        <trans-unit id="SettingMenuText.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">تنظیمات</target>
+        </trans-unit>
+        <trans-unit id="NothingFound" translate="yes" xml:space="preserve">
+          <source>Nothing found!</source>
+          <target state="translated">چیزی یافت نشد!</target>
+        </trans-unit>
+        <trans-unit id="btnPictureDownloadBrw.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Get picture</source>
+          <target state="translated">دریافت تصویر</target>
+        </trans-unit>
+        <trans-unit id="btnProfileDownloadBrw.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Get profile picture</source>
+          <target state="translated">دریافت تصویر پروفایل</target>
+        </trans-unit>
+        <trans-unit id="btnVideoDownloadBrw.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Get video</source>
+          <target state="translated">دریافت ویدیو</target>
+        </trans-unit>
+        <trans-unit id="btnGo.Content" translate="yes" xml:space="preserve">
+          <source>Go</source>
+          <target state="translated">برو</target>
+        </trans-unit>
+        <trans-unit id="btnGo.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Go</source>
+          <target state="translated">برو</target>
+        </trans-unit>
+        <trans-unit id="btnPasteBrowser.Label" translate="yes" xml:space="preserve">
+          <source>Paste</source>
+          <target state="translated">چسباندن</target>
+        </trans-unit>
+        <trans-unit id="btnPasteBrowser.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Paste Url</source>
+          <target state="translated">چسباندن پیوند</target>
+        </trans-unit>
+        <trans-unit id="BrowserMenuText.Content" translate="yes" xml:space="preserve">
+          <source>Web Browser</source>
+          <target state="translated">مرورگر وب</target>
+        </trans-unit>
+        <trans-unit id="Version" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="translated">نسخه</target>
+        </trans-unit>
+        <trans-unit id="btnBack.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">بازگشت</target>
+        </trans-unit>
+        <trans-unit id="btnForward.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Forward</source>
+          <target state="translated">جلو</target>
+        </trans-unit>
+        <trans-unit id="About" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="translated">درباره</target>
+        </trans-unit>
+        <trans-unit id="Browser" translate="yes" xml:space="preserve">
+          <source>Web Browser</source>
+          <target state="translated">مرورگر وب</target>
+        </trans-unit>
+        <trans-unit id="Download" translate="yes" xml:space="preserve">
+          <source>Download</source>
+          <target state="translated">دریافت</target>
+        </trans-unit>
+        <trans-unit id="History" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">تاریخچه</target>
+        </trans-unit>
+        <trans-unit id="Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">تنظیمات</target>
+        </trans-unit>
+        <trans-unit id="TabPictures.Header" translate="yes" xml:space="preserve">
+          <source>Pictures</source>
+          <target state="translated">تصاویر</target>
+        </trans-unit>
+        <trans-unit id="TabVideos.Header" translate="yes" xml:space="preserve">
+          <source>Videos</source>
+          <target state="translated">ویدئوها</target>
+        </trans-unit>
+        <trans-unit id="btnReloadList.Label" translate="yes" xml:space="preserve">
+          <source>Refresh</source>
+          <target state="translated">‏‏بازخوانی</target>
+        </trans-unit>
+        <trans-unit id="btnReloadList.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Refresh</source>
+          <target state="translated">‏‏بازخوانی</target>
+        </trans-unit>
+        <trans-unit id="mnuOpenFolder.Text" translate="yes" xml:space="preserve">
+          <source>Open file location</source>
+          <target state="translated">باز کردن مکان پرونده</target>
+        </trans-unit>
+        <trans-unit id="btnPictureDownloadBrw.Text" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <target state="translated">عکس</target>
+        </trans-unit>
+        <trans-unit id="btnProfileDownloadBrw.Text" translate="yes" xml:space="preserve">
+          <source>Profile picture</source>
+          <target state="translated">تصویر پروفایل</target>
+        </trans-unit>
+        <trans-unit id="btnVideoDownloadBrw.Text" translate="yes" xml:space="preserve">
+          <source>Video</source>
+          <target state="translated">ویدئو</target>
+        </trans-unit>
+        <trans-unit id="PostponeButton" translate="yes" xml:space="preserve">
+          <source>Enqueue</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">تعویق</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="UrlPostponed" translate="yes" xml:space="preserve">
+          <source>Queued for download later</source>
+          <target state="needs-review-translation">به تعویق افتاد!</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnPickUrlLabelUID.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation">انتخاب از لیست تعویق</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnPickUrlLabelUID.Label" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation">لیست تعویق</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnDonateImg.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Help the developer, by making one donation</source>
+          <target state="translated">برای حمایت از توسعه دهنده مبلغی را اهدا کنید</target>
+        </trans-unit>
+        <trans-unit id="btnPopUpBrowseUrl.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Browse...</source>
+          <target state="translated">مشاهده در مرورگر...</target>
+        </trans-unit>
+        <trans-unit id="btnPopUpCopyUrl.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
+          <source>Copy</source>
+          <target state="translated">رونوشت</target>
+        </trans-unit>
+        <trans-unit id="txtBlockPopUpTitle.Text" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation">لیست تعویق</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="btnClosePopUp.Content" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">بستن</target>
+        </trans-unit>
+        <trans-unit id="btnPickUrlFromListUID.Label" translate="yes" xml:space="preserve">
+          <source>Queue</source>
+          <target state="needs-review-translation">لیست تعویق</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="DonatepopupContent" translate="yes" xml:space="preserve">
+          <source>To protect your privacy, we do not use ads for revenue. So if you have enjoyed my App please consider making a donation towards the cost of keep this App alive!</source>
+          <target state="translated">برای محافظت از حریم خصوصی شما، از تبلیغات برای درآمد استفاده نمی کنیم. بنابراین اگر نرم افزار من را می پسندید، لطفا با تقدیم کمک مالی به این برنامه، از توسعه  برنامه های بیشتر و پشتیبانی آن حمایت کنید!</target>
+        </trans-unit>
+        <trans-unit id="DonatepopupPrimaryButtonText" translate="yes" xml:space="preserve">
+          <source>Donate 🙂</source>
+          <target state="translated">پرداخت 🙂</target>
+        </trans-unit>
+        <trans-unit id="DonatepopupSecondaryButtonText" translate="yes" xml:space="preserve">
+          <source>Not now 🙁</source>
+          <target state="translated">الان نه 🙁</target>
+        </trans-unit>
+        <trans-unit id="DonatepopupTitle" translate="yes" xml:space="preserve">
+          <source>Support Developer</source>
+          <target state="translated">پشتیبانی از توسعه دهنده</target>
+        </trans-unit>
+        <trans-unit id="txtLblNothingPopUp.Text" translate="yes" xml:space="preserve">
+          <source>Nothing here!</source>
+          <target state="translated">چیزی اینجا نیست!</target>
+        </trans-unit>
+        <trans-unit id="lblTheme.Text" translate="yes" xml:space="preserve">
+          <source>Theme :</source>
+          <target state="translated">پوسته :</target>
+        </trans-unit>
+        <trans-unit id="chkFullSizeimage.Content" translate="yes" xml:space="preserve">
+          <source>Download the original photo</source>
+          <target state="needs-review-translation">دریافت تصویر با کیفیت بالاتر</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ErrorProfilePicture" translate="yes" xml:space="preserve">
+          <source>Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
+More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</source>
+          <target state="new">Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
+More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</target>
+        </trans-unit>
+        <trans-unit id="PinnedBrowserTileMsg" translate="yes" xml:space="preserve">
+          <source>Pinned!</source>
+          <target state="new">Pinned!</target>
+        </trans-unit>
+        <trans-unit id="UnPinBrowserTileMsg" translate="yes" xml:space="preserve">
+          <source>UnPinned!</source>
+          <target state="new">UnPinned!</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

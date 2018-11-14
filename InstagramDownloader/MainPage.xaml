@@ -1,0 +1,132 @@
+﻿<Page xmlns:my="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    x:Class="InstagramDownloader.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InstagramDownloader"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" x:Uid="pgMain"
+     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"  
+    xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="SplitViewStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid BorderThickness="0"   x:Name="grdMainPage" Canvas.ZIndex="0">
+        <Grid.RowDefinitions>
+          
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <!--<ImageBrush  Stretch="UniformToFill" ImageSource="Assets/bg.png" Opacity="0.5" />-->
+            <SolidColorBrush Color="{ThemeResource SystemAccentColor}"></SolidColorBrush>
+        </Grid.Background>
+        
+        <!--<Grid Grid.Column="0" Grid.Row="0" x:Name="grdBlurBackg" Canvas.ZIndex="-1">
+
+            <Grid.Background>
+                <ImageBrush  Stretch="UniformToFill" ImageSource="Assets/app-bg3.png" Opacity="0.5" ImageOpened="ImageBrush_ImageOpened_1"/>
+            </Grid.Background>
+
+        </Grid>-->
+        
+    <Grid  Background="Transparent">
+      
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- Menu (hamburger) button -->
+    
+        <StackPanel Background="Transparent" Margin="0 0 0 3" Grid.Row="0" Orientation="Horizontal"> 
+         
+        <controls:HamburgerMenu  HorizontalAlignment="Left" Width="52" Height="52" x:Name="btnHamburger"  Tapped="btnHamburger_Click"     />
+               
+            <TextBlock x:Name="lblMainHeader" x:Uid="lblHeader" VerticalAlignment="Center"  TextAlignment="Left" Padding="12"  HorizontalAlignment="Left" Height="48"  Width="Auto" Style="{StaticResource TitleTextBlockStyle}"  />
+           
+        </StackPanel>
+        <SplitView   PaneBackground="Transparent" Grid.Row="1" x:Name="ShellSplitView"   DisplayMode="Overlay"   IsPaneOpen="False"  OpenPaneLength="240"  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"  >
+            <SplitView.Pane>
+                    <Grid Name="PaneGrid" Background="Transparent" ManipulationMode="TranslateX" ManipulationCompleted="SplitViewPane_ManipulationCompleted" >
+                        <Grid   BorderThickness="0 0 0.6 0" BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}" Canvas.ZIndex="0"  Background="Transparent">
+
+                            <Grid Canvas.ZIndex="-1">
+                                <interactivity:Interaction.Behaviors>
+                                    <behaviors:Blur x:Name="blur"  Value="50" Duration="0" Delay="0" AutomaticallyStart="true"/>
+                                </interactivity:Interaction.Behaviors>
+                                <Grid.Background>
+                                    <SolidColorBrush Color="{ThemeResource ApplicationPageBackgroundThemeBrush}" Opacity="0.5"/>
+                                </Grid.Background>
+
+                            </Grid>
+                            <StackPanel  Background="Transparent">
+
+                                <!-- Home button -->
+                                <RadioButton  ToolTipService.ToolTip="Download" x:Name="rdoHome" Click="rdoHome_Click" Tag="" Content="Download"  x:Uid="DownloadMenuText"    Style="{StaticResource SplitViewNavButtonStyle}"
+               IsChecked="True"  />
+
+                                <!--  Browser button -->
+                                <RadioButton ToolTipService.ToolTip="Browser" x:Name="rdoBrowser" Click="rdoBrowser_Click" Tag="" x:Uid="BrowserMenuText" Content="Browser"
+                Style="{StaticResource SplitViewNavButtonStyle}"   />
+
+                                <!--  Download button -->
+                                <RadioButton x:Name="rdoHistory" ToolTipService.ToolTip="History" Click="rdoHistory_Click" Tag="" x:Uid="HistoryMenuText" Content="History"
+                Style="{StaticResource SplitViewNavButtonStyle}"   />
+
+
+                            </StackPanel>
+                            <StackPanel  Background="Transparent" VerticalAlignment="Bottom">
+
+                                <!-- About button -->
+                                <RadioButton  x:Name="rdoAbout" ToolTipService.ToolTip="About" Click="rdoAbout_Click" Tag="" x:Uid="AboutMenuText" Content="About"
+                Style="{StaticResource SplitViewNavButtonStyle}"
+                 />
+
+
+                                <!-- Settings button -->
+                                <RadioButton   x:Name="rdoSettings" ToolTipService.ToolTip="Settings" Click="rdoSettings_Click" Tag="" x:Uid="SettingMenuText" Content="Settings"
+                Style="{StaticResource SplitViewNavButtonStyle}"
+                 />
+
+                            </StackPanel>
+
+
+
+                        </Grid>
+                    </Grid>
+
+
+
+                </SplitView.Pane>
+        <SplitView.Content>
+                    <Grid>
+                        <Frame  Canvas.ZIndex="0" x:Name="contentFrame">
+                         
+                        </Frame>
+                        <Grid  ManipulationMode="TranslateX" ManipulationCompleted="SplitViewOpener_ManipulationCompleted"  Width="10" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+                    </Grid>
+                  
+
+               
+
+                </SplitView.Content>
+            </SplitView>
+
+        </Grid>
+    </Grid>
+
+</Page>

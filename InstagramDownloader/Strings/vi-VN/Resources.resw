@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMenuText.Content" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="btnClearSelection.Label" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="btnCommandShareFile.Label" xml:space="preserve">
+    <value>Chia sẻ</value>
+  </data>
+  <data name="btnCommandShareFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Chia sẻ </value>
+  </data>
+  <data name="btnCommandViewFile.Label" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="btnCommandViewFile.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="btnDeleteGrid.Label" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="btnDownload.Label" xml:space="preserve">
+    <value>Tải Xuống</value>
+  </data>
+  <data name="btnDownload.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tải Xuống</value>
+  </data>
+  <data name="btnFeedback.Content" xml:space="preserve">
+    <value>Gửi Phản hồi</value>
+  </data>
+  <data name="btnPaste.Label" xml:space="preserve">
+    <value>Dán</value>
+  </data>
+  <data name="btnPaste.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Dán</value>
+  </data>
+  <data name="btnRate.Content" xml:space="preserve">
+    <value>Xếp hạng và Đánh giá</value>
+  </data>
+  <data name="btnSelectGrid.Label" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="btnSelectPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="btnSelectVideoPath.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="DownloadCompleted" xml:space="preserve">
+    <value>Tải xuống hoàn tất. </value>
+  </data>
+  <data name="DownloadCompleteToast" xml:space="preserve">
+    <value>Tải xuống hoàn tất </value>
+  </data>
+  <data name="DownloadError" xml:space="preserve">
+    <value>Đã có lỗi xảy ra khi tải xuống file này</value>
+  </data>
+  <data name="DownloadFailedToast" xml:space="preserve">
+    <value>Tải xuống thất bại </value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Đang tải {0}kB của {1}kB</value>
+  </data>
+  <data name="DownloadInitialize" xml:space="preserve">
+    <value>Đang khởi tạo…</value>
+  </data>
+  <data name="DownloadMenuText.Content" xml:space="preserve">
+    <value>Tải xuống </value>
+  </data>
+  <data name="DownloadPaused" xml:space="preserve">
+    <value>Tạm dừng tải xuống.</value>
+  </data>
+  <data name="ErrorDownloadPicture" xml:space="preserve">
+    <value>Đã có lỗi xảy ra trong khi tải xuống ảnh.</value>
+  </data>
+  <data name="ErrorDownloadVideo" xml:space="preserve">
+    <value>Đã có lỗi xảy ra trong khi tải xuống video.</value>
+  </data>
+  <data name="ErrorWhenInitialize" xml:space="preserve">
+    <value>Đã có lỗi xảy ra khi đang khởi tạo quá trình tải xuống .</value>
+  </data>
+  <data name="FailedToRetrieveUrl" xml:space="preserve">
+    <value>Thất bại khi tìm Url</value>
+  </data>
+  <data name="HistoryMenuText.Content" xml:space="preserve">
+    <value>Lịch sử</value>
+  </data>
+  <data name="InvalidInstagramUrl" xml:space="preserve">
+    <value>Url Instagram không hợp lệ </value>
+  </data>
+  <data name="mnuCopyShareUrl.Text" xml:space="preserve">
+    <value>Sao chép Url chia sẻ</value>
+  </data>
+  <data name="mnuDelete.Text" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="PausedCostedNetwork" xml:space="preserve">
+    <value>Tải xuống tạm dừng, kết nối đo được.</value>
+  </data>
+  <data name="PausedNoNetwork" xml:space="preserve">
+    <value>Tải xuống tạm dừng, không có kết nối mạng.</value>
+  </data>
+  <data name="PictureSuccessfullySaved" xml:space="preserve">
+    <value>Lưu ảnh thành công </value>
+  </data>
+  <data name="RatepopupContent" xml:space="preserve">
+    <value>Nếu bạn thích ứng dụng này, xin hãy dành ra chút thời gian để xếp hạng nó trong Windows Store.</value>
+  </data>
+  <data name="RatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Được rồi, đưa tôi đến đó </value>
+  </data>
+  <data name="RatepopupSecondaryButtonText" xml:space="preserve">
+    <value>Có lẽ để sau </value>
+  </data>
+  <data name="RatepopupTitle" xml:space="preserve">
+    <value>Xếp hạng ProGet Universal</value>
+  </data>
+  <data name="SettingMenuText.Content" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="ShareUITitle" xml:space="preserve">
+    <value>Chia sẻ nhanh </value>
+  </data>
+  <data name="TabPictures.Header" xml:space="preserve">
+    <value>Ảnh </value>
+  </data>
+  <data name="TabVideos.Header" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="TargetFileNotFound" xml:space="preserve">
+    <value>Không tìm thấy file mục tiêu.</value>
+  </data>
+  <data name="toggleActionCenter.Header" xml:space="preserve">
+    <value>Trung tâm hành động</value>
+  </data>
+  <data name="toggleTheme.Header" xml:space="preserve">
+    <value>Nền Tối</value>
+  </data>
+  <data name="txtAppearance.Text" xml:space="preserve">
+    <value>Bề ngoài</value>
+  </data>
+  <data name="txtbgTask.Text" xml:space="preserve">
+    <value>Tác vụ nền </value>
+  </data>
+  <data name="txtChangesTip.Text" xml:space="preserve">
+    <value>* Bạn sẽ thấy thay đổi của bạn lần tiếp theo bạn mở ứng dụng </value>
+  </data>
+  <data name="txtPicturesFolder.Text" xml:space="preserve">
+    <value>Thư mục ảnh :</value>
+  </data>
+  <data name="txtUrlCaption.Text" xml:space="preserve">
+    <value>Trang cá nhân Insgram hoặc chia sẻ Url:</value>
+  </data>
+  <data name="txtVideosFolder.Text" xml:space="preserve">
+    <value>Thư mục Video :</value>
+  </data>
+  <data name="UnhandledException" xml:space="preserve">
+    <value>Lỗi không kiểm soát đã xảy ra.</value>
+  </data>
+  <data name="VideoSuccessfullySaved" xml:space="preserve">
+    <value>Lưu Video thành công.</value>
+  </data>
+  <data name="txtStorage.Text" xml:space="preserve">
+    <value>Bộ nhớ</value>
+  </data>
+  <data name="btnClearSelection.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="btnDeleteGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="btnSelectGrid.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Chọn </value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Truy cập bị từ chối.</value>
+  </data>
+  <data name="ActionCenterIsntRunning" xml:space="preserve">
+    <value>Trung tâm hành động không hoạt động, kích hoạt lại nó trong cài đặt .</value>
+  </data>
+  <data name="appActionCenterCancelMsg" xml:space="preserve">
+    <value>Để giữ app chạy dưới nền, kích hoạt lại Trung tâm hành động  trong Cài đặt .</value>
+  </data>
+  <data name="bgPermissionFailed" xml:space="preserve">
+    <value>Yêu cầu không thể hoàn tất. Quyền không thành công !</value>
+  </data>
+  <data name="CancelBtn" xml:space="preserve">
+    <value>Hủy </value>
+  </data>
+  <data name="DeleteBtn" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="DeleteThese" xml:space="preserve">
+    <value>Xóa những cái này ? </value>
+  </data>
+  <data name="DeleteThis" xml:space="preserve">
+    <value>Xóa cái này ? </value>
+  </data>
+  <data name="DownloadButton" xml:space="preserve">
+    <value>Tải xuống </value>
+  </data>
+  <data name="DownloadInProgress" xml:space="preserve">
+    <value>Đang trong quá trình tải xuống, vui lòng đợi… </value>
+  </data>
+  <data name="FailedToEnableActionCenter" xml:space="preserve">
+    <value>Thất bại khi  bật/Tắt Trung tâm hành động tích hợp.</value>
+  </data>
+  <data name="FailedToLoadData" xml:space="preserve">
+    <value>Thất bại khi tải dữ liệu người dùng.</value>
+  </data>
+  <data name="PasteShareUrl" xml:space="preserve">
+    <value>Dán Url ở đây !</value>
+  </data>
+  <data name="dropLangAutomatic.Content" xml:space="preserve">
+    <value>Ngôn ngữ hệ thống </value>
+  </data>
+  <data name="txtLanguage.Text" xml:space="preserve">
+    <value>Ngôn ngữ </value>
+  </data>
+  <data name="lblGeneralSetting.Text" xml:space="preserve">
+    <value>Bộ nhớ tạm </value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>Chọn ngôn ngữ ưa thích :</value>
+  </data>
+  <data name="toggleClipboard.Header" xml:space="preserve">
+    <value>Tự động dán Urls</value>
+  </data>
+  <data name="AboutMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Thông tin </value>
+  </data>
+  <data name="BrowserMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Trình duyệt Web </value>
+  </data>
+  <data name="DownloadMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Tải Xuống </value>
+  </data>
+  <data name="HistoryMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Lịch sử</value>
+  </data>
+  <data name="SettingMenuText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="BrowserMenuText.Content" xml:space="preserve">
+    <value>Trình Duyệt Web </value>
+  </data>
+  <data name="btnGo.Content" xml:space="preserve">
+    <value>Đi</value>
+  </data>
+  <data name="btnGo.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Đi</value>
+  </data>
+  <data name="btnPasteBrowser.Label" xml:space="preserve">
+    <value>Dán</value>
+  </data>
+  <data name="btnPasteBrowser.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Dán Url</value>
+  </data>
+  <data name="btnPictureDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Lấy ảnh </value>
+  </data>
+  <data name="btnProfileDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Lấy ảnh đại diện </value>
+  </data>
+  <data name="btnVideoDownloadBrw.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Lấy Video </value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Không tìm thấy gì !</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Phiên Bản</value>
+  </data>
+  <data name="btnBack.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Trở Về</value>
+  </data>
+  <data name="btnForward.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Trở về </value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Thông tin </value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Trình duyệt Web </value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Tải Xuống </value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Lịch sử</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="btnReloadList.Label" xml:space="preserve">
+    <value>Làm mới </value>
+  </data>
+  <data name="btnReloadList.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Làm mới </value>
+  </data>
+  <data name="mnuOpenFolder.Text" xml:space="preserve">
+    <value>Mở vị trí tệp </value>
+  </data>
+  <data name="btnPictureDownloadBrw.Text" xml:space="preserve">
+    <value>ảnh </value>
+  </data>
+  <data name="btnProfileDownloadBrw.Text" xml:space="preserve">
+    <value>ảnh đại diện </value>
+  </data>
+  <data name="btnVideoDownloadBrw.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="PostponeButton" xml:space="preserve">
+    <value>Trì hoãn</value>
+  </data>
+  <data name="UrlPostponed" xml:space="preserve">
+    <value>Hoãn!</value>
+  </data>
+  <data name="btnPickUrlLabelUID.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Chọn từ danh sách bị trì hoãn</value>
+  </data>
+  <data name="btnPickUrlLabelUID.Label" xml:space="preserve">
+    <value>Hoãn lại</value>
+  </data>
+  <data name="btnDonateImg.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Giúp nhà phát triển, bằng cách thực hiện một tặng</value>
+  </data>
+  <data name="btnPopUpBrowseUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Duyệt...</value>
+  </data>
+  <data name="btnPopUpCopyUrl.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <data name="txtBlockPopUpTitle.Text" xml:space="preserve">
+    <value>Hoãn lại</value>
+  </data>
+  <data name="btnClosePopUp.Content" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="btnPickUrlFromListUID.Label" xml:space="preserve">
+    <value>Hoãn lại</value>
+  </data>
+  <data name="DonatepopupContent" xml:space="preserve">
+    <value>Để bảo vệ sự riêng tư của bạn, chúng tôi không sử dụng quảng cáo cho doanh thu. Vì vậy, nếu bạn đã thích App của tôi xin vui lòng xem xét làm cho một khoản đóng góp đối với chi phí của việc giữ App này còn sống!</value>
+  </data>
+  <data name="DonatepopupPrimaryButtonText" xml:space="preserve">
+    <value>Tài trợ 🙂</value>
+  </data>
+  <data name="DonatepopupSecondaryButtonText" xml:space="preserve">
+    <value>Không phải bây giờ 🙁</value>
+  </data>
+  <data name="DonatepopupTitle" xml:space="preserve">
+    <value>Hỗ trợ Nhà phát triển</value>
+  </data>
+  <data name="txtLblNothingPopUp.Text" xml:space="preserve">
+    <value>Không có gì ở đây!</value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>Chủ đề:</value>
+  </data>
+  <data name="chkFullSizeimage.Content" xml:space="preserve">
+    <value>Tải về độ phân giải hình ảnh ban đầu</value>
+  </data>
+</root>
