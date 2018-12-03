@@ -8,7 +8,8 @@
     mc:Ignorable="d"
       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"  
     xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors"
-     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls">
+     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+   >
     <Page.Transitions>
         <TransitionCollection>
             <EdgeUIThemeTransition Edge="Right" />
@@ -434,9 +435,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <!--0-->
-                <RowDefinition Height="1"/>
+                <RowDefinition Height="Auto"/>
                 <!--1-->
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="0"/>
                 <!--2-->
                 <RowDefinition Height="*"/>
                 <!--3-->
@@ -496,33 +497,52 @@
                 </Grid>
             
             </StackPanel>
-            
-            <ProgressBar Foreground="#e95950" VerticalAlignment="Center" HorizontalAlignment="Stretch" Visibility="Collapsed" Grid.Column="0" Height="5" Grid.Row="2" x:Name="prgDownload" />
 
-            <TextBlock x:Name="txtDownloadStatus" Padding="0 10" Foreground="Gray" TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="2">
-                <TextBlock.Triggers>
-                    <EventTrigger RoutedEvent="TextBlock.Loaded">
-                        <BeginStoryboard x:Name="txtstatusFadeAnimation">
-                            <Storyboard>
-                                <DoubleAnimation
+            <FlyoutPresenter x:Name="flyoutDownloadProgress" 
+                 Visibility="Collapsed"
+                 Canvas.ZIndex="2" 
+                 Background="Transparent" Height="Auto" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"/>
+                        <!--0-->
+                        <RowDefinition Height="60"/>
+                        <!--1-->
+                    </Grid.RowDefinitions>
+                   
+                    
+                    <ProgressBar FlowDirection="LeftToRight" IsIndeterminate="False" Background="Transparent"  Canvas.ZIndex="3" Foreground="#e95950" VerticalAlignment="Center" HorizontalAlignment="Stretch" Visibility="Collapsed" Grid.Column="0" Height="5" Grid.Row="0" x:Name="prgDownload" />
+                    <ProgressBar FlowDirection="RightToLeft" IsIndeterminate="True" Background="Transparent"  Canvas.ZIndex="2" Foreground="#e95950" VerticalAlignment="Center" HorizontalAlignment="Stretch" Visibility="Collapsed" Grid.Column="0" Height="5" Grid.Row="0" x:Name="prgIntermediate" />
+
+                <TextBlock x:Name="txtDownloadStatus" Padding="0 10" Foreground="Gray" TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                    <TextBlock.Triggers>
+                        <EventTrigger RoutedEvent="TextBlock.Loaded">
+                            <BeginStoryboard x:Name="txtstatusFadeAnimation">
+                                <Storyboard>
+                                    <DoubleAnimation
             Storyboard.TargetName="txtDownloadStatus" 
             Storyboard.TargetProperty="(TextBlock.Opacity)"
             From="1.0" To="0.5" Duration="0:0:3" 
             AutoReverse="True" RepeatBehavior="Forever" />
-                             
-                            </Storyboard>
-                        </BeginStoryboard>
-                
-                    </EventTrigger>
-                </TextBlock.Triggers>
-               
-            </TextBlock>
 
+                                </Storyboard>
+                            </BeginStoryboard>
+
+                        </EventTrigger>
+                    </TextBlock.Triggers>
+
+                </TextBlock>
+                </Grid>
+            </FlyoutPresenter>
+           
             <ScrollViewer  Grid.Column="0" Grid.Row="3"  VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Background="Transparent" >
                 <!--Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"-->
-                <StackPanel  Background="Transparent" Width="Auto" Height="Auto" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  >
-                    <Image ToolTipService.ToolTip="Tap to open photo..." Width="380" Height="380" HorizontalAlignment="Stretch" FlowDirection="LeftToRight" VerticalAlignment="Stretch" x:Name="imgDownloaded"   Stretch="Uniform" Visibility="Collapsed" Tapped="btnViewFile_Click"></Image>
-                    <MediaPlayerElement HorizontalAlignment="Stretch" FlowDirection="LeftToRight" VerticalAlignment="Stretch"  Width="380" Height="380" Foreground="#e95950" x:Name="plyVideo" AreTransportControlsEnabled="True" Stretch="UniformToFill" AutoPlay="False" Visibility="Collapsed"/>
+                <StackPanel Background="Transparent" Width="Auto" Height="Auto" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  >
+                    <Image ToolTipService.ToolTip="Tap to open photo..."  Width="Auto" Height="Auto" HorizontalAlignment="Stretch" FlowDirection="LeftToRight" VerticalAlignment="Stretch" x:Name="imgDownloaded"   Stretch="Uniform" Visibility="Collapsed" Tapped="btnViewFile_Click"></Image>
+                    <MediaPlayerElement HorizontalAlignment="Stretch" FlowDirection="LeftToRight" VerticalAlignment="Stretch"  Width="380" Height="380" Foreground="#e95950" x:Name="plyVideo" AreTransportControlsEnabled="True" Stretch="None" AutoPlay="False" Visibility="Collapsed"/>
                     <TextBlock></TextBlock>
 
                 </StackPanel>

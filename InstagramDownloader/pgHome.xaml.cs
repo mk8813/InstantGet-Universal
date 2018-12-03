@@ -46,7 +46,8 @@ namespace InstagramDownloader
         {
             this.InitializeComponent();
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
-         
+            Window.Current.CoreWindow.SizeChanged += CoreWindow_SizeChanged;
+           
             /////////////////////////
             // Uncomment the following line in the release version of your app.
             licenseInformation = CurrentApp.LicenseInformation;
@@ -95,6 +96,29 @@ namespace InstagramDownloader
             }
         }
 
+        private void CoreWindow_SizeChanged(CoreWindow sender, WindowSizeChangedEventArgs args)
+        {
+            try
+            {
+
+                if (Window.Current.CoreWindow.Bounds.Height < _downloadedImageHeight)
+                {
+                    imgDownloaded.Height = Window.Current.CoreWindow.Bounds.Height - 50;
+                }
+                if (Window.Current.CoreWindow.Bounds.Width < _downloadedImageWidth)
+                {
+                    imgDownloaded.Width = Window.Current.CoreWindow.Bounds.Width - 50;
+                }
+
+                args.Handled = true;
+                    
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
 
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
@@ -268,22 +292,22 @@ namespace InstagramDownloader
 
         }
 
-        private async Task SetDownloadStatusText(string text)
+        private void SetDownloadStatusText(string text)
         {
-            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-            {
+           /* await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {*/
                 txtDownloadStatus.Text = text;
 
-            }).AsTask().AsAsyncAction();
+           /* }).AsTask().AsAsyncAction();*/
 
         }
         private async Task SetMsgDialogText(string text)
         {
-            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
-            {
+          /*await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+            {*/
                 await new MessageDialog(text).ShowAsync();
 
-            }).AsTask().AsAsyncAction();
+          /*  }).AsTask().AsAsyncAction();*/
 
         }
         private async Task SetProgressValue(double val, double max)
@@ -332,59 +356,61 @@ namespace InstagramDownloader
             }).AsTask().AsAsyncAction();
         }
 
-        private async void progressChanged(DownloadOperation downloadOperation)
+        private void progressChanged(DownloadOperation downloadOperation)
         {
 
             double br = downloadOperation.Progress.BytesReceived;
             double TotalbytesReceived = downloadOperation.Progress.TotalBytesToReceive;
             var result = br / TotalbytesReceived * 100;
-         
-            await SetProgressValue(br, TotalbytesReceived);
 
+            // await SetProgressValue(br, TotalbytesReceived);
+            prgDownload.Maximum = TotalbytesReceived;
+            prgDownload.Value = br;
 
-            await SetDownloadStatusText(String.Format(res.GetString("Downloading"), ((int)(br / 1024)).ToString(), ((int)(TotalbytesReceived / 1024)).ToString()));
+            //await SetDownloadStatusText(String.Format(res.GetString("Downloading"), ((int)(br / 1024)).ToString(), ((int)(TotalbytesReceived / 1024)).ToString()));
+            txtDownloadStatus.Text = String.Format(res.GetString("Downloading"), ((double)(br / 1024)).ToString(), ((double)(TotalbytesReceived / 1024)).ToString());
 
             switch (downloadOperation.Progress.Status)
             {
-                case BackgroundTransferStatus.Running:
-                    {
-                        // SetDownloadStatusText("Downloading...");
-                        break;
-                    }
+            
                 case BackgroundTransferStatus.PausedByApplication:
                     {
-                        await SetDownloadStatusText(res.GetString("DownloadPaused"));
+                     
+                        txtDownloadStatus.Text = res.GetString("DownloadPaused");
                         break;
                     }
                 case BackgroundTransferStatus.PausedCostedNetwork:
                     {
-                        await SetDownloadStatusText(res.GetString("PausedCostedNetwork"));
+                     
+                        txtDownloadStatus.Text = res.GetString("PausedCostedNetwork");
                         break;
                     }
                 case BackgroundTransferStatus.PausedNoNetwork:
                     {
-                        await SetDownloadStatusText(res.GetString("PausedNoNetwork"));
+                   
+                        txtDownloadStatus.Text = res.GetString("PausedNoNetwork");
                         break;
                     }
                 case BackgroundTransferStatus.Error:
                     {
-                        await SetDownloadStatusText(res.GetString("DownloadError"));
-
+                     
+                        txtDownloadStatus.Text = res.GetString("DownloadError");
                         break;
                     }
                 case BackgroundTransferStatus.Completed:
                     {
-                        await SetDownloadStatusText(res.GetString("DownloadCompleted"));
-
+                    
+                        txtDownloadStatus.Text = res.GetString("DownloadCompleted");
                         break;
                     }
 
             }
             if (result >= 100)
             {
-                await SetDownloadStatusText(res.GetString("DownloadCompleted"));
+               // await SetDownloadStatusText(res.GetString("DownloadCompleted"));
+                txtDownloadStatus.Text = res.GetString("DownloadCompleted");
                 downloadOperation = null;
-                await SetProgressValue(-1, -1);
+                flyoutDownloadProgress.Visibility=  prgDownload.Visibility =prgIntermediate.Visibility= Visibility.Collapsed;
 
 
 
@@ -461,12 +487,10 @@ namespace InstagramDownloader
         {
             try
             {
-                await SetProgressValue(-5, 0);//marquee progress
-                await SetDownloadStatusText(res.GetString("DownloadInitialize"));
+             
                 isVideoLink = false;
 
-                // StorageFolder folder = ApplicationData.Current.LocalCacheFolder;//.PickSingleFolderAsync();
-                //  StorageFile file = await folder.CreateFileAsync(DateTime.Now.Ticks.ToString() + ".txt", CreationCollisionOption.GenerateUniqueName);
+             
                 Uri durl = new Uri(url);
                 JsonPostInfo jsonresult = null;
                 ///////////////////////////////////////////////////// saving item record
@@ -553,7 +577,7 @@ namespace InstagramDownloader
                     else// json result is null
                     {
                         curDownload.IsDownloaded = "0";
-                        await SetDownloadStatusText(res.GetString("FailedToRetrieveUrl"));
+                        SetDownloadStatusText(res.GetString("FailedToRetrieveUrl"));
                         await SetMsgDialogText(res.GetString("FailedToRetrieveUrl"));
 
                     }
@@ -617,14 +641,14 @@ namespace InstagramDownloader
                             {
                                 curDownload.IsDownloaded = "1";
 
-
-                                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
-                                {
                                     try
                                     {
 
                                         imgDownloaded.Visibility = Visibility.Collapsed;
                                         plyVideo.Visibility = Visibility.Visible;
+
+
+
                                         plyVideo.Source = Windows.Media.Core.MediaSource.CreateFromStorageFile(outputfile);
                                         btnCommandViewFile.Tag = outputfile.Path;
                                         btnCommandViewFile.Visibility = Visibility.Visible;
@@ -647,15 +671,12 @@ namespace InstagramDownloader
                                     }
 
 
-                                });
-
-
 
                             }
                             else
                             {
                                 curDownload.IsDownloaded = "0";
-                                await SetDownloadStatusText(res.GetString("ErrorDownloadVideo"));
+                                SetDownloadStatusText(res.GetString("ErrorDownloadVideo"));
                                 await SetMsgDialogText(res.GetString("ErrorDownloadVideo"));
 
                              
@@ -668,53 +689,48 @@ namespace InstagramDownloader
                             {
                                 curDownload.IsDownloaded = "1";
 
-                                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+                            try
+                            {
+                                var outfileStorage = await StorageFile.GetFileFromPathAsync(outputfile.Path);
+                                var stream = await outfileStorage.OpenReadAsync();
+                                var imageSource = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+                                await imageSource.SetSourceAsync(stream);
+
+                                //isVideo = false;
+                                if (Window.Current.Bounds.Height<_downloadedImageHeight)
                                 {
-                                    try
-                                    {
-                                        var outfileStorage = await StorageFile.GetFileFromPathAsync(outputfile.Path);
-                                        var stream = await outfileStorage.OpenReadAsync();
-                                        var imageSource = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
-                                        await imageSource.SetSourceAsync(stream);
+                                    imgDownloaded.Height = Window.Current.Bounds.Height-50;
+                                }
+                                if (Window.Current.Bounds.Width < _downloadedImageWidth)
+                                {
+                                    imgDownloaded.Width = Window.Current.Bounds.Width - 150;
+                                }
+                                //imgDownloaded.Height = _downloadedImageHeight;
+                                //imgDownloaded.Width = _downloadedImageWidth;
 
-                                        //isVideo = false;
-
-                                        //imgDownloaded.Height = _downloadedImageHeight;
-                                        //imgDownloaded.Width = _downloadedImageWidth;
-
-                                        imgDownloaded.Source = imageSource;
-                                        imgDownloaded.Visibility = Visibility.Visible;
-                                        plyVideo.Visibility = Visibility.Collapsed;
+                                imgDownloaded.Source = imageSource;
+                                imgDownloaded.Visibility = Visibility.Visible;
+                                plyVideo.Visibility = Visibility.Collapsed;
 
 
-                                        btnCommandViewFile.Tag = outputfile.Path;
-                                        btnCommandViewFile.Visibility = Visibility.Visible;
-                                        btnCommandShareFile.Visibility = Visibility.Visible;
-                                        prgDownload.Visibility = Visibility.Collapsed;
-
-                                       
-                                        //MessageDialog msg = new MessageDialog(res.GetString("PictureSuccessfullySaved"));
-                                        //var result = msg.ShowAsync();
+                                btnCommandViewFile.Tag = outputfile.Path;
+                                btnCommandViewFile.Visibility = Visibility.Visible;
+                                btnCommandShareFile.Visibility = Visibility.Visible;
+                                prgDownload.Visibility = Visibility.Collapsed;
 
 
-                                    }
-                                    catch (Exception)
-                                    {
+                            }
+                            catch (Exception)
+                            {
 
 
-                                    }
-
-
-                                });
-
-
-
+                            }
 
                             }
                             else
                             {
                                 curDownload.IsDownloaded = "0";
-                                await SetDownloadStatusText(res.GetString("ErrorDownloadPicture"));
+                                SetDownloadStatusText(res.GetString("ErrorDownloadPicture"));
                                 await SetMsgDialogText(res.GetString("ErrorDownloadPicture"));
 
 
@@ -728,7 +744,7 @@ namespace InstagramDownloader
                     {
                         //imgsrc is null
                         curDownload.IsDownloaded = "0";
-                        await SetDownloadStatusText(res.GetString("TargetFileNotFound"));
+                        SetDownloadStatusText(res.GetString("TargetFileNotFound"));
                         await SetMsgDialogText(res.GetString("TargetFileNotFound"));
 
                     }
@@ -760,18 +776,6 @@ namespace InstagramDownloader
 
 
 
-                //}
-
-                //catch (Exception ex)
-                //{
-
-                //        await SetDownloadStatusText(ex.Message);
-                //        await SetMsgDialogText(ex.Message);
-                //        await ErrorLogger.ErrorLog.WriteError("Error in pgHome_imgDownloader_tryBlockTwo\r\n" + ex.ToString());
-
-
-                //}
-
             }
             catch (TaskCanceledException)
             {
@@ -782,7 +786,7 @@ namespace InstagramDownloader
             catch (Exception ex)
             {
 
-                await SetDownloadStatusText(res.GetString("ErrorWhenInitialize"));
+                SetDownloadStatusText(res.GetString("ErrorWhenInitialize"));
                 await SetMsgDialogText(ex.Message);
                 await ErrorLogger.ErrorLog.WriteError("Error in pgHome_imgDownloader_tryBlockOne_Initialize\r\n" + ex.ToString());
 
@@ -790,11 +794,9 @@ namespace InstagramDownloader
             }
             finally
             {
-                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-                {
-
+      
                     txtUrl.Text = "";
-                    prgDownload.Visibility = Visibility.Collapsed;
+                    prgDownload.Visibility =prgIntermediate.Visibility= Visibility.Collapsed;
                     btnDownload.IsEnabled = chkFullSizeImage.IsEnabled = btnPickUrlFromList.IsEnabled = txtUrl.IsEnabled = true;
 
                     txtstatusFadeAnimation.Storyboard.Stop();
@@ -812,9 +814,7 @@ namespace InstagramDownloader
 
                     /////////////////////////
                     /////////////////////
-                });
-
-
+ 
                 GC.Collect();
 
             }
@@ -881,10 +881,13 @@ namespace InstagramDownloader
             try
             {
                 Regex regPost = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
+                Regex regIGTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
+
                 Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
 
                 txtstatusFadeAnimation.Storyboard.Begin();
-                if (regPost.IsMatch(txtUrl.Text))
+
+                if (regPost.IsMatch(txtUrl.Text) || regIGTv.IsMatch(txtUrl.Text))
                 {
                     imgDownloaded.Source = null;
                     imgDownloaded.Visibility = Visibility.Collapsed;
@@ -893,38 +896,25 @@ namespace InstagramDownloader
                     plyVideo.Visibility = Visibility.Collapsed;
                     btnChoosefromAlbum.Visibility = Visibility.Collapsed;
                     prgDownload.Value = 0;
-                    prgDownload.Visibility = Visibility.Visible;
+
+                    flyoutDownloadProgress.Visibility = Visibility.Visible;
+
+                   flyoutDownloadProgress.Visibility= prgDownload.Visibility =prgIntermediate.Visibility= Visibility.Visible;
                     btnDownload.IsEnabled=chkFullSizeImage.IsEnabled = btnPickUrlFromList.IsEnabled = txtUrl.IsEnabled = false;
 
                     Uri posturl = new Uri(txtUrl.Text.Replace("http:", "https:"));
 
 
-                  
-                    await Task.Run(() => imgDownloader(posturl.ToString()));
+                    txtDownloadStatus.Text = res.GetString("DownloadInitialize");
+                    await imgDownloader(posturl.ToString());//Task.Run()
 
                     txtUrl.Text = "";
                 }
                 else if (regProfile.IsMatch(txtUrl.Text))
                 {
-                    await SetDownloadStatusText(res.GetString("ErrorProfilePicture"));
+                    SetDownloadStatusText(res.GetString("ErrorProfilePicture"));
                     await new MessageDialog(res.GetString("ErrorProfilePicture")).ShowAsync();
-                    //imgDownloaded.Source = null;
-                    //imgDownloaded.Visibility = Visibility.Collapsed;
-                    //btnCommandViewFile.Visibility = Visibility.Collapsed;
-                    //btnCommandShareFile.Visibility = Visibility.Collapsed;
-                    //plyVideo.Visibility = Visibility.Collapsed;
-
-                    //prgDownload.Value = 0;
-                    //prgDownload.Visibility = Visibility.Visible;
-
-                    //btnDownload.IsEnabled = chkFullSizeImage.IsEnabled = btnPickUrlFromList.IsEnabled = txtUrl.IsEnabled = false;
-
-                    //await SetProgressValue(-5, 0);//marquee progress
-
-                    //string posturl = txtUrl.Text.Replace("http:", "https:");
-                    //await Task.Run(() => imgDownloader(posturl, true));//.AsAsyncAction();
-
-                    //txtUrl.Text = "";
+                 
                 }
 
                 else
@@ -1416,8 +1406,26 @@ namespace InstagramDownloader
             }
         }
 
-     
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
 
-       
+            try
+            {
+
+                if (Window.Current.Bounds.Height < _downloadedImageHeight)
+                {
+                    imgDownloaded.Height = Window.Current.Bounds.Height - 50;
+                }
+                if (Window.Current.Bounds.Width < _downloadedImageWidth)
+                {
+                    imgDownloaded.Width = Window.Current.Bounds.Width - 50;
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
     }
 }

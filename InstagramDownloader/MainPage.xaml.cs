@@ -26,7 +26,7 @@ namespace InstagramDownloader
         public MainPage()
         {
             InitializeComponent();
-           
+        
             if (AppSettings.Values["theme"]!=null && AppSettings.Values["theme"].ToString()=="2")//picture background
             {
                 contentFrame.Background = new ImageBrush() { Stretch=Stretch.UniformToFill

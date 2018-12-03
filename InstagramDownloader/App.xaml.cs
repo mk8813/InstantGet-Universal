@@ -34,7 +34,7 @@ namespace InstagramDownloader
 
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
+            
             ClearToastNotifications();//clear toasts
 
             /////////////////////language/////////////////

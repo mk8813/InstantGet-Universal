@@ -54,7 +54,8 @@ namespace UrlListenerComponent
                         var userInput = details.UserInput;
                         string inputurl = userInput["inputurl"].ToString(); // textbox value
                                                                             /////////////////////////////////////////////////////
-                        Regex reg = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
+                        Regex regPost = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
+                        Regex regIGTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
 
                         Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
                         /////////////////////////////////////////////////
@@ -81,12 +82,12 @@ namespace UrlListenerComponent
                                     /////////////////////////////////////////////////////////////////////////////////
 
 
-                                    if (reg.IsMatch(inputurl))
+                                    if (regPost.IsMatch(inputurl) || regIGTv.IsMatch(inputurl))
                                     {
                                         _deferral = taskInstance.GetDeferral();
                                         _taskInstance = taskInstance;
                                         string posturl = inputurl.Replace("http:", "https:");
-                                        await imgDownloader(posturl, false);
+                                        await imgDownloader(posturl, false).ConfigureAwait(false);
 
 
 
@@ -98,7 +99,7 @@ namespace UrlListenerComponent
                                         _taskInstance = taskInstance;
                                         //_taskInstance = taskInstance;
                                         string posturl = inputurl.Replace("http:", "https:");
-                                        await imgDownloader(posturl, true);
+                                        await imgDownloader(posturl, true).ConfigureAwait(false); ;
 
                                     }
                                     else
@@ -114,7 +115,7 @@ namespace UrlListenerComponent
                             //////postpone
                             case "postpone":
                                 {
-                                    if (reg.IsMatch(inputurl))
+                                    if (regPost.IsMatch(inputurl) || regIGTv.IsMatch(inputurl))
                                     {
                                         try
                                         {
@@ -129,7 +130,7 @@ namespace UrlListenerComponent
                                             {
 
                                                 db.tbl_History.Add(postponeDownload);
-                                                int result = await db.SaveChangesAsync();
+                                                int result = await db.SaveChangesAsync().ConfigureAwait(false); ;
                                                 //ShowNotification(cnt.ToString() + "  record saved");
                                                 if (result > 0)
                                                 {
