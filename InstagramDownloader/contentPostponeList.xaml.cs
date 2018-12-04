@@ -225,7 +225,7 @@ namespace InstagramDownloader
 
         private void ContentDialog_LostFocus(object sender, RoutedEventArgs e)
         {
-            Hide();
+          //  Hide();
         }
     }
 

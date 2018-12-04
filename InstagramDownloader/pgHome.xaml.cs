@@ -96,22 +96,57 @@ namespace InstagramDownloader
             }
         }
 
+        private void PgHome_VisibleBoundsChanged(ApplicationView sender, object args)
+        {
+           
+        }
+
         private void CoreWindow_SizeChanged(CoreWindow sender, WindowSizeChangedEventArgs args)
         {
             try
             {
-
-                if (Window.Current.CoreWindow.Bounds.Height < _downloadedImageHeight)
+                if (!isVideoLink)
                 {
-                    imgDownloaded.Height = Window.Current.CoreWindow.Bounds.Height - 50;
+                    if (Window.Current.Bounds.Height < _downloadedImageHeight)
+                    {
+                        imgDownloaded.Height = Window.Current.Bounds.Height - 50;
+                    }
+                    else
+                    {
+                        imgDownloaded.Height = _downloadedImageHeight - 50;
+                    }
+                    if (Window.Current.Bounds.Width < _downloadedImageWidth)
+                    {
+                        imgDownloaded.Width = Window.Current.Bounds.Width - 50;
+                    }
+                    else
+                    {
+                        imgDownloaded.Width = _downloadedImageWidth - 50;
+                    }
                 }
-                if (Window.Current.CoreWindow.Bounds.Width < _downloadedImageWidth)
+                else
                 {
-                    imgDownloaded.Width = Window.Current.CoreWindow.Bounds.Width - 50;
+                    if (Window.Current.Bounds.Height < _downloadedImageHeight)
+                    {
+                       plyVideo.Height= plyVideo.MinHeight = Window.Current.Bounds.Height - 50;
+                    }
+                    else
+                    {
+                        plyVideo.Height = plyVideo.MaxHeight = _downloadedImageHeight - 50;
+                    }
+                    if (Window.Current.Bounds.Width < _downloadedImageWidth)
+                    {
+                      plyVideo.Width=  plyVideo.MinWidth = Window.Current.Bounds.Width - 50;
+                    }
+                    else
+                    {
+                        plyVideo.Width = plyVideo.MaxWidth = _downloadedImageWidth - 50;
+                    }
                 }
+               
 
-                args.Handled = true;
-                    
+               
+
             }
             catch (Exception)
             {
@@ -368,7 +403,7 @@ namespace InstagramDownloader
             prgDownload.Value = br;
 
             //await SetDownloadStatusText(String.Format(res.GetString("Downloading"), ((int)(br / 1024)).ToString(), ((int)(TotalbytesReceived / 1024)).ToString()));
-            txtDownloadStatus.Text = String.Format(res.GetString("Downloading"), ((double)(br / 1024)).ToString(), ((double)(TotalbytesReceived / 1024)).ToString());
+            txtDownloadStatus.Text = String.Format(res.GetString("Downloading"), ((int)(br / 1024)).ToString(), ((int)(TotalbytesReceived / 1024)).ToString());
 
             switch (downloadOperation.Progress.Status)
             {
@@ -641,34 +676,37 @@ namespace InstagramDownloader
                             {
                                 curDownload.IsDownloaded = "1";
 
-                                    try
-                                    {
+                            try
+                            {
 
-                                        imgDownloaded.Visibility = Visibility.Collapsed;
-                                        plyVideo.Visibility = Visibility.Visible;
-
-
-
-                                        plyVideo.Source = Windows.Media.Core.MediaSource.CreateFromStorageFile(outputfile);
-                                        btnCommandViewFile.Tag = outputfile.Path;
-                                        btnCommandViewFile.Visibility = Visibility.Visible;
-                                        btnCommandShareFile.Visibility = Visibility.Collapsed;
-                                        prgDownload.Visibility = Visibility.Collapsed;
+                                imgDownloaded.Visibility = Visibility.Collapsed;
+                                plyVideo.Visibility = Visibility.Visible;
 
 
 
-                                        /////////////save video thumbnail
-                                        ThumbnailVideos tb = new ThumbnailVideos();
+                                plyVideo.Source = Windows.Media.Core.MediaSource.CreateFromStorageFile(outputfile);
+                                // try to set video player size by current window size
+                                CoreWindow_SizeChanged(null, null);
 
-                                        await tb.LoadVideo(outputfile.Path);
+                                btnCommandViewFile.Tag = outputfile.Path;
+                                btnCommandViewFile.Visibility = Visibility.Visible;
+                                btnCommandShareFile.Visibility = Visibility.Collapsed;
+                                prgDownload.Visibility = Visibility.Collapsed;
 
 
-                                    }
-                                    catch (Exception)
-                                    {
+
+                                /////////////save video thumbnail
+                                ThumbnailVideos tb = new ThumbnailVideos();
+
+                                await tb.LoadVideo(outputfile.Path);
 
 
-                                    }
+                            }
+                            catch (Exception)
+                            {
+
+
+                            }
 
 
 
@@ -696,21 +734,15 @@ namespace InstagramDownloader
                                 var imageSource = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
                                 await imageSource.SetSourceAsync(stream);
 
-                                //isVideo = false;
-                                if (Window.Current.Bounds.Height<_downloadedImageHeight)
-                                {
-                                    imgDownloaded.Height = Window.Current.Bounds.Height-50;
-                                }
-                                if (Window.Current.Bounds.Width < _downloadedImageWidth)
-                                {
-                                    imgDownloaded.Width = Window.Current.Bounds.Width - 150;
-                                }
-                                //imgDownloaded.Height = _downloadedImageHeight;
-                                //imgDownloaded.Width = _downloadedImageWidth;
-
+                               
+                                
                                 imgDownloaded.Source = imageSource;
                                 imgDownloaded.Visibility = Visibility.Visible;
                                 plyVideo.Visibility = Visibility.Collapsed;
+
+
+                                // try to set image size by current window size
+                                CoreWindow_SizeChanged(null, null);
 
 
                                 btnCommandViewFile.Tag = outputfile.Path;
@@ -1406,26 +1438,5 @@ namespace InstagramDownloader
             }
         }
 
-        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-
-            try
-            {
-
-                if (Window.Current.Bounds.Height < _downloadedImageHeight)
-                {
-                    imgDownloaded.Height = Window.Current.Bounds.Height - 50;
-                }
-                if (Window.Current.Bounds.Width < _downloadedImageWidth)
-                {
-                    imgDownloaded.Width = Window.Current.Bounds.Width - 50;
-                }
-            }
-            catch (Exception)
-            {
-
-
-            }
-        }
     }
 }
