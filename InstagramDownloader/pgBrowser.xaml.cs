@@ -18,6 +18,7 @@ using Windows.UI.Popups;
 using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.Web.Http;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -45,7 +46,10 @@ namespace InstagramDownloader
                 licenseInformation = CurrentApp.LicenseInformation;
 
                 this.Loaded += PgBrowser_Loaded;
+                brwInstagram.NavigationStarting += BrwInstagram_NavigationStarting;
                 CheckBackAndForward();
+
+              
             }
             catch (Exception)
             {
@@ -54,6 +58,57 @@ namespace InstagramDownloader
             }
       
         }
+
+        private void BrwInstagram_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
+        {
+            try
+            {
+                brwInstagram.NavigationStarting -= BrwInstagram_NavigationStarting;
+                args.Cancel = true;
+                NavigateWithHeader(args.Uri);
+            }
+            catch (Exception)
+            {
+
+               
+            }
+          
+        }
+        private void NavigateWithHeader(Uri uri)
+        {
+            try
+            {
+                //Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/14.14263
+                string userAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1";
+                var requestMsg = new Windows.Web.Http.HttpRequestMessage(HttpMethod.Post, uri);
+                requestMsg.Headers.Add("User-Agent", userAgent);
+
+                brwInstagram.NavigateWithHttpRequestMessage(requestMsg);//start navigate
+
+                brwInstagram.NavigationStarting += BrwInstagram_NavigationStarting;
+            
+
+            }
+            catch (Exception)
+            {
+
+              
+            }
+           
+        }
+
+        private void TryNavigateWithMobileUserAgent(Uri uri)
+        {
+            try
+            {
+                NavigateWithHeader(uri);
+            }
+            catch (Exception)
+            {
+                brwInstagram.Navigate(uri);
+
+            }
+        }
         protected override void OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs e)
         {
             try
@@ -61,7 +116,7 @@ namespace InstagramDownloader
                 if (e!=null)
                 {
                     var url = e.Parameter.ToString();
-                    brwInstagram.Navigate(new Uri(url));
+                    TryNavigateWithMobileUserAgent(new Uri(url));
                     txtBrwUrl.Text = url;
                 }
             }
@@ -83,7 +138,7 @@ namespace InstagramDownloader
                 }
                 if (brwInstagram.Source==null)
                 {
-                    brwInstagram.Navigate(new Uri("https://www.instagram.com/accounts/login/"));
+                    TryNavigateWithMobileUserAgent(new Uri("https://www.instagram.com/accounts/login/"));
 
                 }
 
@@ -144,7 +199,7 @@ namespace InstagramDownloader
             {
                 if (txtBrwUrl.Text.Length>=10)
                 {
-                    brwInstagram.Navigate(new Uri(txtBrwUrl.Text));
+                    TryNavigateWithMobileUserAgent(new Uri(txtBrwUrl.Text));
                 }
                
             }
@@ -210,10 +265,12 @@ namespace InstagramDownloader
                
                 try
                 {
-                    Regex reg = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
+                    Regex regPost = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
                     Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
+                    Regex regIGTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
 
-                    if (reg.IsMatch(txtBrwUrl.Text))
+                    if (regPost.IsMatch(txtBrwUrl.Text) ||
+                        regIGTv.IsMatch(txtBrwUrl.Text))
                     {
                         IsProfile = false;
                     }
@@ -1067,7 +1124,7 @@ new XElement("text", text)))));
                 {
                     baseFilter.CookieManager.DeleteCookie(cookie);
                 }
-                brwInstagram.Navigate(new Uri("https://www.instagram.com/accounts/login/"));
+                TryNavigateWithMobileUserAgent(new Uri("https://www.instagram.com/accounts/login/"));
             }
             catch (Exception)
             {
