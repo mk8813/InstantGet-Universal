@@ -65,8 +65,8 @@
                   NavigationStarting="brwInstagram_NavigationStarting" NavigationFailed="brwInstagram_NavigationFailed" 
                   FrameNavigationCompleted="brwInstagram_FrameNavigationCompleted" FrameNavigationStarting="brwInstagram_FrameNavigationStarting"
                   FrameContentLoading="brwInstagram_FrameContentLoading" FrameDOMContentLoaded="brwInstagram_FrameDOMContentLoaded"
-                  DOMContentLoaded="brwInstagram_DOMContentLoaded"
-                  x:Name="brwInstagram" Grid.Column="0" Grid.Row="1" Loaded="brwInstagram_Loaded"/>
+                  DOMContentLoaded="brwInstagram_DOMContentLoaded" ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  x:Name="brwInstagram" Grid.Column="0" Grid.Row="1" Loaded="brwInstagram_Loaded" MaxWidth="400"/>
 
         <Grid Background="Transparent" Canvas.ZIndex="0" Width="Auto" Grid.Column="0"  Grid.Row="2" FlowDirection="LeftToRight">
           

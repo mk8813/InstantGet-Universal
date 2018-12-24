@@ -165,7 +165,7 @@
         <trans-unit id="RatepopupTitle" translate="yes" xml:space="preserve">
           <source>Rate InstantGet Universal</source>
           <target state="needs-review-translation">Rate ProGet Universal</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="SettingMenuText.Content" translate="yes" xml:space="preserve">
           <source>Settings</source>
@@ -474,7 +474,7 @@
         <trans-unit id="DonatepopupPrimaryButtonText" translate="yes" xml:space="preserve">
           <source>Donate 🙂</source>
           <target state="needs-review-translation">Donate 🙂</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="DonatepopupSecondaryButtonText" translate="yes" xml:space="preserve">
           <source>Not now 🙁</source>

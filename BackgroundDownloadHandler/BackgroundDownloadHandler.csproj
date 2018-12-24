@@ -4,19 +4,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{955BFF32-A49B-4A0C-9E3D-FC7DB0567C5C}</ProjectGuid>
-    <OutputType>winmdobj</OutputType>
+    <ProjectGuid>{C72D3E78-5D25-4BFD-B6C7-6E7111390A62}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UrlListenerComponent</RootNamespace>
-    <AssemblyName>UrlListenerComponent</AssemblyName>
+    <RootNamespace>BackgroundDownloadHandler</RootNamespace>
+    <AssemblyName>BackgroundDownloadHandler</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <AllowCrossPlatformRetargeting>false</AllowCrossPlatformRetargeting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -108,14 +107,11 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UrlListener.cs" />
+    <Compile Include="BackgroundDownloadHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\BackgroundDownloadHandler.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BackgroundDownloadHandler\BackgroundDownloadHandler.csproj">
-      <Project>{c72d3e78-5d25-4bfd-b6c7-6e7111390a62}</Project>
-      <Name>BackgroundDownloadHandler</Name>
-    </ProjectReference>
     <ProjectReference Include="..\dbHelper\dbHelper.csproj">
       <Project>{6aca2d4d-02cb-47f7-9c71-65aad90171c2}</Project>
       <Name>dbHelper</Name>

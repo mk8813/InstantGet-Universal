@@ -281,6 +281,10 @@
       <Project>{6ad25355-3194-4a5b-9039-c0c292ff6659}</Project>
       <Name>ActionCenterToastHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BackgroundDownloadHandler\BackgroundDownloadHandler.csproj">
+      <Project>{c72d3e78-5d25-4bfd-b6c7-6e7111390a62}</Project>
+      <Name>BackgroundDownloadHandler</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dbHelper\dbHelper.csproj">
       <Project>{6aca2d4d-02cb-47f7-9c71-65aad90171c2}</Project>
       <Name>dbHelper</Name>

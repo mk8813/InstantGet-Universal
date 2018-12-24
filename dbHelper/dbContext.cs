@@ -38,7 +38,7 @@ namespace DbHelper
         public string SavePath { get; set; } //c:\\aaaaaaaaa
         public string DateInserted { get; set; } // datetime
         public string IsDownloaded { get; set; } // 1 : yes - 0 : no
-
+        public string DownloadGuid { get; set; }//Guid od download
 
     }
 }

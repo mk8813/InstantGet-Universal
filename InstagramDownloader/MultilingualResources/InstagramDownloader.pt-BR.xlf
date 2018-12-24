@@ -165,7 +165,7 @@
         <trans-unit id="RatepopupTitle" translate="yes" xml:space="preserve">
           <source>Rate InstantGet Universal</source>
           <target state="needs-review-translation">Classificar o ProGet Universal</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="SettingMenuText.Content" translate="yes" xml:space="preserve">
           <source>Settings</source>
@@ -214,7 +214,7 @@
         <trans-unit id="txtUrlCaption.Text" translate="yes" xml:space="preserve">
           <source>Instagram Share URL :</source>
           <target state="needs-review-translation">Perfil do Instagram ou Colar Link :</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="txtVideosFolder.Text" translate="yes" xml:space="preserve">
           <source>Videos Folder :</source>
@@ -431,22 +431,22 @@
         <trans-unit id="PostponeButton" translate="yes" xml:space="preserve">
           <source>Enqueue</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiar</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="UrlPostponed" translate="yes" xml:space="preserve">
           <source>Queued for download later</source>
           <target state="needs-review-translation">Adiado!</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="btnPickUrlLabelUID.Label" translate="yes" xml:space="preserve">
           <source>Queue</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiado</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="btnPickUrlLabelUID.ToolTipService.ToolTip" translate="yes" xml:space="preserve">
           <source>Queue</source>
           <target state="needs-review-translation">Escolha da lista adiada</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="btnClosePopUp.Content" translate="yes" xml:space="preserve">
           <source>Close</source>
@@ -467,12 +467,12 @@
         <trans-unit id="txtBlockPopUpTitle.Text" translate="yes" xml:space="preserve">
           <source>Queue</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiado</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="btnPickUrlFromListUID.Label" translate="yes" xml:space="preserve">
           <source>Queue</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Adiado</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="DonatepopupContent" translate="yes" xml:space="preserve">
           <source>To protect your privacy, we do not use ads for revenue. So if you have enjoyed my App please consider making a donation towards the cost of keep this App alive!</source>
@@ -501,7 +501,7 @@
         <trans-unit id="chkFullSizeimage.Content" translate="yes" xml:space="preserve">
           <source>Download the original photo</source>
           <target state="needs-review-translation">Baixe a resolução da imagem original</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          
         </trans-unit>
         <trans-unit id="ErrorProfilePicture" translate="yes" xml:space="preserve">
           <source>Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.

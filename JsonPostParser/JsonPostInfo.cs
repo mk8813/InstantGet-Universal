@@ -13,7 +13,17 @@ namespace QuickType
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
+    public struct PostDetails
+    {
+        public string Src;
+        public string PostShortCode;
+        public Dimensions PostDimensions;
+        public bool IsVideo;
+        public string InstagramTypeName;
+        public bool isAlbumPost;
+        public List<StickyNode> AlbumNodes;
 
+    }
     public partial class JsonPostInfo
     {
         [JsonProperty("user")]

@@ -35,7 +35,7 @@ namespace InstagramDownloader
         private LicenseInformation licenseInformation;
         private int WhatToDownload = -1;//0 pic - 1 video - 2 profile
         private bool IsFullSizeImageBought = false;
-
+        private string currentHostUrl = "";
 
         public pgBrowser()
         {
@@ -44,11 +44,10 @@ namespace InstagramDownloader
                 this.InitializeComponent();
                 this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
                 licenseInformation = CurrentApp.LicenseInformation;
-
+                brwInstagram.FrameNavigationStarting += BrwInstagram_FrameNavigationStarting;
+             
                 this.Loaded += PgBrowser_Loaded;
-                brwInstagram.NavigationStarting += BrwInstagram_NavigationStarting;
-                CheckBackAndForward();
-
+          
               
             }
             catch (Exception)
@@ -59,53 +58,29 @@ namespace InstagramDownloader
       
         }
 
-        private void BrwInstagram_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
+      
+
+        private async void BrwInstagram_FrameNavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-            try
+
+            var s = await brwInstagram.InvokeScriptAsync("eval", new[] { "window.location.href;" });
+            if (!string.IsNullOrEmpty(s))
             {
-                brwInstagram.NavigationStarting -= BrwInstagram_NavigationStarting;
-                args.Cancel = true;
-                NavigateWithHeader(args.Uri);
+                txtBrwUrl.Text = s;
             }
-            catch (Exception)
-            {
 
-               
-            }
-          
-        }
-        private void NavigateWithHeader(Uri uri)
-        {
-            try
-            {
-                //Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 950) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/14.14263
-                string userAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1";
-                var requestMsg = new Windows.Web.Http.HttpRequestMessage(HttpMethod.Post, uri);
-                requestMsg.Headers.Add("User-Agent", userAgent);
-
-                brwInstagram.NavigateWithHttpRequestMessage(requestMsg);//start navigate
-
-                brwInstagram.NavigationStarting += BrwInstagram_NavigationStarting;
-            
-
-            }
-            catch (Exception)
-            {
-
-              
-            }
-           
         }
 
         private void TryNavigateWithMobileUserAgent(Uri uri)
         {
             try
             {
-                NavigateWithHeader(uri);
+                brwInstagram.Navigate(uri);
+           
             }
             catch (Exception)
             {
-                brwInstagram.Navigate(uri);
+            
 
             }
         }
@@ -158,9 +133,11 @@ namespace InstagramDownloader
 
                 //  txtBrwUrl.Text = await brwInstagram.InvokeScriptAsync("eval", new string[] { "var newURL = window.location.protocol + '//' + window.location.host + '/" + window.location.pathname;" });//pictures
 
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
+                txtBrwUrl.Text = args.Uri.ToString();
+                currentHostUrl = args.Uri.ToString();
 
-                CheckBackAndForward();
+
+               
             }
             catch (Exception)
             {
@@ -215,8 +192,8 @@ namespace InstagramDownloader
             try
             {
                 prgLoadingUrl.Visibility = Visibility.Visible;
-             
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
+
+                txtBrwUrl.Text = args.Uri.ToString();
             }
             catch (Exception)
             {
@@ -225,30 +202,17 @@ namespace InstagramDownloader
             }  
         }
 
-     void CheckBackAndForward()
-        {
-            try
-            {
-                //btnForward.IsEnabled = brwInstagram.CanGoForward;
-                //btnBack.IsEnabled = brwInstagram.CanGoBack;
-              
-            }
-            catch (Exception)
-            {
-
-              
-            }
-        }
+    
        
         private void brwInstagram_NavigationFailed(object sender, WebViewNavigationFailedEventArgs e)
         {
             try
             {
                 prgLoadingUrl.Visibility = Visibility.Collapsed;
-             
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
-     
-                CheckBackAndForward();
+
+                txtBrwUrl.Text = e.Uri.ToString();
+
+
 
             }
             catch (Exception)
@@ -905,8 +869,8 @@ new XElement("text", text)))));
             try
             {
                 prgLoadingUrl.Visibility = Visibility.Collapsed;
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
-                CheckBackAndForward();
+               // txtBrwUrl.Text = brwInstagram.Source.ToString();
+              
             }
             catch (Exception)
             {
@@ -920,7 +884,7 @@ new XElement("text", text)))));
             {
                 prgLoadingUrl.Visibility = Visibility.Collapsed;
                 txtBrwUrl.Text = brwInstagram.Source.ToString();
-                CheckBackAndForward();
+               
             }
             catch (Exception)
             {
@@ -934,8 +898,8 @@ new XElement("text", text)))));
             try
             {
                 prgLoadingUrl.Visibility = Visibility.Collapsed;
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
-                CheckBackAndForward();
+               // txtBrwUrl.Text = brwInstagram.Source.ToString();
+                
             }
             catch (Exception)
             {
@@ -949,7 +913,7 @@ new XElement("text", text)))));
             try
             {
                 prgLoadingUrl.Visibility = Visibility.Visible;
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
+               // txtBrwUrl.Text = brwInstagram.Source.ToString();
             }
             catch (Exception)
             {
@@ -963,7 +927,7 @@ new XElement("text", text)))));
             try
             {
                 prgLoadingUrl.Visibility = Visibility.Visible;
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
+               // txtBrwUrl.Text = brwInstagram.Source.ToString();
 
             }
             catch (Exception)
@@ -978,8 +942,8 @@ new XElement("text", text)))));
             try
             {
                 prgLoadingUrl.Visibility = Visibility.Collapsed;
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
-                CheckBackAndForward();
+               // txtBrwUrl.Text = brwInstagram.Source.ToString();
+              
             }
             catch (Exception)
             {
@@ -992,9 +956,9 @@ new XElement("text", text)))));
         {
             try
             {
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
+               // txtBrwUrl.Text = brwInstagram.Source.ToString();
           
-                CheckBackAndForward();
+               
             }
             catch (Exception)
             {
@@ -1007,8 +971,8 @@ new XElement("text", text)))));
         {
             try
             {
-                txtBrwUrl.Text = brwInstagram.Source.ToString();
-                CheckBackAndForward();
+               // txtBrwUrl.Text = brwInstagram.Source.ToString();
+               
             }
             catch (Exception)
             {
@@ -1039,6 +1003,7 @@ new XElement("text", text)))));
             {
                 if (brwInstagram.CanGoBack)
                 {
+                  
                     brwInstagram.GoBack();
 
                 }
@@ -1185,6 +1150,8 @@ new XElement("text", text)))));
             }
            
         }
+
+       
 
         ////////////////////////////////////////////////////////////////////
     }
