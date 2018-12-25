@@ -19,6 +19,7 @@ using Windows.UI.Notifications;
 using Newtonsoft.Json;
 using DbHelper;
 using Windows.Web.Http;
+using Windows.UI.Core;
 
 namespace BackgroundDownloadHandler
 {
@@ -28,7 +29,7 @@ namespace BackgroundDownloadHandler
         ResourceLoader res = ResourceLoader.GetForViewIndependentUse();
         private bool IsFullSizeImageBought=false;
         private string _downloadedFilePath;
-        private Dimensions _postDimensions;
+        private PostDetails _postdetailsForCurrentDownload;
         public string DownloadedFilePath
         {
             get
@@ -42,16 +43,16 @@ namespace BackgroundDownloadHandler
             }
         }
 
-        public Dimensions PostDimensions
+        public PostDetails PostDetailsForCurrentDownload
         {
             get
             {
-                return _postDimensions;
+                return _postdetailsForCurrentDownload;
             }
 
             set
             {
-                _postDimensions = value;
+                _postdetailsForCurrentDownload = value;
             }
         }
 
@@ -110,14 +111,18 @@ namespace BackgroundDownloadHandler
        
 
 
-        public async Task<bool> DownloadPost(string url, bool IsProfile,Progress<DownloadOperation> progress)
+        public async Task<bool> DownloadPost(string url,Progress<DownloadOperation> progress)
         {
 
             try
             {
                 Uri durl = new Uri(url);
-                PostDetails tuResult;
-                tuResult =await new JsonPostParser.FetchResourceUrl().GetPostFromUrl(new Uri(url),IsProfile,IsFullSizeImageBought);
+                if (string.IsNullOrEmpty(PostDetailsForCurrentDownload.PostShortCode))
+                {
+                   
+                    PostDetailsForCurrentDownload = await new JsonPostParser.FetchResourceUrl().GetPostFromUrl(new Uri(url), IsFullSizeImageBought);
+
+                }
 
                 try
                 {
@@ -130,20 +135,19 @@ namespace BackgroundDownloadHandler
                     curDownload.DateInserted = DateTime.Now.ToString();
                     //////////////////////////////////////////////////////
                   
-                    if (!string.IsNullOrEmpty(tuResult.PostShortCode))
+                    if (!string.IsNullOrEmpty(PostDetailsForCurrentDownload.PostShortCode))
                     {
   
-                        string imgSrc = tuResult.Src;
-                        string postIdOrUsername =tuResult.PostShortCode;
-                        bool isVideoLink = tuResult.IsVideo;
-                        PostDimensions = tuResult.PostDimensions;
-                        StorageFile outputfile =await SetOutputFile(isVideoLink, postIdOrUsername);
+                        string imgSrc = PostDetailsForCurrentDownload.Src;
+                        string postIdOrUsername = PostDetailsForCurrentDownload.PostShortCode;
+                        bool isVideopost = PostDetailsForCurrentDownload.IsVideo;
+                        StorageFile outputfile =await SetOutputFile(isVideopost, postIdOrUsername);
 
 
                         //////////////////////////
 
                         curDownload.SavePath = outputfile.Path;
-                        curDownload.Type = isVideoLink ? "video" : "picture";
+                        curDownload.Type = isVideopost ? "video" : "picture";
                         curDownload.Url = durl.ToString();
 
 
@@ -154,12 +158,12 @@ namespace BackgroundDownloadHandler
 
 
                             ShowNotification(res.GetString("DownloadInProgress"), true);
-                            isSuccess = await CreateDownload(imgSrc, outputfile,progress, isVideoLink);
+                            isSuccess = await CreateDownload(imgSrc, outputfile,progress, isVideopost);
                             DownloadedFilePath = outputfile.Path;
 
                             if (isSuccess)
                             {
-                                if (isVideoLink)
+                                if (isVideopost)
                                 {
                                     /////////////save video thumbnail
 
@@ -179,7 +183,7 @@ namespace BackgroundDownloadHandler
 
 
 
-                                if (isVideoLink)
+                                if (isVideopost)
                                 {
 
                                     ShowNotification(res.GetString("ErrorDownloadVideo"));
@@ -248,6 +252,8 @@ namespace BackgroundDownloadHandler
                 }
                 catch (Exception ex)
                 {
+                    await ErrorLogger.ErrorLog.WriteError("Error in BackgroundDownloadHandler_DownloadPost\r\n" + ex.ToString());
+
                     ShowNotification(ex.Message);
                     return false;
                 }
@@ -255,6 +261,8 @@ namespace BackgroundDownloadHandler
             }
             catch (Exception ex)
             {
+                await ErrorLogger.ErrorLog.WriteError("Error in BackgroundDownloadHandler_DownloadPost_JsonParserTryCatch\r\n" + ex.ToString());
+
                 ShowNotification(ex.Message);
                 return false;
             }
@@ -265,6 +273,64 @@ namespace BackgroundDownloadHandler
 
 
         }
+
+
+        public string FetchLinksFromSource(string htmlSource, out bool isVideo, bool IsProfile = false)
+        {
+
+            List<string> links = new List<string>();
+
+            string regexMeta = @"<meta\b[^>]*\bproperty=[""]og:image[""][^>]*\b+content[\s]?=[\s""']+(.*?)[""']+.*?";
+            string videoRegex = @"<meta\b[^>]*\bproperty=[""]og:video[""][^>]*\b+content[\s]?=[\s""']+(.*?)[""']+.*?";
+            Regex profileRegex = new Regex(@"s[0-9][0-9][0-9]x[0-9][0-9][0-9]");
+
+            MatchCollection videomatches = Regex.Matches(htmlSource, videoRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            if (videomatches.Count != 0)
+            {
+                foreach (Match m in videomatches)
+                {
+                    string src = m.Groups[1].Value;
+                    isVideo = true;
+                    return src;
+                }
+            }
+            else
+            {
+                MatchCollection matchesImgSrc = Regex.Matches(htmlSource, regexMeta, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                if (!IsProfile)
+                {
+                    //picture
+
+                    foreach (Match m in matchesImgSrc)
+                    {
+                        string src = m.Groups[1].Value;
+                        isVideo = false;
+                        return src;
+                    }
+                }
+                else
+                {
+                    //profile
+                    foreach (Match m in matchesImgSrc)
+                    {
+                        string src = m.Groups[1].Value;
+                        isVideo = false;
+
+                        if (profileRegex.IsMatch(src))
+                        {
+                            src = profileRegex.Replace(src, "s");
+                        }
+
+                        return src;
+                    }
+                }
+
+
+            }
+            isVideo = false;
+            return "";
+        }
+
         private string GetProfilePictureUrl(string url)
         {
             Regex profileRegex = new Regex(@"s[0-9][0-9][0-9]x[0-9][0-9][0-9]");

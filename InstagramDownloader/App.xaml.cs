@@ -14,7 +14,8 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-
+using Microsoft.EntityFrameworkCore;
+using DbHelper;
 namespace InstagramDownloader
 {
     /// <summary>
@@ -34,7 +35,8 @@ namespace InstagramDownloader
 
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            
+           
+
             ClearToastNotifications();//clear toasts
 
             /////////////////////language/////////////////
@@ -402,7 +404,7 @@ namespace InstagramDownloader
                     Windows.UI.Core.AppViewBackButtonVisibility.Collapsed;
 
 
-              
+
                 //try
                 //{
                 //    ShowStatus();
@@ -412,15 +414,15 @@ namespace InstagramDownloader
 
 
                 //}
-                 ///////////////load db
+                ///////////////load db
                 ////////////////////////
-             
+
                 if (!(await CopyDatabase()))
                 {
                     await new MessageDialog(ResourceLoader.GetForViewIndependentUse().GetString("FailedToLoadData")).ShowAsync();
-                 
+
                 }
-               
+
 
 
 

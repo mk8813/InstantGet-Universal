@@ -493,4 +493,7 @@ More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-gr
   <data name="UnPinBrowserTileMsg" xml:space="preserve">
     <value>UnPinned!</value>
   </data>
+  <data name="FullSizeImageMsg" xml:space="preserve">
+    <value>Thank you! Now you can download original images resolution.</value>
+  </data>
 </root>

@@ -12,7 +12,7 @@ namespace JsonPostParser
 {
     public class FetchResourceUrl
     {
-        public async Task<PostDetails> GetPostFromUrl(Uri durl, bool isProfile, bool IsHDDownload)
+        public async Task<PostDetails> GetPostFromUrl(Uri durl, bool IsHDDownload)
         {
             PostDetails postDetails=new PostDetails();
            
@@ -47,59 +47,12 @@ namespace JsonPostParser
                     jsonresult = JsonConvert.DeserializeObject<JsonPostInfo>(json);
                     if (jsonresult != null)
                     {
-                        if (!isProfile)
-                        {
-                           IsVideo = jsonresult.Graphql.ShortcodeMedia.IsVideo;
 
-                        }
+                        IsVideo = jsonresult.Graphql.ShortcodeMedia.IsVideo;
 
                         postDetails.PostDimensions = jsonresult.Graphql.ShortcodeMedia.Dimensions;//get width height
                         string postType = jsonresult.Graphql.ShortcodeMedia.Typename.ToString();//post type
-
-                        #region beforeEdit
-                        //if (!IsVideo)
-                        //{
-                        //    if (!isProfile)//not profile requested
-                        //    {
-
-                        //        postDetails.PostShortCode = jsonresult.Graphql.ShortcodeMedia.Shortcode;
-
-                        //        if (IsHDDownload)//full hd
-                        //        {
-                        //            postDetails.Src = jsonresult.Graphql.ShortcodeMedia.DisplayUrl; /* FetchLinksFromSource(htmlsrc, out isVideoLink,IsProfile);//.ToString());*/
-                        //        }
-                        //        else // sd image
-                        //        {
-                        //            postDetails.Src = jsonresult.Graphql.ShortcodeMedia.DisplayResources[0].Src;
-                        //        }
-
-                        //    }// is profile picture
-                        //    else
-                        //    {
-                        //        postDetails.PostShortCode = jsonresult.User.Username;
-                        //        if (IsHDDownload)
-                        //        {
-                        //            postDetails.Src = GetProfilePictureUrl(jsonresult.User.ProfilePicUrlHd);
-                        //        }
-                        //        else
-                        //        {
-                        //            postDetails.Src = jsonresult.User.ProfilePicUrlHd;
-                        //        }
-
-                        //    }
-
-
-                        //}
-                        //else // video link
-                        //{
-                        //    postDetails.PostShortCode = jsonresult.Graphql.ShortcodeMedia.Shortcode;
-
-                        //    postDetails.Src = jsonresult.Graphql.ShortcodeMedia.VideoUrl;
-
-                        //}
-                        #endregion beforeEdit
-
-
+                        postDetails.InstagramTypeName = postType;
                         postDetails.PostShortCode = jsonresult.Graphql.ShortcodeMedia.Shortcode;
 
                         if (postType == Instagram__Typename.GraphImage.ToString())//single image post
@@ -133,7 +86,16 @@ namespace JsonPostParser
                                 }
                                 postDetails.isAlbumPost = true;
                                 postDetails.AlbumNodes = lstNodes;
-                                //imgSrc = await ShowAlbumListDialog(lstNodes);
+                                if (lstNodes.FirstOrDefault().IsVideo)
+                                {
+                                    postDetails.Src = lstNodes.FirstOrDefault().VideoUrl;
+                                    postDetails.IsVideo = true;
+                                }
+                                else
+                                {
+                                    postDetails.Src = IsHDDownload ? lstNodes.FirstOrDefault().DisplayResources.LastOrDefault().Src : lstNodes.FirstOrDefault().DisplayResources.FirstOrDefault().Src;
+                                    postDetails.IsVideo = false;
+                                }
 
 
                             }

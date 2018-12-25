@@ -49,7 +49,7 @@ namespace UrlListenerComponent
                         Regex regPost = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
                         Regex regIGTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
 
-                        Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
+                       // Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
                         /////////////////////////////////////////////////
                         switch (arguments)
                         {
@@ -78,14 +78,7 @@ namespace UrlListenerComponent
                                     {
                                        
                                         string posturl = inputurl.Replace("http:", "https:");
-                                        await bgDownloader.DownloadPost(posturl, false, dlProgress).ConfigureAwait(false);
-
-                                    }
-                                    else if (regProfile.IsMatch(inputurl))
-                                    {
-                                       
-                                        string posturl = inputurl.Replace("http:", "https:");
-                                        await bgDownloader.DownloadPost(posturl, true, dlProgress).ConfigureAwait(false); ;
+                                        await bgDownloader.DownloadPost(posturl, dlProgress);//.ConfigureAwait(false);
 
                                     }
                                     else
@@ -116,7 +109,7 @@ namespace UrlListenerComponent
                                             {
 
                                                 db.tbl_History.Add(postponeDownload);
-                                                int result = await db.SaveChangesAsync().ConfigureAwait(false); ;
+                                                int result = await db.SaveChangesAsync();//.ConfigureAwait(false); ;
                                                 //ShowNotification(cnt.ToString() + "  record saved");
                                                 if (result > 0)
                                                 {

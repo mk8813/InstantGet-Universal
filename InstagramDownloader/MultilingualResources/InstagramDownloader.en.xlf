@@ -165,7 +165,6 @@
         <trans-unit id="RatepopupTitle" translate="yes" xml:space="preserve">
           <source>Rate InstantGet Universal</source>
           <target state="needs-review-translation">Rate ProGet Universal</target>
-          
         </trans-unit>
         <trans-unit id="SettingMenuText.Content" translate="yes" xml:space="preserve">
           <source>Settings</source>
@@ -474,7 +473,6 @@
         <trans-unit id="DonatepopupPrimaryButtonText" translate="yes" xml:space="preserve">
           <source>Donate 🙂</source>
           <target state="needs-review-translation">Donate 🙂</target>
-          
         </trans-unit>
         <trans-unit id="DonatepopupSecondaryButtonText" translate="yes" xml:space="preserve">
           <source>Not now 🙁</source>
@@ -509,6 +507,10 @@ More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-gr
         <trans-unit id="UnPinBrowserTileMsg" translate="yes" xml:space="preserve">
           <source>UnPinned!</source>
           <target state="new">UnPinned!</target>
+        </trans-unit>
+        <trans-unit id="FullSizeImageMsg" translate="yes" xml:space="preserve">
+          <source>Thank you! Now you can download original images resolution.</source>
+          <target state="new">Thank you! Now you can download original images resolution.</target>
         </trans-unit>
       </group>
     </body>

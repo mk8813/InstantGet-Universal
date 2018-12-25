@@ -21,7 +21,7 @@ namespace InstagramDownloader
     public sealed partial class dlgAlbumPost : ContentDialog
     {
         bool __isVideo = false;
-        string selectedNode;
+        PostDetails selectedNode;
         string postId;
         bool isFullSized;
         private List<StickyNode> __lstAlbumPost;
@@ -38,7 +38,7 @@ namespace InstagramDownloader
             }
         }
 
-        public string SelectedNode
+        public PostDetails SelectedNode
         {
             get
             {
@@ -90,10 +90,11 @@ namespace InstagramDownloader
             }
         }
 
-        public dlgAlbumPost()
+        public dlgAlbumPost(List<StickyNode> lstNodes)
         {
             this.InitializeComponent();
             this.Loaded += DlgAlbumPost_Loaded;
+            LstAlbumPost = new List<StickyNode>(lstNodes);
         }
 
         private void DlgAlbumPost_Loaded(object sender, RoutedEventArgs e)
@@ -101,7 +102,7 @@ namespace InstagramDownloader
             this.Loaded -= DlgAlbumPost_Loaded;
             try
             {
-                if (__lstAlbumPost!=null)
+                if (LstAlbumPost!=null)
                 {
                     flpAlbumlist.ItemsSource = __lstAlbumPost;
                     flpAlbumlist.Visibility = Visibility.Visible;
@@ -123,30 +124,35 @@ namespace InstagramDownloader
                     var SelectedRecord = (flpAlbumlist.SelectedItem) as StickyNode;
                     if (SelectedRecord != null)
                     {
-                        postId = SelectedRecord.Shortcode;
-                        if (SelectedRecord.Typename==Instagram__Typename.GraphImage.ToString())
+                        selectedNode.PostShortCode= postId = SelectedRecord.Shortcode;
+                        selectedNode.PostDimensions = SelectedRecord.Dimensions;
+                        selectedNode.InstagramTypeName = SelectedRecord.Typename;
+                        selectedNode.isAlbumPost = true;
+                        selectedNode.AlbumNodes = LstAlbumPost;
+
+                        if (SelectedRecord.Typename == Instagram__Typename.GraphImage.ToString())
                         {
-                            IsVideo = false;
+                            selectedNode.IsVideo = IsVideo = false;
                             if (isFullSized)//hd image url
                             {
-                                selectedNode = SelectedRecord.DisplayUrl;
+                                selectedNode.Src = SelectedRecord.DisplayResources.LastOrDefault().Src;
                             }
                             else // sd image url
                             {
-                                selectedNode = SelectedRecord.DisplayResources[0].Src;
+                                selectedNode.Src = SelectedRecord.DisplayResources.FirstOrDefault().Src;
                             }
                         }
-                        else if(SelectedRecord.Typename == Instagram__Typename.GraphVideo.ToString())//video
+                        else if (SelectedRecord.Typename == Instagram__Typename.GraphVideo.ToString())//video
                         {
-                            IsVideo = true;
-                            selectedNode = SelectedRecord.VideoUrl;
+                            selectedNode.IsVideo= IsVideo = true;
+                            selectedNode.Src = SelectedRecord.VideoUrl;
                         }
-                       
+
 
                     }
                     else
                     {
-                        selectedNode = "";
+                        selectedNode.PostShortCode="";
 
                     }
                 }
