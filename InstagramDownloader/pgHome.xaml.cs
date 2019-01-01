@@ -436,56 +436,6 @@ namespace InstagramDownloader
 
                 string strDurl=url;
 
-                #region IsFromAlbum
-                //if (!IsSelectedFromAlbum)
-                //{
-                //PostDetails tuResult;
-                //tuResult = await new JsonPostParser.FetchResourceUrl().GetPostFromUrl(new Uri(url), false, IsFullSizeImageBought);
-
-
-
-                //if (!string.IsNullOrEmpty(tuResult.PostShortCode))
-                //{
-
-                //    imgSrc = tuResult.Src;
-                //    string postIdOrUsername = tuResult.PostShortCode;
-                //    bool isVideoLink = tuResult.IsVideo;
-                //    /////////////////get image size for viewing
-                //    _downloadedImageHeight = tuResult.PostDimensions.Height;
-                //    _downloadedImageWidth = tuResult.PostDimensions.Width;
-                //    bool  isAlbum = tuResult.isAlbumPost;//post type
-                //    /////////////////////
-
-                //    if (isAlbum)//album  post
-                //    {
-                //        //to do
-                //        if (tuResult.AlbumNodes != null)
-                //        {
-
-                //            imgSrc = await ShowAlbumListDialog(tuResult.AlbumNodes);
-
-
-                //        }
-                //    }
-
-                //}
-                //else// json result is null
-                //{
-                //   // curDownload.IsDownloaded = "0";
-                //    SetDownloadStatusText(res.GetString("FailedToRetrieveUrl"));
-                //    await SetMsgDialogText(res.GetString("FailedToRetrieveUrl"));
-
-                //}
-
-                //}
-                #endregion IsFromAlbum
-                //if (IsSelectedFromAlbum)// from album dialog
-                //{
-                //    strDurl = dlgLoadAlbum.SelectedNode;
-                //    prgDownload.Visibility = Visibility.Visible;
-                //}
-
-                
                 ///////////////////
                 if (!String.IsNullOrEmpty(strDurl))
                 {
