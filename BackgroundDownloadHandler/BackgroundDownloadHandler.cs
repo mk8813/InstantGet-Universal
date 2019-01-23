@@ -84,8 +84,6 @@ namespace BackgroundDownloadHandler
         }
 
        
-
-
         public async Task<bool> DownloadPost(string url,Progress<DownloadOperation> progress)
         {
 

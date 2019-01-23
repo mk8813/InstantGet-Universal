@@ -25,31 +25,26 @@ namespace InstagramDownloader
     {
         ResourceLoader res = ResourceLoader.GetForViewIndependentUse();
         ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
-        ToastNotificationHistory th = ToastNotificationManager.History;
+       
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
         {
+            //clear toasts
+            ClearToastNotifications();
+            ////language/////////////////
+            ApplyLanguage();
+            //check background task
+            CheckBackgroundTaskActivation();
+            //apply user selected theme
+            ApplyTheme();
 
+            ////////////////////////
             this.InitializeComponent();
             this.Suspending += OnSuspending;
            
-
-            ClearToastNotifications();//clear toasts
-
-            /////////////////////language/////////////////
-            ApplyLanguage();
-            //////////////////////end language////////////////
-
-            CheckBackgroundTaskActivation();//check background task
-
-            ApplyTheme();//apply user selected theme
-
-            ////////////////////////
-
-
 
         }
 
@@ -57,6 +52,7 @@ namespace InstagramDownloader
         {
             try
             {
+                ToastNotificationHistory th = ToastNotificationManager.History;
                 if (th.GetHistory().Any())
                 {
                     th.Clear();
@@ -78,44 +74,45 @@ namespace InstagramDownloader
                 object theme = AppSettings.Values["theme"];
                 if (theme != null)
                 {
-                    if (theme.ToString() == "1")
+                    switch (theme.ToString())
                     {
-                        this.RequestedTheme = ApplicationTheme.Dark;
-                    }
-                    else if (theme.ToString() == "0")
-                    {
-                        this.RequestedTheme = ApplicationTheme.Light;
-                    }
-                    else if (theme.ToString() == "2")
-                    {
-                        var uiSettings = new UISettings();
-                        var color = uiSettings.GetColorValue(
-                                                Windows.UI.ViewManagement.UIColorType.Background
-                                               );
-
-                        if (color == Windows.UI.Colors.Black)
-                        {
+                        case "1":
                             this.RequestedTheme = ApplicationTheme.Dark;
-                        }
-                        else if (color == Windows.UI.Colors.White)
-                        {
+                            break;
+                        case "0":
                             this.RequestedTheme = ApplicationTheme.Light;
+                            break;
+                        case "2":
+                        {
+                            var uiSettings = new UISettings();
+                            var color = uiSettings.GetColorValue(
+                                Windows.UI.ViewManagement.UIColorType.Background
+                            );
+
+                            if (color == Windows.UI.Colors.Black)
+                            {
+                                this.RequestedTheme = ApplicationTheme.Dark;
+                            }
+                            else if (color == Windows.UI.Colors.White)
+                            {
+                                this.RequestedTheme = ApplicationTheme.Light;
+                            }
+
+                            break;
                         }
                     }
-
                 }
                 else
                 {
-                    if (this.RequestedTheme == ApplicationTheme.Dark)
+                    switch (this.RequestedTheme)
                     {
-
-                        AppSettings.Values["theme"] = "1";
+                        case ApplicationTheme.Dark:
+                            AppSettings.Values["theme"] = "1";
+                            break;
+                        case ApplicationTheme.Light:
+                            AppSettings.Values["theme"] = "0";
+                            break;
                     }
-                    else if (this.RequestedTheme == ApplicationTheme.Light)
-                    {
-                        AppSettings.Values["theme"] = "0";
-                    }
-
                 }
             }
             catch (Exception ex)
@@ -130,30 +127,23 @@ namespace InstagramDownloader
         {
             try
             {
+                ToastNotificationHistory th = ToastNotificationManager.History;
                 object val = AppSettings.Values["bgStatus"];
-                if (val != null)
+                if (val == null) return;
+                if (val.ToString() != "1") return;
+                var isAlreadyRegistered = Windows.ApplicationModel.Background.BackgroundTaskRegistration.AllTasks.Any(t => t.Value?.Name == "UrlListener");
+                if (isAlreadyRegistered)
                 {
-                    if (val.ToString() == "1")
+
+                    if (th.GetHistory().Count(t => t.Tag == "AgentToast") == 0)
                     {
-                        var isAlreadyRegistered = Windows.ApplicationModel.Background.BackgroundTaskRegistration.AllTasks.Any(t => t.Value?.Name == "UrlListener");
-                        if (isAlreadyRegistered)
-                        {
 
-                            if (th.GetHistory().Where(t => t.Tag == "AgentToast").Count() == 0)
-                            {
-
-                                Sendnotidication();
-                            }
-                        }
-                        else
-                        {
-                            var result = new MessageDialog(res.GetString("ActionCenterIsntRunning")).ShowAsync();
-
-                        }
-
-
+                        Sendnotidication();
                     }
-
+                }
+                else
+                {
+                   await  new MessageDialog(res.GetString("ActionCenterIsntRunning")).ShowAsync();
 
                 }
             }
@@ -210,8 +200,6 @@ namespace InstagramDownloader
             }
 
         }
-
-
 
         private async System.Threading.Tasks.Task<bool>  CopyDatabase()
         {

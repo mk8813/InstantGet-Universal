@@ -3,13 +3,10 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Popups;
 using Windows.ApplicationModel.DataTransfer;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Windows.Storage;
 using System.Threading.Tasks;
 using Windows.Networking.BackgroundTransfer;
-using Windows.UI.Notifications;
-using Windows.Data.Xml.Dom;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using Windows.ApplicationModel;
@@ -29,12 +26,13 @@ namespace InstagramDownloader
     {
         
         ResourceLoader res = ResourceLoader.GetForCurrentView();
-        private bool IsAutomaticallyPaste = false;
+       
         private bool IsRatingOpened = false;
         private bool IsDonateBoxViewed = false;
         private LicenseInformation licenseInformation;
         private bool IsFullSizeImageBought = false;
         ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
+        private bool IsAutomaticallyPaste = false;
         bool isVideoLink = false;
         string postIdOrUsername = "";
         double _downloadedImageWidth = 0;
@@ -69,17 +67,10 @@ namespace InstagramDownloader
                     IsAutomaticallyPaste = true;
                 else if (clipboard.ToString() == "0") IsAutomaticallyPaste = false;
             }
-
-
             catch (Exception)
             {
                 // ignored
             }
-        }
-
-        private void PgHome_VisibleBoundsChanged(ApplicationView sender, object args)
-        {
-           
         }
 
         private void CoreWindow_SizeChanged(CoreWindow sender, WindowSizeChangedEventArgs args)
@@ -191,13 +182,10 @@ namespace InstagramDownloader
                     }
                     ///////////////////////////////
                 }
-                catch (Exception)
+                catch
                 {
-
-
+                    // ignored
                 }
-
-
             }
             catch (Exception)
             {
@@ -258,9 +246,6 @@ namespace InstagramDownloader
 
             }
         }
-        public string OuputFilePath = "";
-
-
 
         private void SetDownloadStatusText(string text)
         {

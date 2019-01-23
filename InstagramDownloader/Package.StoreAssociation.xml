@@ -363,6 +363,9 @@
       <ReservedName>InstantGet Universal</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
-  <AccountPackageIdentityNames/>
+  <AccountPackageIdentityNames>
+    <MainPackageIdentityName>49301MehdiKheirandish.Sendenarium</MainPackageIdentityName>
+    <MainPackageIdentityName>49301MehdiKheirandish.6772E1270747</MainPackageIdentityName>
+  </AccountPackageIdentityNames>
   <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NBLGGH42JND" />
 </StoreAssociation>

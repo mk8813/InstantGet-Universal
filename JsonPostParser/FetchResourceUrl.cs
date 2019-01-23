@@ -50,7 +50,6 @@ namespace JsonPostParser
 
                         IsVideo = jsonresult.Graphql.ShortcodeMedia.IsVideo;
 
-                        postDetails.PostDimensions = jsonresult.Graphql.ShortcodeMedia.Dimensions;//get width height
                         string postType = jsonresult.Graphql.ShortcodeMedia.Typename.ToString();//post type
                         postDetails.InstagramTypeName = postType;
                         postDetails.PostShortCode = jsonresult.Graphql.ShortcodeMedia.Shortcode;
@@ -61,10 +60,19 @@ namespace JsonPostParser
                             if (IsHDDownload)//full hd
                             {
                                 postDetails.Src = jsonresult.Graphql.ShortcodeMedia.DisplayResources.LastOrDefault().Src;//Displayurl /* FetchLinksFromSource(htmlsrc, out isVideoLink,IsProfile);//.ToString());*/
+                                postDetails.PostDimensions = new Dimensions() {
+                                    Width = jsonresult.Graphql.ShortcodeMedia.DisplayResources.LastOrDefault().ConfigWidth,
+                                    Height= jsonresult.Graphql.ShortcodeMedia.DisplayResources.LastOrDefault().ConfigHeight
+                                };//get width height
                             }
                             else // sd image
                             {
                                 postDetails.Src = jsonresult.Graphql.ShortcodeMedia.DisplayResources.FirstOrDefault().Src;//[0]
+                                postDetails.PostDimensions = new Dimensions()
+                                {
+                                    Width = jsonresult.Graphql.ShortcodeMedia.DisplayResources.FirstOrDefault().ConfigWidth,
+                                    Height = jsonresult.Graphql.ShortcodeMedia.DisplayResources.FirstOrDefault().ConfigHeight
+                                };//get width height
                             }
                         }
                         else if (postType == Instagram__Typename.GraphVideo.ToString())//video post
@@ -94,6 +102,17 @@ namespace JsonPostParser
                                 else
                                 {
                                     postDetails.Src = IsHDDownload ? lstNodes.FirstOrDefault().DisplayResources.LastOrDefault().Src : lstNodes.FirstOrDefault().DisplayResources.FirstOrDefault().Src;
+                                    postDetails.PostDimensions =IsHDDownload ?
+                                     new Dimensions()
+                                     {
+                                         Width = jsonresult.Graphql.ShortcodeMedia.DisplayResources.LastOrDefault().ConfigWidth,
+                                         Height = jsonresult.Graphql.ShortcodeMedia.DisplayResources.LastOrDefault().ConfigHeight
+                                     }   
+                                    : new Dimensions()
+                                    {
+                                        Width = jsonresult.Graphql.ShortcodeMedia.DisplayResources.FirstOrDefault().ConfigWidth,
+                                        Height = jsonresult.Graphql.ShortcodeMedia.DisplayResources.FirstOrDefault().ConfigHeight
+                                    };//get width height
                                     postDetails.IsVideo = false;
                                 }
 
