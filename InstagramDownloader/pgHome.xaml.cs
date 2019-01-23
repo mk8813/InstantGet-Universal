@@ -61,38 +61,19 @@ namespace InstagramDownloader
             {
 
 
-                if (txtUrl.Text.Length >= 10)
-                {
-                    btnDownload.IsEnabled = true;
-                }
-                else
-                {
-                    btnDownload.IsEnabled = false;
-                }
-
-
+                btnDownload.IsEnabled = txtUrl.Text.Length >= 10;
 
                 object clipboard = AppSettings.Values["autoPaste"];
-                if (clipboard != null)
-                {
-                    switch (clipboard.ToString())
-                    {
-                        case "1":
-                            IsAutomaticallyPaste = true;
-                            break;
-                        case "0":
-                            IsAutomaticallyPaste = false;
-                            break;
-
-                    }
-                }
+                if (clipboard == null) return;
+                if (clipboard.ToString() == "1")
+                    IsAutomaticallyPaste = true;
+                else if (clipboard.ToString() == "0") IsAutomaticallyPaste = false;
             }
 
 
             catch (Exception)
             {
-
-
+                // ignored
             }
         }
 
@@ -203,13 +184,10 @@ namespace InstagramDownloader
 
                     int rnd = new Random().Next(1, 15);
 
-                    if (rnd == 3)
+                    if (rnd != 3) return;
+                    if (!IsRatingOpened)
                     {
-                        if (!IsRatingOpened)
-                        {
-                            RateApp();
-                        }
-
+                        RateApp();
                     }
                     ///////////////////////////////
                 }
@@ -346,15 +324,15 @@ namespace InstagramDownloader
         {
 
             double br = downloadOperation.Progress.BytesReceived;
-            double TotalbytesReceived = downloadOperation.Progress.TotalBytesToReceive;
-            var result = br / TotalbytesReceived * 100;
+            double totalbytesReceived = downloadOperation.Progress.TotalBytesToReceive;
+            var result = br / totalbytesReceived * 100;
 
             // await SetProgressValue(br, TotalbytesReceived);
-            prgDownload.Maximum = TotalbytesReceived;
+            prgDownload.Maximum = totalbytesReceived;
             prgDownload.Value = br;
 
             //await SetDownloadStatusText(String.Format(res.GetString("Downloading"), ((int)(br / 1024)).ToString(), ((int)(TotalbytesReceived / 1024)).ToString()));
-            txtDownloadStatus.Text = String.Format(res.GetString("Downloading"), ((int)(br / 1024)).ToString(), ((int)(TotalbytesReceived / 1024)).ToString());
+            txtDownloadStatus.Text = string.Format(res.GetString("Downloading"), ((int)(br / 1024)).ToString(), ((int)(totalbytesReceived / 1024)).ToString());
 
             switch (downloadOperation.Progress.Status)
             {
@@ -395,7 +373,6 @@ namespace InstagramDownloader
             {
                // await SetDownloadStatusText(res.GetString("DownloadCompleted"));
                 txtDownloadStatus.Text = res.GetString("DownloadCompleted");
-                downloadOperation = null;
                 flyoutDownloadProgress.Visibility=  prgDownload.Visibility =prgIntermediate.Visibility= Visibility.Collapsed;
 
 
@@ -426,27 +403,23 @@ namespace InstagramDownloader
   
 
       
-        private async Task Downloader(string url, bool IsSelectedFromAlbum = false)
+        private async Task Downloader(string url, bool isSelectedFromAlbum = false)
         {
             try
             {
-
-
-                bool isSuccess = false;
-
                 string strDurl=url;
 
                 ///////////////////
-                if (!String.IsNullOrEmpty(strDurl))
+                if (!string.IsNullOrEmpty(strDurl))
                 {
                     //SetProgressValue(-10, 0);
                     BackgroundDownloaderManager bgDownloader = new BackgroundDownloaderManager();
                     Progress<DownloadOperation> progress = new Progress<DownloadOperation>(progressChanged);
-                    if (IsSelectedFromAlbum)//user selected a album post item
+                    if (isSelectedFromAlbum)//user selected a album post item
                     {
                         bgDownloader.PostDetailsForCurrentDownload = dlgLoadAlbum.SelectedNode;
                     }
-                    isSuccess = await bgDownloader.DownloadPost(strDurl, progress);//start Download
+                    var isSuccess = await bgDownloader.DownloadPost(strDurl, progress);
                     PostDetails curPostDetails = bgDownloader.PostDetailsForCurrentDownload;
                     ////////////////////////////////////////
                     isVideoLink = curPostDetails.IsVideo;
@@ -493,8 +466,7 @@ namespace InstagramDownloader
                             }
                             catch (Exception)
                             {
-
-
+                                // ignored
                             }
                         }
                         else // picture
@@ -526,8 +498,7 @@ namespace InstagramDownloader
                             }
                             catch (Exception)
                             {
-
-
+                                // ignored
                             }
                         }
 
@@ -580,7 +551,7 @@ namespace InstagramDownloader
                     prgDownload.Visibility =prgIntermediate.Visibility= Visibility.Collapsed;
                     btnDownload.IsEnabled = chkFullSizeImage.IsEnabled = btnPickUrlFromList.IsEnabled = txtUrl.IsEnabled = true;
 
-                    txtstatusFadeAnimation.Storyboard.Stop();
+                    txtstatusFadeAnimation.Storyboard?.Stop();
                     //////////////////////////
                     /////////////////////begin showing donate 
                     if (!IsDonateBoxViewed)
@@ -601,39 +572,39 @@ namespace InstagramDownloader
             }
 
         }
-        private async Task<PostDetails> ShowAlbumListDialog(List<StickyNode> lstnode)
-        {
-            var tcs = new TaskCompletionSource<PostDetails>();
-            var dialogTask = tcs.Task;
+        //private async Task<PostDetails> ShowAlbumListDialog(List<StickyNode> lstnode)
+        //{
+        //    var tcs = new TaskCompletionSource<PostDetails>();
+        //    var dialogTask = tcs.Task;
 
 
-            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () => {
+        //    await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () => {
 
 
-                btnChoosefromAlbum.Visibility = Visibility.Visible;
-                //dlgAlbumPost loadalbum = new dlgAlbumPost();
-                dlgLoadAlbum.IsFullSized = IsFullSizeImageBought;
-                dlgLoadAlbum.LstAlbumPost = lstnode;
-                var ress = await dlgLoadAlbum.ShowAsync();
-                if (ress == ContentDialogResult.Primary)
-                {
-                    isVideoLink = dlgLoadAlbum.IsVideo;
-                    postIdOrUsername = dlgLoadAlbum.PostId;
-                    tcs.SetResult(dlgLoadAlbum.SelectedNode);
-                }
-                else
-                {
-                    tcs.SetResult(new PostDetails() { PostShortCode=""});
-                };
+        //        btnChoosefromAlbum.Visibility = Visibility.Visible;
+        //        //dlgAlbumPost loadalbum = new dlgAlbumPost();
+        //        dlgLoadAlbum.IsFullSized = IsFullSizeImageBought;
+        //        dlgLoadAlbum.LstAlbumPost = lstnode;
+        //        var ress = await dlgLoadAlbum.ShowAsync();
+        //        if (ress == ContentDialogResult.Primary)
+        //        {
+        //            isVideoLink = dlgLoadAlbum.IsVideo;
+        //            postIdOrUsername = dlgLoadAlbum.PostId;
+        //            tcs.SetResult(dlgLoadAlbum.SelectedNode);
+        //        }
+        //        else
+        //        {
+        //            tcs.SetResult(new PostDetails() { PostShortCode=""});
+        //        };
 
-            });
+        //    });
 
-            var result = await dialogTask;
+        //    var result = await dialogTask;
 
-            return result;
+        //    return result;
 
 
-        }
+        //}
 
         private async void Donate()
         {
@@ -642,71 +613,64 @@ namespace InstagramDownloader
                 ///////////////////// begin read setting
                 ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
                 object donated = AppSettings.Values["IsDonated"];
-                if (!licenseInformation.ProductLicenses["FullSizeImageDownload"].IsActive) //not bought
+                if (licenseInformation.ProductLicenses["FullSizeImageDownload"].IsActive) return;
+                if (donated != null)
                 {
-                    if (donated != null)
+                    if (donated.ToString() != "0") return;
+                    ContentDialog donateDialog = new ContentDialog()
                     {
-                        if (donated.ToString() == "0")
-                        {
-                            ContentDialog donateDialog = new ContentDialog()
-                            {
-                                Title = res.GetString("DonatepopupTitle"),
-                                Content = res.GetString("DonatepopupContent"),
-                                PrimaryButtonText = res.GetString("DonatepopupPrimaryButtonText"),
-                                SecondaryButtonText = res.GetString("DonatepopupSecondaryButtonText")
-                            };
+                        Title = res.GetString("DonatepopupTitle"),
+                        Content = res.GetString("DonatepopupContent"),
+                        PrimaryButtonText = res.GetString("DonatepopupPrimaryButtonText"),
+                        SecondaryButtonText = res.GetString("DonatepopupSecondaryButtonText")
+                    };
 
-                            IsRatingOpened = true;
-                            ContentDialogResult result = await donateDialog.ShowAsync();
+                    IsRatingOpened = true;
+                    ContentDialogResult result = await donateDialog.ShowAsync();
 
 
-                            if (result == ContentDialogResult.Primary)
-                            {
-                                try
-                                {
-                                    AppSettings.Values["IsDonated"] = "1";
-                                    await new contentDonateList().ShowAsync();
-                                    //  await Windows.System.Launcher.LaunchUriAsync(new Uri(@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SR6U393C95FT6"));
-                                }
-                                catch
-                                {
-
-                                }
-                            }
-                        }
+                    if (result != ContentDialogResult.Primary) return;
+                    try
+                    {
+                        AppSettings.Values["IsDonated"] = "1";
+                        await new contentDonateList().ShowAsync();
+                        //  await Windows.System.Launcher.LaunchUriAsync(new Uri(@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SR6U393C95FT6"));
                     }
-                    else
+                    catch
                     {
-                        AppSettings.Values["IsDonated"] = "0";
+                        // ignored
                     }
                 }
-                 
+                else
+                {
+                    AppSettings.Values["IsDonated"] = "0";
+                }
+
 
 
             }
             catch (Exception)
             {
-
-
+                // ignored
             }
         }
         private async void btnDownload_Click(object sender, RoutedEventArgs e)
         {
-          await PrepareForDownload(txtUrl.Text, false);
+          await PrepareForDownload(txtUrl.Text);
         }
 
-        private async Task PrepareForDownload(string ShareUrl, bool IsAlbumItem=false)
+        private async Task PrepareForDownload(string shareUrl, bool IsAlbumItem=false)
         {
             try
             {
                 Regex regPost = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
-                Regex regIGTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
+                Regex regIgTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
 
                 Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
 
-                txtstatusFadeAnimation.Storyboard.Begin();
+                txtstatusFadeAnimation.Storyboard?.Begin();
 
-                if (regPost.IsMatch(ShareUrl) || regIGTv.IsMatch(ShareUrl))
+                if (regPost.IsMatch(shareUrl) || regIgTv.IsMatch(shareUrl))
                 {
                     imgDownloaded.Source = null;
                     imgDownloaded.Visibility = Visibility.Collapsed;
@@ -722,7 +686,7 @@ namespace InstagramDownloader
                     flyoutDownloadProgress.Visibility = prgDownload.Visibility = prgIntermediate.Visibility = Visibility.Visible;
                     btnDownload.IsEnabled = chkFullSizeImage.IsEnabled = btnPickUrlFromList.IsEnabled = txtUrl.IsEnabled = false;
 
-                    Uri posturl = new Uri(ShareUrl.Replace("http:", "https:"));
+                    Uri posturl = new Uri(shareUrl.Replace("http:", "https:"));
 
 
                     txtDownloadStatus.Text = res.GetString("DownloadInitialize");
@@ -761,149 +725,39 @@ namespace InstagramDownloader
 
             }
         }
-        public static ToastNotification CreateFailureToast(string FileName)
-        {
-            string title = ResourceLoader.GetForViewIndependentUse().GetString("DownloadFailedToast");
-            string name = FileName;
-            return CreateToast(title, name);
-        }
-        public static ToastNotification CreateSuccessToast(string FileName, string path, bool Isvideo = false)
-        {
-            string title = ResourceLoader.GetForViewIndependentUse().GetString("DownloadCompleteToast");
-            string name = FileName;
-            if (Isvideo)
-            {
-                return CreateVideoToast(title, name, path);
-            }
-            else
-            {
-                return CreateToast(title, name, path);
-            }
-
-        }
-        private static ToastNotification CreateToast(string title, string name, string imagePath = "")
-        {
-            // Create xml template
-            string xmlToastTemplate = string.Format("<toast launch=\"{3}\">" +
-    "<visual>" +
-    "  <binding template=\"ToastGeneric\">" +
-
-         " <text> {0} </text>" +
-
-              " <text> {1} </text>" +
-
-                     " <image placement=\"inline\" src=\"{2}\" />" +
-
-                       "  </binding>" +
-
-                    "  </visual>" +
-                   "  </toast> ", title, name, imagePath, imagePath);
-            var toastXml = new XmlDocument();
-
-            toastXml.LoadXml(xmlToastTemplate);
-
-            ToastNotification toastDlComplete = new ToastNotification(toastXml);
-
-
-            return toastDlComplete;
-        }
-
-        private static ToastNotification CreateVideoToast(string title, string name, string imagePath = "")
-        {
-            // Create xml template
-            string xmlToastTemplate = string.Format("<toast launch=\"{2}\">" +
-    "<visual>" +
-    "  <binding template=\"ToastGeneric\">" +
-
-         " <text> {0} </text>" +
-
-              " <text> {1} </text>" +
-
-                       " </binding>" +
-
-                    "  </visual>" +
-                   "  </toast> ", title, name, imagePath);
-            var toastXml = new XmlDocument();
-
-            toastXml.LoadXml(xmlToastTemplate);
-
-            ToastNotification toastDlComplete = new ToastNotification(toastXml);
-
-
-            return toastDlComplete;
-        }
 
         private async void btnPaste_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (txtUrl.IsEnabled)
-                {
-                    DataPackageView dataPackageView = Clipboard.GetContent();
-                    if (dataPackageView.Contains(StandardDataFormats.Text))
-                    {
+                if (!txtUrl.IsEnabled) return;
+                DataPackageView dataPackageView = Clipboard.GetContent();
+                if (!dataPackageView.Contains(StandardDataFormats.Text)) return;
+                string text = await dataPackageView.GetTextAsync();
 
-                        string text = await dataPackageView.GetTextAsync();
-
-                        txtUrl.Text = text;
-                    }
-                }
+                txtUrl.Text = text;
 
             }
             catch (Exception)
             {
-
-
+                // ignored
             }
         }
 
-        private string GetProfilePictureUrl(string url)
-        {
-            Regex profileRegex = new Regex(@"s[0-9][0-9][0-9]x[0-9][0-9][0-9]");
-            if (profileRegex.IsMatch(url))
-            {
-                url = profileRegex.Replace(url, "s");
-            }
-            return url;
-        }
-
-
-
-
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
-
-        private void btnHelp_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                Frame.Navigate(typeof(pgHelp));
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
 
         private async void btnViewFile_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 //var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync();
-                var res = await Windows.System.Launcher.LaunchFileAsync(await StorageFile.GetFileFromPathAsync(btnCommandViewFile.Tag.ToString()));
+                await Windows.System.Launcher.LaunchFileAsync(await StorageFile.GetFileFromPathAsync(btnCommandViewFile.Tag.ToString()));
 
             }
             catch (Exception ex)
             {
 
                 MessageDialog msg = new MessageDialog(res.GetString("UnhandledException") + ex.Message);
-
-                var result = msg.ShowAsync();
+                await  msg.ShowAsync();
             }
 
         }
@@ -969,44 +823,24 @@ namespace InstagramDownloader
 
         }
 
-        private void btnHistory_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                Frame.Navigate(typeof(pgHistory));
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
         private async void txtUrl_GotFocus(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (txtUrl.Text.Length == 0)
+                if (txtUrl.Text.Length != 0) return;
+                if (!IsAutomaticallyPaste) return;
+                DataPackageView dataPackageView = Clipboard.GetContent();
+                if (!dataPackageView.Contains(StandardDataFormats.Text)) return;
+                string clipboradtext = await dataPackageView.GetTextAsync();
+
+                Regex regPost = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
+                Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
+                Regex regIgTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
+
+                if (regPost.IsMatch(clipboradtext) || regProfile.IsMatch(clipboradtext) || regIgTv.IsMatch(clipboradtext))
                 {
-                    if (IsAutomaticallyPaste)
-                    {
-                        DataPackageView dataPackageView = Clipboard.GetContent();
-                        if (dataPackageView.Contains(StandardDataFormats.Text))
-                        {
-                            string clipboradtext = await dataPackageView.GetTextAsync();
-
-                            Regex regPost = new Regex(@"((http:\/\/(instagr\.am\/p\/.*|instagram\.com\/p\/.*|www\.instagram\.com\/p\/.*))|(https:\/\/(www\.instagram\.com\/p\/.*))|(https:\/\/(instagram\.com\/p\/.*)))");
-                            Regex regProfile = new Regex(@"((http:\/\/(instagr\.am/.*|instagram\.com/.*|www\.instagram\.com/.*))|(https:\/\/(www\.instagram\.com/.*))|(https:\/\/(instagram\.com/.*)))");
-                            Regex regIGTv = new Regex(@"((http:\/\/(instagr\.am\/tv\/.*|instagram\.com\/tv\/.*|www\.instagram\.com\/tv\/.*))|(https:\/\/(www\.instagram\.com\/tv\/.*))|(https:\/\/(instagram\.com\/tv\/.*)))");
-
-                            if (regPost.IsMatch(clipboradtext) || regProfile.IsMatch(clipboradtext) || regIGTv.IsMatch(clipboradtext))
-                            {
-                                txtUrl.Text = clipboradtext;
-                                txtUrl.SelectAll();
-                            }
-
-                        }
-                    }
+                    txtUrl.Text = clipboradtext;
+                    txtUrl.SelectAll();
                 }
 
             }

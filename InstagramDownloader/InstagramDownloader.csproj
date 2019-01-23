@@ -126,12 +126,13 @@
     <Compile Include="contentPostponeList.xaml.cs">
       <DependentUpon>contentPostponeList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\UriConverter.cs" />
     <Compile Include="dlgAlbumPost.xaml.cs">
       <DependentUpon>dlgAlbumPost.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Extension.cs" />
-    <Compile Include="FlipViewIndicator.cs" />
-    <Compile Include="GetSaveLocations.cs" />
+    <Compile Include="Utils\Extension.cs" />
+    <Compile Include="Utils\FlipViewIndicator.cs" />
+    <Compile Include="Utils\GetSaveLocations.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

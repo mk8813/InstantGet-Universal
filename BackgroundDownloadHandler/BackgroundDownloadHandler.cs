@@ -26,42 +26,17 @@ namespace BackgroundDownloadHandler
     public class BackgroundDownloaderManager
     {
         DownloadOperation downloadOperation;
-        ResourceLoader res = ResourceLoader.GetForViewIndependentUse();
+        ResourceLoader resLoader = ResourceLoader.GetForViewIndependentUse();
         private bool IsFullSizeImageBought=false;
-        private string _downloadedFilePath;
-        private PostDetails _postdetailsForCurrentDownload;
-        public string DownloadedFilePath
-        {
-            get
-            {
-                return _downloadedFilePath;
-            }
 
-            set
-            {
-                _downloadedFilePath = value;
-            }
-        }
+        public string DownloadedFilePath { get; set; }
 
-        public PostDetails PostDetailsForCurrentDownload
-        {
-            get
-            {
-                return _postdetailsForCurrentDownload;
-            }
-
-            set
-            {
-                _postdetailsForCurrentDownload = value;
-            }
-        }
+        public PostDetails PostDetailsForCurrentDownload { get; set; }
 
         private async Task<bool> CreateDownload(string url, StorageFile file, Progress<DownloadOperation> progress, bool isVideo = false)
         {
             try
             {
-
-                CancellationTokenSource cancellationToken;
                 BackgroundDownloader backgroundDownloader = new BackgroundDownloader();
 
                 string filename = Path.GetFileName(url);
@@ -78,7 +53,7 @@ namespace BackgroundDownloadHandler
                 downloadOperation.Priority = BackgroundTransferPriority.High;////////////new
 
                // Progress<DownloadOperation> progress = new Progress<DownloadOperation>(progressChanged);
-                cancellationToken = new CancellationTokenSource();
+                var cancellationToken = new CancellationTokenSource();
                 try
                 {
                 
@@ -88,7 +63,7 @@ namespace BackgroundDownloadHandler
                 }
                 catch (TaskCanceledException)
                 {
-                    var res = downloadOperation.ResultFile.DeleteAsync();
+                    await  downloadOperation.ResultFile.DeleteAsync();
                     downloadOperation = null;
 
                     //if (_deferral!=null)
@@ -157,7 +132,7 @@ namespace BackgroundDownloadHandler
                         {
 
 
-                            ShowNotification(res.GetString("DownloadInProgress"), true);
+                            ShowNotification(resLoader.GetString("DownloadInProgress"), true);
                             isSuccess = await CreateDownload(imgSrc, outputfile,progress, isVideopost);
                             DownloadedFilePath = outputfile.Path;
 
@@ -182,17 +157,9 @@ namespace BackgroundDownloadHandler
                                 curDownload.IsDownloaded = "0";
 
 
-
-                                if (isVideopost)
-                                {
-
-                                    ShowNotification(res.GetString("ErrorDownloadVideo"));
-                                }
-                                else
-                                {
-                                    ShowNotification(res.GetString("ErrorDownloadPicture"));
-                                }
-
+                                ShowNotification(isVideopost
+                                    ? resLoader.GetString("ErrorDownloadVideo")
+                                    : resLoader.GetString("ErrorDownloadPicture"));
                             }
 
 
@@ -200,7 +167,7 @@ namespace BackgroundDownloadHandler
                         else
                         {
                             curDownload.IsDownloaded = "0";
-                            ShowNotification(res.GetString("TargetFileNotFound"));
+                            ShowNotification(resLoader.GetString("TargetFileNotFound"));
                         }
 
 
@@ -213,7 +180,7 @@ namespace BackgroundDownloadHandler
                     else
                     {
                         curDownload.IsDownloaded = "0";
-                        ShowNotification(res.GetString("FailedToRetrieveUrl"));
+                        ShowNotification(resLoader.GetString("FailedToRetrieveUrl"));
 
                     }
                     //////////////////////////////////////
@@ -280,8 +247,8 @@ namespace BackgroundDownloadHandler
 
             List<string> links = new List<string>();
 
-            string regexMeta = @"<meta\b[^>]*\bproperty=[""]og:image[""][^>]*\b+content[\s]?=[\s""']+(.*?)[""']+.*?";
-            string videoRegex = @"<meta\b[^>]*\bproperty=[""]og:video[""][^>]*\b+content[\s]?=[\s""']+(.*?)[""']+.*?";
+            const string regexMeta = @"<meta\b[^>]*\bproperty=[""]og:image[""][^>]*\b+content[\s]?=[\s""']+(.*?)[""']+.*?";
+            const string videoRegex = @"<meta\b[^>]*\bproperty=[""]og:video[""][^>]*\b+content[\s]?=[\s""']+(.*?)[""']+.*?";
             Regex profileRegex = new Regex(@"s[0-9][0-9][0-9]x[0-9][0-9][0-9]");
 
             MatchCollection videomatches = Regex.Matches(htmlSource, videoRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
@@ -343,10 +310,10 @@ namespace BackgroundDownloadHandler
 
         private async Task<StorageFolder> GetPicturesFolder()
         {
-            ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
+            ApplicationDataContainer appSettings = ApplicationData.Current.LocalSettings;
             try
             {
-                string picturepath = AppSettings.Values["picture"].ToString();
+                string picturepath = appSettings.Values["picture"].ToString();
                 var folder = await StorageFolder.GetFolderFromPathAsync(picturepath);
                 return folder;
             }
@@ -359,10 +326,10 @@ namespace BackgroundDownloadHandler
 
         private async Task<StorageFolder> GetVideosFolder()
         {
-            ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
+            ApplicationDataContainer appSettings = ApplicationData.Current.LocalSettings;
             try
             {
-                string videopath = AppSettings.Values["video"].ToString();
+                string videopath = appSettings.Values["video"].ToString();
                 var folder = await StorageFolder.GetFolderFromPathAsync(videopath);
                 return folder;
             }
@@ -375,38 +342,23 @@ namespace BackgroundDownloadHandler
 
         private async Task<StorageFile> SetOutputFile(bool isVideoLink,string postIdOrUsername)
         {
-            StorageFile outputfile = null;
-            StorageFolder savefolder;
             try
             {
+                StorageFolder savefolder;
                 if (isVideoLink)
                 {
                     ////////////////////
-                    var Settingfolder = await GetVideosFolder();
-                    if (Settingfolder != null)
-                    {
-                        savefolder = Settingfolder;
-                    }
-                    else
-                    {
-                        savefolder = KnownFolders.VideosLibrary;//.PickSingleFolderAsync();
-                    }
+                    var settingfolder = await GetVideosFolder();
+                    savefolder = settingfolder ?? KnownFolders.VideosLibrary;
 
-                   return  outputfile = await savefolder.CreateFileAsync("InstantGet-" + postIdOrUsername + ".mp4", CreationCollisionOption.GenerateUniqueName);
+                   return  await savefolder.CreateFileAsync("InstantGet-" + postIdOrUsername + ".mp4", CreationCollisionOption.GenerateUniqueName);
                     //////////////////
                 }
                 else
                 {
-                    var Settingfolder = await GetPicturesFolder();
-                    if (Settingfolder != null)
-                    {
-                        savefolder = Settingfolder;
-                    }
-                    else
-                    {   ////////////////////
-                        savefolder = KnownFolders.PicturesLibrary;//.PickSingleFolderAsync();
-                    }
-                 return   outputfile = await savefolder.CreateFileAsync("InstantGet-" + postIdOrUsername + ".jpg", CreationCollisionOption.GenerateUniqueName);
+                    var settingfolder = await GetPicturesFolder();
+                    savefolder = settingfolder ?? KnownFolders.PicturesLibrary;
+                 return   await savefolder.CreateFileAsync("InstantGet-" + postIdOrUsername + ".jpg", CreationCollisionOption.GenerateUniqueName);
                     //////////////////
                 }
             }
@@ -418,24 +370,17 @@ namespace BackgroundDownloadHandler
          
            
         }
-        public static ToastNotification CreateFailureToast(string FileName)
+        public static ToastNotification CreateFailureToast(string fileName)
         {
             string title = ResourceLoader.GetForViewIndependentUse().GetString("DownloadFailedToast");
-            string name = FileName;
+            string name = fileName;
             return CreateToast(title, name);
         }
-        public static ToastNotification CreateSuccessToast(string FileName, string path, bool isVideo)
+        public static ToastNotification CreateSuccessToast(string fileName, string path, bool isVideo)
         {
             string title = ResourceLoader.GetForViewIndependentUse().GetString("DownloadCompleteToast");
-            string name = FileName;
-            if (isVideo)
-            {
-                return CreateVideoToast(title, name, path);
-            }
-            else
-            {
-                return CreateToast(title, name, path);
-            }
+            string name = fileName;
+            return isVideo ? CreateVideoToast(title, name, path) : CreateToast(title, name, path);
 
         }
 
@@ -465,7 +410,7 @@ namespace BackgroundDownloadHandler
         }
 
 
-        private static ToastNotification CreateToast(string title, string name, string imagePath = "")
+        public static ToastNotification CreateToast(string title, string name, string imagePath = "")
         {
             // Create xml template
             string xmlToastTemplate = string.Format("<toast launch=\"{3}\">" +
