@@ -61,16 +61,7 @@ namespace UrlListenerComponent
                                     // UnComment the following line in the release version of your app.
                                     licenseInformation = CurrentApp.LicenseInformation;
                                     ///////////////////////
-                                    if (licenseInformation.ProductLicenses["FullSizeImageDownload"].IsActive)
-                                    {
-                                        IsFullSizeImageBought = true;
-
-                                    }
-                                    else
-                                    {
-                                        IsFullSizeImageBought = false;
-
-                                    }
+                                    IsFullSizeImageBought = licenseInformation.ProductLicenses["FullSizeImageDownload"].IsActive;
                                     /////////////////////////////////////////////////////////////////////////////////
                                     Progress<DownloadOperation> dlProgress = new Progress<DownloadOperation>(progressChanged);
 

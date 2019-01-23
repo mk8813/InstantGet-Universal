@@ -426,7 +426,7 @@
 
 
         <!--Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"-->
-        <Grid  x:Name="grdpgHome" Canvas.ZIndex="0" Background="Transparent" Loaded="Grid_Loaded">
+        <Grid  x:Name="grdpgHome" Canvas.ZIndex="0" Background="Transparent" >
 
             <Grid.ColumnDefinitions>
 

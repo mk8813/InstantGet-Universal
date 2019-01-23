@@ -497,10 +497,8 @@
           <target state="needs-review-translation">Descargar resolución de imagen original</target>
         </trans-unit>
         <trans-unit id="ErrorProfilePicture" translate="yes" xml:space="preserve">
-          <source>Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
-More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</source>
-          <target state="new">Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
-More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</target>
+          <source>Due to Instagram limitations you should login to your Account to download Profile pictures, Upcoming feature...</source>
+          <target state="new">Due to Instagram limitations you should login to your Account to download Profile pictures, Upcoming feature...</target>
         </trans-unit>
         <trans-unit id="PinnedBrowserTileMsg" translate="yes" xml:space="preserve">
           <source>Pinned!</source>

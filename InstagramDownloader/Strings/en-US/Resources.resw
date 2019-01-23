@@ -484,8 +484,7 @@
     <value>Download the original photo</value>
   </data>
   <data name="ErrorProfilePicture" xml:space="preserve">
-    <value>Due to limitations made by Instagram (from January 2018), downloading profile pictures are not possible from now on.
-More info at : https://developers.facebook.com/blog/post/2018/01/30/instagram-graph-api-updates/</value>
+    <value>Due to Instagram limitations you should login to your Account to download Profile pictures, Upcoming feature...</value>
   </data>
   <data name="PinnedBrowserTileMsg" xml:space="preserve">
     <value>Pinned!</value>
